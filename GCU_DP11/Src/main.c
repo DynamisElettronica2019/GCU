@@ -32,6 +32,10 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+/*Includere il codice generato.
+	La chiamata delle funzioni step va fatta in can.c, tim.c, usart.c e adc.c dove indicato dai commenti*/
+#include "GCU_Model_genCode.h"
+#include "string.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -41,7 +45,9 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define UART_READ_MODE 1
+#define CAN_READ_MODE 2
+#define DEMO_READ_MODE 3
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -63,7 +69,10 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+extern uint8_t rxData[];
+uint8_t tempMsg[24];
 
+extern uint32_t adc_buffer[];
 /* USER CODE END 0 */
 
 /**
@@ -89,7 +98,7 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-
+	
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -104,7 +113,26 @@ int main(void)
   MX_GFXSIMULATOR_Init();
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
-
+	/*
+	HAL_TIM_Base_Start_IT(&htim2);
+	HAL_UART_Receive_IT(&huart3, rxData, 1);
+	HAL_ADC_Start_DMA(&hadc1, rtU.adc_buffer, ADC_DATA_SIZE);
+	*/
+	/*
+	HAL_GPIO_WritePin(LED_1_GIALLO_GPIO_Port, LED_1_GIALLO_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(LED_2_GIALLO_GPIO_Port, LED_2_GIALLO_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(LED_3_GIALLO_GPIO_Port, LED_3_GIALLO_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(LED_4_GIALLO_GPIO_Port, LED_4_GIALLO_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(LED_5_ROSSO_GPIO_Port, LED_5_ROSSO_Pin, GPIO_PIN_SET);
+	*/
+	/*Qui bisogna inserire la funzione che inizializza il modello,
+	lo step per l'interpretazione del messaggio (per entrare nel primo stato della macchina a stati
+	ed essere pronto a ricevere) e va selezionata su rtU.SelectMode la periferica da cui leggere i messaggi*/
+	GCU_Model_genCode_initialize();	
+	rtU.SelectMode = UART_READ_MODE;
+	GCU_Model_genCode_step2();
+	
+	//CAN1_Start();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -114,6 +142,15 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+		//CAN1_Send_Nucleo_F7_Packet();
+		//HAL_Delay(500);
+		if(rtU.SelectMode == DEMO_READ_MODE)
+		{
+			GCU_Model_genCode_step2();
+			HAL_Delay(100);
+		}
+		
+
   }
   /* USER CODE END 3 */
 }

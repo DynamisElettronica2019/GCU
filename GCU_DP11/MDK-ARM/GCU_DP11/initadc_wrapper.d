@@ -39,3 +39,7 @@ gcu_dp11\initadc_wrapper.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_ti
 gcu_dp11\initadc_wrapper.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h
 gcu_dp11\initadc_wrapper.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h
 gcu_dp11\initadc_wrapper.o: ../Inc/adc.h
+gcu_dp11\initadc_wrapper.o: ../Inc/GCU_Model_genCode.h
+gcu_dp11\initadc_wrapper.o: ../Inc/zero_crossing_types.h
+gcu_dp11\initadc_wrapper.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+gcu_dp11\initadc_wrapper.o: ../Inc/timings.h

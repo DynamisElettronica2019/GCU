@@ -21,6 +21,7 @@
 #include "adc.h"
 
 /* USER CODE BEGIN 0 */
+uint32_t value[9], adc_buffer[9];
 
 /* USER CODE END 0 */
 
@@ -235,7 +236,21 @@ void HAL_ADC_MspDeInit(ADC_HandleTypeDef* adcHandle)
 } 
 
 /* USER CODE BEGIN 1 */
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
+{
+	if(hadc->Instance == ADC_SENSORS)
+	{
+		//HAL_GPIO_WritePin(GPIOF, GPIO_PIN_13, GPIO_PIN_SET);
+		//HAL_GPIO_TogglePin(GPIOF, GPIO_PIN_13);
 
+		//chiamare qui lo step del modello che copia i dati presenti nel buffer dell'ADC
+		//ATTENZIONE: per modificare il numero di valori letti occorre modificare ADC_DATA_SIZE in adc.h
+		//ADC_DATA_SIZE <= 10 per ora
+		GCU_Model_genCode_step4();
+		
+		//HAL_GPIO_WritePin(GPIOF, GPIO_PIN_13, GPIO_PIN_RESET);
+	}	
+}	
 /* USER CODE END 1 */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

@@ -21,7 +21,8 @@
 #include "tim.h"
 
 /* USER CODE BEGIN 0 */
-
+int timer2_counter1 = 0;
+int timer2_counter2 = 0;
 /* USER CODE END 0 */
 
 TIM_HandleTypeDef htim1;
@@ -307,7 +308,34 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* tim_baseHandle)
 } 
 
 /* USER CODE BEGIN 1 */
-
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	__disable_irq();
+	
+	if(htim->Instance == TIM_1KHZ)
+	{	
+		timer2_counter1++;
+		timer2_counter2++;
+		
+		//inserire qui la funzione step che contiene la logica del modello
+		GCU_Model_genCode_step1();
+		
+		if(timer2_counter1 >= SEND_DATA_PERIOD)
+		{
+			//inserire qui lo step che invia i dati su uart
+			GCU_Model_genCode_step3();
+		 
+			timer2_counter1 = 0;		 
+		}
+		
+		if(timer2_counter2 >= TOGGLE_LED_PERIOD)
+		{
+			HAL_GPIO_TogglePin(BlueLed_GPIO_Port, BlueLed_Pin);
+			timer2_counter2 = 0;
+		}
+	}
+  __enable_irq();
+}
 /* USER CODE END 1 */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

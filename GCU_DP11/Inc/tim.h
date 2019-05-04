@@ -27,7 +27,8 @@
 #include "main.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "GCU_Model_genCode.h"
+#include "pin_defines.h"	 
 /* USER CODE END Includes */
 
 extern TIM_HandleTypeDef htim1;
@@ -35,7 +36,8 @@ extern TIM_HandleTypeDef htim2;
 extern TIM_HandleTypeDef htim4;
 
 /* USER CODE BEGIN Private defines */
-
+#define SEND_DATA_PERIOD 50
+#define TOGGLE_LED_PERIOD 500 
 /* USER CODE END Private defines */
 
 void MX_TIM1_Init(void);

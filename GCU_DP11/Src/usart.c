@@ -21,7 +21,9 @@
 #include "usart.h"
 
 /* USER CODE BEGIN 0 */
-
+uint8_t rxData[DIM], readData = 0;
+char header[] = "hdr", temp[] = {0,0,0};
+int flag = 0;
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart4;
@@ -129,7 +131,45 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 } 
 
 /* USER CODE BEGIN 1 */
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+	__disable_irq();
+	
+	if(!readData)
+	{	
+		temp[0] = temp[1];
+		temp[1] = temp[2];
+		temp[2] = rxData[0];
+	}
+	else
+	{
+		readData = 0;
+		
+		for(int i=0; i<DIM;i++)
+			rtU.UART_debug[i] = rxData[i];
+			
+			HAL_GPIO_TogglePin(RedLed_GPIO_Port, RedLed_Pin);
+			flag = 1;
 
+		if(rtU.SelectMode == UART_READ_MODE)
+		{
+			//inserire qui la funzione step per l'interpretazione del messaggio	
+			GCU_Model_genCode_step2();
+		}	
+	}
+	
+	if(!strncmp(header, temp, 3))
+	{
+		readData = 1;
+		HAL_UART_Receive_IT(&huartDebug, rxData, DIM);
+		
+		for(int i = 0; i<3; i++)
+			temp[i] = 0;
+	}
+	else HAL_UART_Receive_IT(&huartDebug, rxData, 1);
+	
+		 __enable_irq();
+}	
 /* USER CODE END 1 */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
