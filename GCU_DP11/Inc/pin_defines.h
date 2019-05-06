@@ -26,8 +26,8 @@
 #define huartDebug huart4
 
 //Definizione timer utilizzato per logica
-#define htim_1khz htim4
-#define TIM_1KHZ TIM4
+#define htim_1khz htim6
+#define TIM_1KHZ TIM6
 
 //Definizione ADC per sensori
 #define hadc_sensors hadc1

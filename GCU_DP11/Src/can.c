@@ -21,7 +21,14 @@
 #include "can.h"
 
 /* USER CODE BEGIN 0 */
+static CAN_FilterTypeDef CAN_Filter_Config;
+static CAN_RxHeaderTypeDef CAN_Received_0_Message_Header;
+static CAN_RxHeaderTypeDef CAN_Received_1_Message_Header;
+static uint8_t CAN_Received_0_Message_Data[8];
+static uint8_t CAN_Received_1_Message_Data[8];
 
+static uint8_t GCU_Packet_Data[8];
+static CAN_TxHeaderTypeDef GCU_Packet_Header;
 /* USER CODE END 0 */
 
 CAN_HandleTypeDef hcan2;
@@ -75,6 +82,13 @@ void HAL_CAN_MspInit(CAN_HandleTypeDef* canHandle)
     GPIO_InitStruct.Alternate = GPIO_AF9_CAN2;
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
+    /* CAN2 interrupt Init */
+    HAL_NVIC_SetPriority(CAN2_TX_IRQn, 0, 0);
+    HAL_NVIC_EnableIRQ(CAN2_TX_IRQn);
+    HAL_NVIC_SetPriority(CAN2_RX0_IRQn, 0, 0);
+    HAL_NVIC_EnableIRQ(CAN2_RX0_IRQn);
+    HAL_NVIC_SetPriority(CAN2_RX1_IRQn, 0, 0);
+    HAL_NVIC_EnableIRQ(CAN2_RX1_IRQn);
   /* USER CODE BEGIN CAN2_MspInit 1 */
 
   /* USER CODE END CAN2_MspInit 1 */
@@ -100,6 +114,10 @@ void HAL_CAN_MspDeInit(CAN_HandleTypeDef* canHandle)
     */
     HAL_GPIO_DeInit(GPIOB, GPIO_PIN_12|GPIO_PIN_13);
 
+    /* CAN2 interrupt Deinit */
+    HAL_NVIC_DisableIRQ(CAN2_TX_IRQn);
+    HAL_NVIC_DisableIRQ(CAN2_RX0_IRQn);
+    HAL_NVIC_DisableIRQ(CAN2_RX1_IRQn);
   /* USER CODE BEGIN CAN2_MspDeInit 1 */
 
   /* USER CODE END CAN2_MspDeInit 1 */
@@ -107,7 +125,71 @@ void HAL_CAN_MspDeInit(CAN_HandleTypeDef* canHandle)
 } 
 
 /* USER CODE BEGIN 1 */
+void CAN2_Filter_Setup(void)
+{
+	/*mittente: NUCLEOF4
+	Id:     (0011111xxxx)
+	Mask: 0x1DE0   (0111 1111 0000)
+	Filter: 0x5E0  (0001 1111 0000)*/
+	
+	CAN_Filter_Config.FilterBank = 14;
+  CAN_Filter_Config.FilterMode = CAN_FILTERMODE_IDMASK;
+  CAN_Filter_Config.FilterScale = CAN_FILTERSCALE_32BIT;
+	CAN_Filter_Config.FilterIdHigh = (0x1F0 << 5);
+  CAN_Filter_Config.FilterIdLow = 0x0000;
+  CAN_Filter_Config.FilterMaskIdHigh = (0x7F0  << 5);
+  CAN_Filter_Config.FilterMaskIdLow = 0x0000;
+	CAN_Filter_Config.FilterFIFOAssignment = CAN_RX_FIFO0;
+  CAN_Filter_Config.FilterActivation = ENABLE;	
+  CAN_Filter_Config.SlaveStartFilterBank = 14;
+		
+	HAL_CAN_ConfigFilter(&hcan2, &CAN_Filter_Config);
+}	
 
+
+void CAN2_Start(void)
+{
+	CAN2_Filter_Setup();
+	
+	HAL_CAN_ActivateNotification(&hcan2, CAN_IT_TX_MAILBOX_EMPTY);
+	HAL_CAN_ActivateNotification(&hcan2, CAN_IT_RX_FIFO0_MSG_PENDING);
+	HAL_CAN_ActivateNotification(&hcan2, CAN_IT_RX_FIFO1_MSG_PENDING);
+	HAL_CAN_Start(&hcan2);
+	//HAL_GPIO_TogglePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin);
+}	
+
+
+void CAN2_Send_GCU_Packet(void)
+{
+	//HAL_GPIO_TogglePin(GreenPin_GPIO_Port,GreenPin_Pin);
+	uint32_t GCU_Packet_Mailbox;
+	GCU_Packet_Header.StdId = GCU_ID;
+  GCU_Packet_Header.RTR = CAN_RTR_DATA;
+  GCU_Packet_Header.IDE = CAN_ID_STD;
+  GCU_Packet_Header.DLC = 8;
+  GCU_Packet_Header.TransmitGlobalTime = DISABLE;
+  GCU_Packet_Data[0] = 6;
+  GCU_Packet_Data[1] = 0;
+  GCU_Packet_Data[2] = 10;
+  GCU_Packet_Data[3] = 0;
+  GCU_Packet_Data[4] = 0;
+  GCU_Packet_Data[5] = 6;
+	GCU_Packet_Data[6] = 0;
+  GCU_Packet_Data[7] = 5;
+	
+	HAL_CAN_AddTxMessage(&hcan2, &GCU_Packet_Header, GCU_Packet_Data, &GCU_Packet_Mailbox);
+}
+
+
+void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
+{
+	HAL_CAN_GetRxMessage(&hcan2, CAN_RX_FIFO0, &CAN_Received_0_Message_Header, CAN_Received_0_Message_Data);
+	//if(CAN_Received_0_Message_Data[0] == 5) 
+	//{	
+	HAL_GPIO_TogglePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin);
+		//CAN1_Send_Nucleo_F7_Packet();
+	//}
+}
 /* USER CODE END 1 */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

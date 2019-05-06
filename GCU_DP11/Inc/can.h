@@ -33,13 +33,14 @@
 extern CAN_HandleTypeDef hcan2;
 
 /* USER CODE BEGIN Private defines */
-
+#define GCU_ID 510
 /* USER CODE END Private defines */
 
 void MX_CAN2_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-
+extern void CAN2_Start();
+extern void CAN2_Send_GCU_Packet(void);
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus
