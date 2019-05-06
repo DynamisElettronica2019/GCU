@@ -21,6 +21,8 @@
 #include "can.h"
 
 /* USER CODE BEGIN 0 */
+#define CAN_READ_MODE 2
+
 static CAN_FilterTypeDef CAN_Filter_Config;
 static CAN_RxHeaderTypeDef CAN_Received_0_Message_Header;
 static CAN_RxHeaderTypeDef CAN_Received_1_Message_Header;
@@ -137,7 +139,7 @@ void CAN2_Filter_Setup(void)
   CAN_Filter_Config.FilterScale = CAN_FILTERSCALE_32BIT;
 	CAN_Filter_Config.FilterIdHigh = (0x1F0 << 5);
   CAN_Filter_Config.FilterIdLow = 0x0000;
-  CAN_Filter_Config.FilterMaskIdHigh = (0x7F0  << 5);
+  CAN_Filter_Config.FilterMaskIdHigh = 0x0000;//(0x7F0  << 5);
   CAN_Filter_Config.FilterMaskIdLow = 0x0000;
 	CAN_Filter_Config.FilterFIFOAssignment = CAN_RX_FIFO0;
   CAN_Filter_Config.FilterActivation = ENABLE;	
@@ -184,11 +186,21 @@ void CAN2_Send_GCU_Packet(void)
 void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 {
 	HAL_CAN_GetRxMessage(&hcan2, CAN_RX_FIFO0, &CAN_Received_0_Message_Header, CAN_Received_0_Message_Data);
-	//if(CAN_Received_0_Message_Data[0] == 5) 
-	//{	
+	
+	uint16_t id = (uint16_t) CAN_Received_0_Message_Header.StdId;
+
+	rtU.CAN[0] =  id >> 8;
+	rtU.CAN[1] = 0; rtU.CAN[1] |= id;
+	for (int i=2; i<10; i++)
+		rtU.CAN[i] = CAN_Received_0_Message_Data[i-2];
+	
+	if(rtU.SelectMode == CAN_READ_MODE)
+	{
+		GCU_Model_genCode_step2();
+	}
+	
 	HAL_GPIO_TogglePin(GreenLed_GPIO_Port, GreenLed_Pin);
-		//CAN1_Send_Nucleo_F7_Packet();
-	//}
+
 }
 /* USER CODE END 1 */
 
