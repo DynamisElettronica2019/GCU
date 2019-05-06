@@ -132,6 +132,8 @@ int main(void)
 	rtU.SelectMode = UART_READ_MODE;
 	GCU_Model_genCode_step2();
 	
+	CAN2_Start();
+	
 	//CAN1_Start();
   /* USER CODE END 2 */
 

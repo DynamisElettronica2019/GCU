@@ -58,11 +58,9 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define GEAR_MOTOR_INHIBIT_Pin GPIO_PIN_2
-#define GEAR_MOTOR_INHIBIT_GPIO_Port GPIOE
-#define GEAR_MOTOR_IN1_Pin GPIO_PIN_3
+#define GEAR_MOTOR_IN1_Pin GPIO_PIN_2
 #define GEAR_MOTOR_IN1_GPIO_Port GPIOE
-#define GEAR_MOTOR_IN2_Pin GPIO_PIN_4
+#define GEAR_MOTOR_IN2_Pin GPIO_PIN_3
 #define GEAR_MOTOR_IN2_GPIO_Port GPIOE
 #define MCU_OSC_IN_Pin GPIO_PIN_0
 #define MCU_OSC_IN_GPIO_Port GPIOH
@@ -128,6 +126,8 @@ void Error_Handler(void);
 #define EEPROM_SCL_GPIO_Port GPIOB
 #define EEPROM_SDA_Pin GPIO_PIN_7
 #define EEPROM_SDA_GPIO_Port GPIOB
+#define GEAR_MOTOR_INHIBIT_Pin GPIO_PIN_1
+#define GEAR_MOTOR_INHIBIT_GPIO_Port GPIOE
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

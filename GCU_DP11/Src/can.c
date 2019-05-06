@@ -186,7 +186,7 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 	HAL_CAN_GetRxMessage(&hcan2, CAN_RX_FIFO0, &CAN_Received_0_Message_Header, CAN_Received_0_Message_Data);
 	//if(CAN_Received_0_Message_Data[0] == 5) 
 	//{	
-	HAL_GPIO_TogglePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin);
+	HAL_GPIO_TogglePin(GreenLed_GPIO_Port, GreenLed_Pin);
 		//CAN1_Send_Nucleo_F7_Packet();
 	//}
 }
