@@ -36,8 +36,7 @@ extern TIM_HandleTypeDef htim2;
 extern TIM_HandleTypeDef htim6;
 
 /* USER CODE BEGIN Private defines */
-#define SEND_DATA_PERIOD 50
-#define TOGGLE_LED_PERIOD 500 
+
 /* USER CODE END Private defines */
 
 void MX_TIM1_Init(void);

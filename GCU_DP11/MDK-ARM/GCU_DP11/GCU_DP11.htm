@@ -3,11 +3,11 @@
 <title>Static Call Graph - [GCU_DP11\GCU_DP11.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image GCU_DP11\GCU_DP11.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Mon May 06 17:20:17 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Wed May 08 13:14:33 2019
 <BR><P>
-<H3>Maximum Stack Usage =        348 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        320 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-TIM6_DAC_IRQHandler &rArr; HAL_TIM_IRQHandler &rArr; HAL_TIM_PeriodElapsedCallback &rArr; GCU_Model_genCode_step1 &rArr; MODES &rArr; ACCELERATION &rArr; checkShift &rArr; GEARSHIFT &rArr; Clutch_setValue &rArr; ClutchMotor_setPosition_Outputs_wrapper &rArr; HAL_TIM_PWM_ConfigChannel &rArr; TIM_OC6_SetConfig
+main &rArr; SystemClock_Config &rArr; HAL_RCC_ClockConfig &rArr; HAL_RCC_GetSysClockFreq &rArr; __aeabi_uldivmod
 <P>
 <H3>
 Mutually Recursive functions
@@ -716,8 +716,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[bc]"></a>GCU_Model_genCode_step1</STRONG> (Thumb, 826 bytes, Stack size 80 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_step1))
-<BR><BR>[Stack]<UL><LI>Max Depth = 316<LI>Call Chain = GCU_Model_genCode_step1 &rArr; MODES &rArr; ACCELERATION &rArr; checkShift &rArr; GEARSHIFT &rArr; Clutch_setValue &rArr; ClutchMotor_setPosition_Outputs_wrapper &rArr; HAL_TIM_PWM_ConfigChannel &rArr; TIM_OC6_SetConfig
+<P><STRONG><a name="[bc]"></a>GCU_Model_genCode_step1</STRONG> (Thumb, 830 bytes, Stack size 72 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_step1))
+<BR><BR>[Stack]<UL><LI>Max Depth = 284<LI>Call Chain = GCU_Model_genCode_step1 &rArr; MODES &rArr; ACCELERATION &rArr; checkShift &rArr; GEARSHIFT &rArr; Clutch_setValue &rArr; ClutchMotor_setPosition_Outputs_wrapper &rArr; HAL_TIM_PWM_ConfigChannel &rArr; TIM_OC6_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EngineControl_stop_Outputs_wrapper
 <LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_I32ZCFcn
@@ -731,7 +731,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
 </UL>
 
-<P><STRONG><a name="[c4]"></a>GCU_Model_genCode_step2</STRONG> (Thumb, 1534 bytes, Stack size 56 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_step2))
+<P><STRONG><a name="[c4]"></a>GCU_Model_genCode_step2</STRONG> (Thumb, 1462 bytes, Stack size 56 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_step2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = GCU_Model_genCode_step2 &rArr; WRITE_EEPROM &rArr; AAC_ExternalValues
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PackCanUART_Outputs_wrapper
@@ -758,8 +758,8 @@ Global Symbols
 <LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
 </UL>
 
-<P><STRONG><a name="[cf]"></a>GCU_Model_genCode_step3</STRONG> (Thumb, 292 bytes, Stack size 120 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_step3))
-<BR><BR>[Stack]<UL><LI>Max Depth = 180<LI>Call Chain = GCU_Model_genCode_step3 &rArr; sendUART_Outputs_wrapper &rArr; HAL_UART_Transmit_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
+<P><STRONG><a name="[cf]"></a>GCU_Model_genCode_step3</STRONG> (Thumb, 274 bytes, Stack size 144 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_step3))
+<BR><BR>[Stack]<UL><LI>Max Depth = 204<LI>Call Chain = GCU_Model_genCode_step3 &rArr; sendUART_Outputs_wrapper &rArr; HAL_UART_Transmit_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PackUARTMsg_Outputs_wrapper
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendUART_Outputs_wrapper
@@ -780,7 +780,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gearmotor_brake
+<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gearmotor_brake
 </UL>
 
 <P><STRONG><a name="[b8]"></a>GearMotor_init_Outputs_wrapper</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, gearmotor_init_wrapper.o(i.GearMotor_init_Outputs_wrapper))
@@ -795,10 +795,10 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GearMotor_init_Outputs_wrapper
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gearmotor_release
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gearmotor_release
 </UL>
 
-<P><STRONG><a name="[d6]"></a>GearMotor_turnLeft_Outputs_wrapper</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, gearmotor_turnleft_wrapper.o(i.GearMotor_turnLeft_Outputs_wrapper))
+<P><STRONG><a name="[d5]"></a>GearMotor_turnLeft_Outputs_wrapper</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, gearmotor_turnleft_wrapper.o(i.GearMotor_turnLeft_Outputs_wrapper))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GearMotor_turnLeft_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
@@ -1071,7 +1071,7 @@ Global Symbols
 
 <P><STRONG><a name="[af]"></a>HAL_GPIO_WritePin</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f7xx_hal_gpio.o(i.HAL_GPIO_WritePin))
 <BR><BR>[Called By]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GearMotor_turnRight_Outputs_wrapper
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GearMotor_turnLeft_Outputs_wrapper
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GearMotor_turnLeft_Outputs_wrapper
 <LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GearMotor_release_Outputs_wrapper
 <LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GearMotor_brake_Outputs_wrapper
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
@@ -1174,8 +1174,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = HAL_Init &rArr; HAL_InitTick &rArr; HAL_NVIC_SetPriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriorityGrouping
 <LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_MspInit
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriorityGrouping
 </UL>
 <BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1337,7 +1337,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[111]"></a>HAL_TIM_IRQHandler</STRONG> (Thumb, 386 bytes, Stack size 16 bytes, stm32f7xx_hal_tim.o(i.HAL_TIM_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 348<LI>Call Chain = HAL_TIM_IRQHandler &rArr; HAL_TIM_PeriodElapsedCallback &rArr; GCU_Model_genCode_step1 &rArr; MODES &rArr; ACCELERATION &rArr; checkShift &rArr; GEARSHIFT &rArr; Clutch_setValue &rArr; ClutchMotor_setPosition_Outputs_wrapper &rArr; HAL_TIM_PWM_ConfigChannel &rArr; TIM_OC6_SetConfig
+<BR><BR>[Stack]<UL><LI>Max Depth = 316<LI>Call Chain = HAL_TIM_IRQHandler &rArr; HAL_TIM_PeriodElapsedCallback &rArr; GCU_Model_genCode_step1 &rArr; MODES &rArr; ACCELERATION &rArr; checkShift &rArr; GEARSHIFT &rArr; Clutch_setValue &rArr; ClutchMotor_setPosition_Outputs_wrapper &rArr; HAL_TIM_PWM_ConfigChannel &rArr; TIM_OC6_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
 <LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_TriggerCallback
@@ -1436,7 +1436,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[115]"></a>HAL_TIM_PeriodElapsedCallback</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, tim.o(i.HAL_TIM_PeriodElapsedCallback))
-<BR><BR>[Stack]<UL><LI>Max Depth = 332<LI>Call Chain = HAL_TIM_PeriodElapsedCallback &rArr; GCU_Model_genCode_step1 &rArr; MODES &rArr; ACCELERATION &rArr; checkShift &rArr; GEARSHIFT &rArr; Clutch_setValue &rArr; ClutchMotor_setPosition_Outputs_wrapper &rArr; HAL_TIM_PWM_ConfigChannel &rArr; TIM_OC6_SetConfig
+<BR><BR>[Stack]<UL><LI>Max Depth = 300<LI>Call Chain = HAL_TIM_PeriodElapsedCallback &rArr; GCU_Model_genCode_step1 &rArr; MODES &rArr; ACCELERATION &rArr; checkShift &rArr; GEARSHIFT &rArr; Clutch_setValue &rArr; ClutchMotor_setPosition_Outputs_wrapper &rArr; HAL_TIM_PWM_ConfigChannel &rArr; TIM_OC6_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_TogglePin
 <LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step3
@@ -1720,7 +1720,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f767xx.o(.text)
 </UL>
 <P><STRONG><a name="[40]"></a>TIM6_DAC_IRQHandler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f7xx_it.o(i.TIM6_DAC_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 348<LI>Call Chain = TIM6_DAC_IRQHandler &rArr; HAL_TIM_IRQHandler &rArr; HAL_TIM_PeriodElapsedCallback &rArr; GCU_Model_genCode_step1 &rArr; MODES &rArr; ACCELERATION &rArr; checkShift &rArr; GEARSHIFT &rArr; Clutch_setValue &rArr; ClutchMotor_setPosition_Outputs_wrapper &rArr; HAL_TIM_PWM_ConfigChannel &rArr; TIM_OC6_SetConfig
+<BR><BR>[Stack]<UL><LI>Max Depth = 316<LI>Call Chain = TIM6_DAC_IRQHandler &rArr; HAL_TIM_IRQHandler &rArr; HAL_TIM_PeriodElapsedCallback &rArr; GCU_Model_genCode_step1 &rArr; MODES &rArr; ACCELERATION &rArr; checkShift &rArr; GEARSHIFT &rArr; Clutch_setValue &rArr; ClutchMotor_setPosition_Outputs_wrapper &rArr; HAL_TIM_PWM_ConfigChannel &rArr; TIM_OC6_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
 </UL>
@@ -1844,7 +1844,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step1
 </UL>
 
-<P><STRONG><a name="[d1]"></a>sendUART_Outputs_wrapper</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, senduart_wrapper.o(i.sendUART_Outputs_wrapper))
+<P><STRONG><a name="[d1]"></a>sendUART_Outputs_wrapper</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, senduart_wrapper.o(i.sendUART_Outputs_wrapper))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = sendUART_Outputs_wrapper &rArr; HAL_UART_Transmit_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit_DMA
@@ -1892,7 +1892,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[95]"></a>ACCELERATION</STRONG> (Thumb, 988 bytes, Stack size 48 bytes, gcu_model_gencode.o(i.ACCELERATION))
-<BR><BR>[Stack]<UL><LI>Max Depth = 212<LI>Call Chain = ACCELERATION &rArr; checkShift &rArr; GEARSHIFT &rArr; Clutch_setValue &rArr; ClutchMotor_setPosition_Outputs_wrapper &rArr; HAL_TIM_PWM_ConfigChannel &rArr; TIM_OC6_SetConfig
+<BR><BR>[Stack]<UL><LI>Max Depth = 188<LI>Call Chain = ACCELERATION &rArr; checkShift &rArr; GEARSHIFT &rArr; Clutch_setValue &rArr; ClutchMotor_setPosition_Outputs_wrapper &rArr; HAL_TIM_PWM_ConfigChannel &rArr; TIM_OC6_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_setRPMLimiter_Outputs_wrapper
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendUpdatesSW
@@ -1932,16 +1932,16 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step1
 </UL>
 
-<P><STRONG><a name="[c2]"></a>GEARSHIFT</STRONG> (Thumb, 656 bytes, Stack size 72 bytes, gcu_model_gencode.o(i.GEARSHIFT))
-<BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = GEARSHIFT &rArr; Clutch_setValue &rArr; ClutchMotor_setPosition_Outputs_wrapper &rArr; HAL_TIM_PWM_ConfigChannel &rArr; TIM_OC6_SetConfig
+<P><STRONG><a name="[c2]"></a>GEARSHIFT</STRONG> (Thumb, 660 bytes, Stack size 48 bytes, gcu_model_gencode.o(i.GEARSHIFT))
+<BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = GEARSHIFT &rArr; Clutch_setValue &rArr; ClutchMotor_setPosition_Outputs_wrapper &rArr; HAL_TIM_PWM_ConfigChannel &rArr; TIM_OC6_SetConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GearMotor_turnLeft_Outputs_wrapper
+<BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GearMotor_turnLeft_Outputs_wrapper
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetCut_Outputs_wrapper
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_setCut_Outputs_wrapper
 <LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gearshift_getTime
 <LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gearmotor_turnRight
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gearmotor_release
-<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gearmotor_brake
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gearmotor_release
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gearmotor_brake
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Clutch_setValue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step1
@@ -1963,7 +1963,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step2
 </UL>
 
-<P><STRONG><a name="[d5]"></a>Gearmotor_brake</STRONG> (Thumb, 38 bytes, Stack size 24 bytes, gcu_model_gencode.o(i.Gearmotor_brake))
+<P><STRONG><a name="[d7]"></a>Gearmotor_brake</STRONG> (Thumb, 38 bytes, Stack size 24 bytes, gcu_model_gencode.o(i.Gearmotor_brake))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = Gearmotor_brake &rArr; GearMotor_brake_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GearMotor_brake_Outputs_wrapper
@@ -1971,7 +1971,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GEARSHIFT
 </UL>
 
-<P><STRONG><a name="[d7]"></a>Gearmotor_release</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, gcu_model_gencode.o(i.Gearmotor_release))
+<P><STRONG><a name="[d6]"></a>Gearmotor_release</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, gcu_model_gencode.o(i.Gearmotor_release))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Gearmotor_release
 </UL>
 <BR>[Calls]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GearMotor_release_Outputs_wrapper
@@ -2006,7 +2006,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[c0]"></a>MODES</STRONG> (Thumb, 148 bytes, Stack size 24 bytes, gcu_model_gencode.o(i.MODES))
-<BR><BR>[Stack]<UL><LI>Max Depth = 236<LI>Call Chain = MODES &rArr; ACCELERATION &rArr; checkShift &rArr; GEARSHIFT &rArr; Clutch_setValue &rArr; ClutchMotor_setPosition_Outputs_wrapper &rArr; HAL_TIM_PWM_ConfigChannel &rArr; TIM_OC6_SetConfig
+<BR><BR>[Stack]<UL><LI>Max Depth = 212<LI>Call Chain = MODES &rArr; ACCELERATION &rArr; checkShift &rArr; GEARSHIFT &rArr; Clutch_setValue &rArr; ClutchMotor_setPosition_Outputs_wrapper &rArr; HAL_TIM_PWM_ConfigChannel &rArr; TIM_OC6_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
@@ -2103,7 +2103,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[9b]"></a>aacCheckShift</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, gcu_model_gencode.o(i.aacCheckShift))
-<BR><BR>[Stack]<UL><LI>Max Depth = 156<LI>Call Chain = aacCheckShift &rArr; GEARSHIFT &rArr; Clutch_setValue &rArr; ClutchMotor_setPosition_Outputs_wrapper &rArr; HAL_TIM_PWM_ConfigChannel &rArr; TIM_OC6_SetConfig
+<BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = aacCheckShift &rArr; GEARSHIFT &rArr; Clutch_setValue &rArr; ClutchMotor_setPosition_Outputs_wrapper &rArr; HAL_TIM_PWM_ConfigChannel &rArr; TIM_OC6_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GEARSHIFT
 </UL>
@@ -2120,7 +2120,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[98]"></a>checkShift</STRONG> (Thumb, 138 bytes, Stack size 24 bytes, gcu_model_gencode.o(i.checkShift))
-<BR><BR>[Stack]<UL><LI>Max Depth = 164<LI>Call Chain = checkShift &rArr; GEARSHIFT &rArr; Clutch_setValue &rArr; ClutchMotor_setPosition_Outputs_wrapper &rArr; HAL_TIM_PWM_ConfigChannel &rArr; TIM_OC6_SetConfig
+<BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = checkShift &rArr; GEARSHIFT &rArr; Clutch_setValue &rArr; ClutchMotor_setPosition_Outputs_wrapper &rArr; HAL_TIM_PWM_ConfigChannel &rArr; TIM_OC6_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NEUTRAL_STATE
 <LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GEARSHIFT

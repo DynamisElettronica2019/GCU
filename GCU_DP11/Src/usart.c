@@ -21,7 +21,7 @@
 #include "usart.h"
 
 /* USER CODE BEGIN 0 */
-uint8_t rxData[DIM], readData = 0;
+uint8_t rxData[UART_READ_DATA_WIDTH], readData = 0;
 char header[] = "hdr", temp[] = {0,0,0};
 int flag = 0;
 /* USER CODE END 0 */
@@ -145,7 +145,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 	{
 		readData = 0;
 		
-		for(int i=0; i<DIM;i++)
+		for(int i=0; i<UART_READ_DATA_WIDTH;i++)
 			rtU.UART_debug[i] = rxData[i];
 			
 			HAL_GPIO_TogglePin(RedLed_GPIO_Port, RedLed_Pin);
@@ -161,7 +161,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 	if(!strncmp(header, temp, 3))
 	{
 		readData = 1;
-		HAL_UART_Receive_IT(&huartDebug, rxData, DIM);
+		HAL_UART_Receive_IT(&huartDebug, rxData, UART_READ_DATA_WIDTH);
 		
 		for(int i = 0; i<3; i++)
 			temp[i] = 0;

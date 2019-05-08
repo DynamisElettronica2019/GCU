@@ -35,8 +35,7 @@
 extern UART_HandleTypeDef huart4;
 
 /* USER CODE BEGIN Private defines */
-#define DIM 10
-#define UART_READ_MODE 1
+
 /* USER CODE END Private defines */
 
 void MX_UART4_Init(void);

@@ -40,7 +40,7 @@ extern CAN_HandleTypeDef hcan2;
 void MX_CAN2_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-extern void CAN2_Start();
+extern void CAN2_Start(void);
 extern void CAN2_Send_GCU_Packet(void);
 /* USER CODE END Prototypes */
 
