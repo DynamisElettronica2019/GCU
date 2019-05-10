@@ -21,16 +21,18 @@
 #include "can.h"
 
 /* USER CODE BEGIN 0 */
-#define CAN_READ_MODE 2
 
-static CAN_FilterTypeDef CAN_Filter_Config;
-static CAN_RxHeaderTypeDef CAN_Received_0_Message_Header;
-static CAN_RxHeaderTypeDef CAN_Received_1_Message_Header;
-static uint8_t CAN_Received_0_Message_Data[8];
-static uint8_t CAN_Received_1_Message_Data[8];
 
-static uint8_t GCU_Packet_Data[8];
-static CAN_TxHeaderTypeDef GCU_Packet_Header;
+CAN_FilterTypeDef CAN_Filter_Config;
+
+CAN_RxHeaderTypeDef CAN_Received_0_Message_Header;
+CAN_RxHeaderTypeDef CAN_Received_1_Message_Header;
+uint8_t CAN_Received_0_Message_Data[8];
+uint8_t CAN_Received_1_Message_Data[8];
+
+uint8_t GCU_Packet_Data[8];
+CAN_TxHeaderTypeDef GCU_Packet_Header;
+
 /* USER CODE END 0 */
 
 CAN_HandleTypeDef hcan2;

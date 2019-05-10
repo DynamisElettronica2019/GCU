@@ -22,27 +22,18 @@ Dialog DLL:      TCM.DLL V1.32.0.0
  
 <h2>Project:</h2>
 C:\Users\SIMONE\Documents\Programmi per GCU\git\GCU-Keil\GCU_DP11\MDK-ARM\GCU_DP11.uvprojx
-Project File Date:  05/06/2019
+Project File Date:  05/10/2019
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 5 (build 528)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'GCU_DP11'
-compiling main.c...
-../Inc/timings.h(76): warning:  #1-D: last line of file ends without a newline
-     
-../Src/main.c: 1 warning, 0 errors
-compiling can.c...
-../Inc/timings.h(76): warning:  #1-D: last line of file ends without a newline
-     
-../Src/can.c(28): warning:  #177-D: variable "CAN_Received_1_Message_Header"  was declared but never referenced
-  static CAN_RxHeaderTypeDef CAN_Received_1_Message_Header;
-../Src/can.c(30): warning:  #177-D: variable "CAN_Received_1_Message_Data"  was declared but never referenced
-  static uint8_t CAN_Received_1_Message_Data[8];
-../Src/can.c: 3 warnings, 0 errors
+compiling sendCAN_wrapper.c...
+compiling CAN_Filter_Setup_wrapper.c...
+compiling CAN_Start_wrapper.c...
 linking...
-Program Size: Code=26838 RO-data=594 RW-data=52 ZI-data=3116  
+Program Size: Code=27470 RO-data=594 RW-data=56 ZI-data=3112  
 FromELF: creating hex file...
-"GCU_DP11\GCU_DP11.axf" - 0 Error(s), 4 Warning(s).
+"GCU_DP11\GCU_DP11.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -65,7 +56,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.0.2
-Build Time Elapsed:  00:00:13
+Build Time Elapsed:  00:00:17
 </pre>
 </body>
 </html>

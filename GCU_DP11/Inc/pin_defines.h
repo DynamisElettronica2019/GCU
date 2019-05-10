@@ -25,6 +25,9 @@
 //Definizione uart utilizzata per debug
 #define huartDebug huart4
 
+//Definizione del CAN utilizzato
+#define hcan_active hcan2
+
 //Definizione timer utilizzato per logica
 #define htim_1khz htim6
 #define TIM_1KHZ TIM6

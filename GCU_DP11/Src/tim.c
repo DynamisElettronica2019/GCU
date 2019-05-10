@@ -21,8 +21,9 @@
 #include "tim.h"
 
 /* USER CODE BEGIN 0 */
-int timer2_counter1 = 0;
-int timer2_counter2 = 0;
+int timer6_counter1 = 0;
+int timer6_counter2 = 0;
+int timer6_counter3 = 0;
 /* USER CODE END 0 */
 
 TIM_HandleTypeDef htim1;
@@ -307,24 +308,32 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	
 	if(htim->Instance == TIM_1KHZ)
 	{	
-		timer2_counter1++;
-		timer2_counter2++;
-		
+		timer6_counter1++;
+		timer6_counter2++;
+		timer6_counter3++;
 		//inserire qui la funzione step che contiene la logica del modello
 		GCU_Model_genCode_step1();
 		
-		if(timer2_counter1 >= SEND_DATA_PERIOD)
+		if(timer6_counter1 >= SEND_SERIAL_DATA_PERIOD)
 		{
 			//inserire qui lo step che invia i dati su uart
 			GCU_Model_genCode_step3();
 		 
-			timer2_counter1 = 0;		 
+			timer6_counter1 = 0;		 
 		}
 		
-		if(timer2_counter2 >= TOGGLE_LED_PERIOD)
+		if(timer6_counter2 >= TOGGLE_LED_PERIOD)
 		{
 			HAL_GPIO_TogglePin(BlueLed_GPIO_Port, BlueLed_Pin);
-			timer2_counter2 = 0;
+			timer6_counter2 = 0;
+		}
+		
+		if(timer6_counter1 >= SEND_SERIAL_DATA_PERIOD)
+		{
+			//inserire qui lo step che invia i dati su uart
+			GCU_Model_genCode_step5();
+		 
+			timer6_counter3 = 0;		 
 		}
 	}
   __enable_irq();
