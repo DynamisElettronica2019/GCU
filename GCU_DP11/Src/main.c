@@ -130,7 +130,7 @@ int main(void)
 	rtU.SelectMode = CAN_READ_MODE;
 	GCU_Model_genCode_step2();
 	
-	CAN2_Start();
+	//CAN2_Start();
 	
 	//CAN1_Start();
   /* USER CODE END 2 */
