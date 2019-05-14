@@ -18,6 +18,10 @@
 #define EFI_UPCUT_Pin   EFI_COM_1_Pin
 #define EFI_RPM_LIMITER_Pin EFI_COM_2_Pin
 
+//Definizione pin per livello olio
+//#define L_OIL_GPIO_Port L_OIL_GPIO_Port
+//#define L_OIL_Pin       L_OIL_Pin
+
 //Definizione pwm per clutch
 #define TIM_CLUTCH_CHANNEL TIM_CHANNEL_2
 #define hClutchTim htim2
