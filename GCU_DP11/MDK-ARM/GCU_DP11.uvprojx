@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F767xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;     ../Drivers/STM32F7xx_HAL_Driver/Inc;     ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy;     ../Drivers/CMSIS/Device/ST/STM32F7xx/Include;     ../Drivers/CMSIS/Include</IncludePath>
+              <IncludePath>../Inc;      ../Drivers/STM32F7xx_HAL_Driver/Inc;      ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy;      ../Drivers/CMSIS/Device/ST/STM32F7xx/Include;      ../Drivers/CMSIS/Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -476,11 +476,6 @@
               <FilePath>..\Src\S-Function_Wrappers\GearMotor_turnRight_wrapper.c</FilePath>
             </File>
             <File>
-              <FileName>InitADC_wrapper.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\S-Function_Wrappers\InitADC_wrapper.c</FilePath>
-            </File>
-            <File>
               <FileName>InitTimer_wrapper.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Src\S-Function_Wrappers\InitTimer_wrapper.c</FilePath>
@@ -564,6 +559,16 @@
               <FileName>Read_oil_sensor_wrapper.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Src\S-Function_Wrappers\Read_oil_sensor_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>ScanADC_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\ScanADC_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>CAN_Load_id_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\CAN_Load_id_wrapper.c</FilePath>
             </File>
           </Files>
         </Group>

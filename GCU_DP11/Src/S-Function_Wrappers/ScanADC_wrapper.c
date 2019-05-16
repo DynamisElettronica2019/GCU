@@ -35,7 +35,7 @@ extern ExtU rtU;
  * Output function
  *
  */
-void InitADC_Outputs_wrapper(void)
+void ScanADC_Outputs_wrapper(void)
 {
 /* %%%-SFUNWIZ_wrapper_Outputs_Changes_BEGIN --- EDIT HERE TO _END */
 #if !defined(MATLAB_MEX_FILE)

@@ -23,6 +23,8 @@
 /* USER CODE BEGIN 0 */
 uint32_t value[9], adc_buffer[9];
 
+extern void ScanADC_Outputs_wrapper(void);
+
 /* USER CODE END 0 */
 
 ADC_HandleTypeDef hadc1;
@@ -39,14 +41,14 @@ void MX_ADC1_Init(void)
   hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV8;
   hadc1.Init.Resolution = ADC_RESOLUTION_12B;
   hadc1.Init.ScanConvMode = ENABLE;
-  hadc1.Init.ContinuousConvMode = ENABLE;
+  hadc1.Init.ContinuousConvMode = DISABLE;
   hadc1.Init.DiscontinuousConvMode = DISABLE;
   hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
   hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
   hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
   hadc1.Init.NbrOfConversion = 9;
   hadc1.Init.DMAContinuousRequests = ENABLE;
-  hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
+  hadc1.Init.EOCSelection = ADC_EOC_SEQ_CONV;
   if (HAL_ADC_Init(&hadc1) != HAL_OK)
   {
     Error_Handler();
@@ -247,6 +249,9 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 		//ATTENZIONE: per modificare il numero di valori letti occorre modificare ADC_DATA_SIZE in adc.h
 		//ADC_DATA_SIZE <= 10 per ora
 		GCU_Model_genCode_step4();
+		
+		ScanADC_Outputs_wrapper();
+		//HAL_ADC_Start_DMA(&hadc_sensors, rtU.adc_buffer, ADC_DATA_SIZE);
 		
 		//HAL_GPIO_WritePin(GPIOF, GPIO_PIN_13, GPIO_PIN_RESET);
 	}	
