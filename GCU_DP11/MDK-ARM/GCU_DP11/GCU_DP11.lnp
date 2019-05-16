@@ -34,6 +34,7 @@
 "gcu_dp11\writevalueeeprom_wrapper.o"
 "gcu_dp11\can_filter_setup_wrapper.o"
 "gcu_dp11\can_start_wrapper.o"
+"gcu_dp11\read_oil_sensor_wrapper.o"
 "gcu_dp11\gcu_model_gencode.o"
 "gcu_dp11\gcu_model_gencode_data.o"
 "gcu_dp11\main.o"

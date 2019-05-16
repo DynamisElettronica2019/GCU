@@ -13,9 +13,10 @@
 
 
 /* %%%-SFUNWIZ_wrapper_includes_Changes_BEGIN --- EDIT HERE TO _END */
-#include "constant_defines.h"
+#if !defined(MATLAB_MEX_FILE)
+#include "pin_defines.h"
+#endif
 /* %%%-SFUNWIZ_wrapper_includes_Changes_END --- EDIT HERE TO _BEGIN */
-#define u_width 9
 #define y_width 1
 
 /*
@@ -30,12 +31,12 @@
  * Output function
  *
  */
-void update_ADC_data_Outputs_wrapper(const uint32_T *adc_buffer,
-			uint32_T *adc_data_vector)
+void Read_oil_sensor_Outputs_wrapper(uint16_T *l_oil)
 {
 /* %%%-SFUNWIZ_wrapper_Outputs_Changes_BEGIN --- EDIT HERE TO _END */
-for (int i=0; i < ADC_DATA_SIZE; i++)
-  adc_data_vector[i] = adc_buffer[i];
+  #if !defined(MATLAB_MEX_FILE)
+  *l_oil = (uint16_T) HAL_GPIO_ReadPin(L_OIL_GPIO_Port, L_OIL_Pin);
+  #endif
 /* %%%-SFUNWIZ_wrapper_Outputs_Changes_END --- EDIT HERE TO _BEGIN */
 }
 
