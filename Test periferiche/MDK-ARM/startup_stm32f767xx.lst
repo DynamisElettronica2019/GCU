@@ -1000,10 +1000,10 @@ ARM Macro Assembler    Page 16
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M7.fp.dp --apcs=
 interwork --depend="test periferiche\startup_stm32f767xx.d" -o"test periferiche
 \startup_stm32f767xx.o" -I.\RTE\_Test_periferiche -IC:\Keil_v5\ARM\PACK\ARM\CMS
-IS\5.2.0\CMSIS\Include -IC:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.11.0\Drivers\
-CMSIS\Device\ST\STM32F7xx\Include --predefine="__MICROLIB SETA 1" --predefine="
-__UVISION_VERSION SETA 524" --predefine="_RTE_ SETA 1" --predefine="STM32F767xx
- SETA 1" --list=startup_stm32f767xx.lst startup_stm32f767xx.s
+IS\5.4.0\CMSIS\Core\Include -IC:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.11.0\Dri
+vers\CMSIS\Device\ST\STM32F7xx\Include --predefine="__MICROLIB SETA 1" --predef
+ine="__UVISION_VERSION SETA 524" --predefine="_RTE_ SETA 1" --predefine="STM32F
+767xx SETA 1" --list=startup_stm32f767xx.lst startup_stm32f767xx.s
 
 
 

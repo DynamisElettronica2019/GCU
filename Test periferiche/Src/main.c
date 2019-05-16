@@ -65,6 +65,18 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN 0 */
 uint8_t rxData[2] = {0,0};
 int counter = 0;
+uint8_t bufferTx[16];
+uint8_t bufferRx[16];
+uint8_t resReceive = 8;
+uint8_t resSend = 8;
+uint8_t flag = 0;
+uint8_t i = 0, j = 0;
+uint8_t page = 0;
+uint8_t cell = 0;
+uint8_t eepromAddress = 0xA;
+uint8_t devAddress = 0;
+uint8_t memAddress = 0;
+
 /* USER CODE END 0 */
 
 /**
@@ -105,15 +117,28 @@ int main(void)
   MX_GFXSIMULATOR_Init();
   MX_TIM3_Init();
   MX_TIM6_Init();
+	
   /* USER CODE BEGIN 2 */
 	HAL_TIM_Base_Start_IT(&htim6);
 	HAL_UART_Receive_IT(&huart4, rxData, 1);
 	
 	CAN2_Start();
+	
 	HAL_Delay(250);
 	
 	//HAL_GPIO_TogglePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin);
+	//HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(EEPROM_WP_GPIO_Port, EEPROM_WP_Pin, GPIO_PIN_SET);
+	
+	page = 1;
+	cell = 0;
+	
+	devAddress = eepromAddress << 3 | page >> 4;
+	memAddress = page << 4 | cell;
+	
+	
   /* USER CODE END 2 */
+	
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -123,8 +148,19 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 		//HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
-		CAN2_Send_GCU_Packet();
-		HAL_Delay(500);
+		//CAN2_Send_GCU_Packet();
+		
+		//HAL_I2C_Master_Transmit(&hi2c1, 
+		if(flag == 2)
+		{
+			
+			//resReceive = HAL_I2C_Mem_Read(&hi2c1, 0x50<<1, 0x10, I2C_MEMADD_SIZE_8BIT, bufferRx, 16, 100);
+			resReceive = HAL_I2C_Mem_Read(&hi2c1, devAddress<<1, memAddress, I2C_MEMADD_SIZE_8BIT, bufferRx, 16, 100);
+			flag = 0;
+		}
+		//HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
+		
+		//HAL_Delay(500);
   }
   /* USER CODE END 3 */
 }
@@ -145,11 +181,12 @@ void SystemClock_Config(void)
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
   /** Initializes the CPU, AHB and APB busses clocks 
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
-  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-  RCC_OscInitStruct.PLL.PLLM = 4;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+  RCC_OscInitStruct.PLL.PLLM = 8;
   RCC_OscInitStruct.PLL.PLLN = 216;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
   RCC_OscInitStruct.PLL.PLLQ = 2;
@@ -194,8 +231,32 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 		
 		if(counter >= 500)
 		{
-			HAL_GPIO_TogglePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin);
+			if (flag == 0)
+			{
+				HAL_GPIO_WritePin(EEPROM_WP_GPIO_Port, EEPROM_WP_Pin, GPIO_PIN_RESET);
+				for(i=0; i < 16; i++)
+				{
+					bufferTx[i]++;
+				}
+				//resSend = HAL_I2C_Mem_Write(&hi2c1, 0x50<<1, 0x10, I2C_MEMADD_SIZE_8BIT, bufferTx, 16, 100);
+				resSend = HAL_I2C_Mem_Write(&hi2c1, devAddress<<1, memAddress, I2C_MEMADD_SIZE_8BIT, bufferTx, 16, 100);
+				HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_SET);
+				HAL_GPIO_WritePin(EEPROM_WP_GPIO_Port, EEPROM_WP_Pin, GPIO_PIN_SET);
+				flag = 1;
+			}
+			else if(flag == 1)
+			{
+				
+				flag = 2;
+				HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_RESET);
+			}
+			
+			//HAL_GPIO_TogglePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin);
 			//HAL_GPIO_TogglePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin);
+			
+			
+			
+			
 			counter = 0;
 		}
 	}

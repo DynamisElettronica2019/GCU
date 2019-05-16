@@ -127,6 +127,12 @@
 
 const uint16_T GCU_Model_genCode_U16GND = 0U;/* uint16_T ground */
 
+uint16_T ID1 = 0x0B1;
+uint16_T ID2 = 0x0B2;
+uint16_T ID3 = 0x0B3;
+uint16_T ID4 = 0x0B4;
+uint16_T ID5 = 0x0B5;
+
 /* Block signals and states (default storage) */
 DW rtDW;
 
@@ -3781,7 +3787,7 @@ void GCU_Model_genCode_step5(void)     /* Sample time: [0.001s, 0.0008s] */
   /* S-Function (sendCAN): '<S11>/sendCAN' incorporates:
    *  Constant: '<S1>/ADC_data1_ID'
    */
-  sendCAN_Outputs_wrapper(&rtConstP.pooled3, &rtDW.PackCANMsg[0]);
+  sendCAN_Outputs_wrapper(&ID1, &rtDW.PackCANMsg[0]);
 
   /* DataTypeConversion: '<S12>/Cast' */
   rtDW.Cast_l = (uint16_T)rtb_RateTransition18[4];
@@ -3802,7 +3808,7 @@ void GCU_Model_genCode_step5(void)     /* Sample time: [0.001s, 0.0008s] */
   /* S-Function (sendCAN): '<S12>/sendCAN' incorporates:
    *  Constant: '<S1>/ADC_data2_ID'
    */
-  sendCAN_Outputs_wrapper(&rtConstP.pooled3, &rtDW.PackCANMsg_m[0]);
+  sendCAN_Outputs_wrapper(&ID2, &rtDW.PackCANMsg_m[0]);
 
   /* DataTypeConversion: '<S13>/Cast' */
   rtDW.Cast_k = (uint16_T)rtb_RateTransition18[8];
@@ -3819,7 +3825,7 @@ void GCU_Model_genCode_step5(void)     /* Sample time: [0.001s, 0.0008s] */
   /* S-Function (sendCAN): '<S13>/sendCAN' incorporates:
    *  Constant: '<S13>/ADC_data1_ID'
    */
-  sendCAN_Outputs_wrapper(&rtConstP.pooled3, &rtDW.PackCANMsg_i[0]);
+  sendCAN_Outputs_wrapper(&ID3, &rtDW.PackCANMsg_i[0]);
 
   /* DataTypeConversion: '<S14>/Cast1' */
   rtDW.Cast1_c = rtb_RateTransition19;
@@ -3833,7 +3839,7 @@ void GCU_Model_genCode_step5(void)     /* Sample time: [0.001s, 0.0008s] */
   /* S-Function (sendCAN): '<S14>/sendCAN' incorporates:
    *  Constant: '<S1>/UPDATES1_SW_ID'
    */
-  sendCAN_Outputs_wrapper(&rtConstP.pooled3, &rtDW.PackCANMsg_b[0]);
+  sendCAN_Outputs_wrapper(&ID4, &rtDW.PackCANMsg_b[0]);
 
   /* DataTypeConversion: '<S16>/Cast1' */
   rtDW.Cast1_o = rtb_RateTransition19;
@@ -3847,7 +3853,7 @@ void GCU_Model_genCode_step5(void)     /* Sample time: [0.001s, 0.0008s] */
   /* S-Function (sendCAN): '<S16>/sendCAN' incorporates:
    *  Constant: '<S1>/UPDATES_EFI_ID'
    */
-  sendCAN_Outputs_wrapper(&rtConstP.pooled3, &rtDW.PackCANMsg_b5[0]);
+  sendCAN_Outputs_wrapper(&ID5, &rtDW.PackCANMsg_b5[0]);
 
   /* DataTypeConversion: '<S15>/Cast' */
   rtDW.Cast_e = rtb_RateTransition20;

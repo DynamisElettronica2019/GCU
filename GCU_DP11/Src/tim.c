@@ -330,7 +330,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 		
 		if(timer6_counter3 >= SEND_CAN_DATA_PERIOD)
 		{
-			//inserire qui lo step che invia i dati su uart
+			//inserire qui lo step che invia i dati su CAN
 			GCU_Model_genCode_step5();
 		 
 			timer6_counter3 = 0;		 
