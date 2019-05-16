@@ -187,6 +187,7 @@ void CAN2_Send_GCU_Packet(void)
 
 void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 {
+	__disable_irq();
 	HAL_CAN_GetRxMessage(&hcan2, CAN_RX_FIFO0, &CAN_Received_0_Message_Header, CAN_Received_0_Message_Data);
 	
 	uint16_t id = (uint16_t) CAN_Received_0_Message_Header.StdId;
@@ -202,7 +203,7 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 	}
 	
 	HAL_GPIO_TogglePin(GreenLed_GPIO_Port, GreenLed_Pin);
-
+  __enable_irq();
 }
 /* USER CODE END 1 */
 
