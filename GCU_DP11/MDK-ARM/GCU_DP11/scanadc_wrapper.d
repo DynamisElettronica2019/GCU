@@ -43,3 +43,4 @@ gcu_dp11\scanadc_wrapper.o: ../Inc/GCU_Model_genCode.h
 gcu_dp11\scanadc_wrapper.o: ../Inc/zero_crossing_types.h
 gcu_dp11\scanadc_wrapper.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 gcu_dp11\scanadc_wrapper.o: ../Inc/timings.h
+gcu_dp11\scanadc_wrapper.o: ../Inc/id_can.h

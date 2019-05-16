@@ -43,4 +43,5 @@ gcu_dp11\usart.o: ../Inc/rtwtypes.h
 gcu_dp11\usart.o: ../Inc/zero_crossing_types.h
 gcu_dp11\usart.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 gcu_dp11\usart.o: ../Inc/timings.h
+gcu_dp11\usart.o: ../Inc/id_can.h
 gcu_dp11\usart.o: ../Inc/pin_defines.h

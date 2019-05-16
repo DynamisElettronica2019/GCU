@@ -43,6 +43,7 @@ gcu_dp11\main.o: ../Inc/rtwtypes.h
 gcu_dp11\main.o: ../Inc/zero_crossing_types.h
 gcu_dp11\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 gcu_dp11\main.o: ../Inc/timings.h
+gcu_dp11\main.o: ../Inc/id_can.h
 gcu_dp11\main.o: ../Inc/pin_defines.h
 gcu_dp11\main.o: ../Inc/can.h
 gcu_dp11\main.o: ../Inc/dma.h

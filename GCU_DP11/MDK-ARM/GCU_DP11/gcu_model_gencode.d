@@ -5,4 +5,5 @@ gcu_dp11\gcu_model_gencode.o: ../Inc/zero_crossing_types.h
 gcu_dp11\gcu_model_gencode.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 gcu_dp11\gcu_model_gencode.o: ../Inc/timings.h
 gcu_dp11\gcu_model_gencode.o: ../Inc/constant_defines.h
+gcu_dp11\gcu_model_gencode.o: ../Inc/id_can.h
 gcu_dp11\gcu_model_gencode.o: ../Inc/solver_zc.h
