@@ -25,6 +25,7 @@
 //Definizione pwm per clutch
 #define TIM_CLUTCH_CHANNEL TIM_CHANNEL_2
 #define hClutchTim htim2
+#define CCR_CLUTCH CCR2
 
 //Definizione uart utilizzata per debug
 #define huartDebug huart4
