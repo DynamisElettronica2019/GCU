@@ -3,7 +3,7 @@
 <title>Static Call Graph - [GCU_DP11\GCU_DP11.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image GCU_DP11\GCU_DP11.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Sat May 18 17:03:55 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Mon May 20 12:12:00 2019
 <BR><P>
 <H3>Maximum Stack Usage =        320 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1500,8 +1500,8 @@ Global Symbols
 <LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
 </UL>
 
-<P><STRONG><a name="[129]"></a>HAL_UART_RxCpltCallback</STRONG> (Thumb, 148 bytes, Stack size 24 bytes, usart.o(i.HAL_UART_RxCpltCallback))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = HAL_UART_RxCpltCallback &rArr; GCU_Model_genCode_step2 &rArr; PackCanUART_Outputs_wrapper
+<P><STRONG><a name="[129]"></a>HAL_UART_RxCpltCallback</STRONG> (Thumb, 236 bytes, Stack size 32 bytes, usart.o(i.HAL_UART_RxCpltCallback))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = HAL_UART_RxCpltCallback &rArr; GCU_Model_genCode_step2 &rArr; PackCanUART_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive_IT
 <LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_TogglePin
@@ -2245,14 +2245,14 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[7e]"></a>UART_RxISR_16BIT</STRONG> (Thumb, 90 bytes, Stack size 8 bytes, stm32f7xx_hal_uart.o(i.UART_RxISR_16BIT))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = UART_RxISR_16BIT &rArr; HAL_UART_RxCpltCallback &rArr; GCU_Model_genCode_step2 &rArr; PackCanUART_Outputs_wrapper
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = UART_RxISR_16BIT &rArr; HAL_UART_RxCpltCallback &rArr; GCU_Model_genCode_step2 &rArr; PackCanUART_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> stm32f7xx_hal_uart.o(i.HAL_UART_Receive_IT)
 </UL>
 <P><STRONG><a name="[7d]"></a>UART_RxISR_8BIT</STRONG> (Thumb, 90 bytes, Stack size 8 bytes, stm32f7xx_hal_uart.o(i.UART_RxISR_8BIT))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = UART_RxISR_8BIT &rArr; HAL_UART_RxCpltCallback &rArr; GCU_Model_genCode_step2 &rArr; PackCanUART_Outputs_wrapper
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = UART_RxISR_8BIT &rArr; HAL_UART_RxCpltCallback &rArr; GCU_Model_genCode_step2 &rArr; PackCanUART_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
 </UL>

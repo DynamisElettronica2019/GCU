@@ -6,6 +6,7 @@
 #define CAN_SENT_DATA_WIDTH     8    //dimensione del vettore dei dati inviati CAN
 #define ADC_DATA_SIZE           9          //numero di segnali campionati dall'adc
 #define UART_READ_DATA_WIDTH    10  //dimensione del vettore dei dati letto da seriale
+#define UART_READ_EEPROM_DATA_WIDTH 20 //dimensione del vettore dei dati letto da seriale per eeprom
 #define CAN_READ_DATA_WIDTH     8    //dimensione del vettore dei dati letti CAN
 
 //Periodi 
