@@ -69,7 +69,6 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN 0 */
 extern uint8_t rxData[];
 uint8_t tempMsg[UART_SENT_DATA_WIDTH + 4];
-
 extern uint32_t adc_buffer[];
 /* USER CODE END 0 */
 

@@ -24,6 +24,7 @@
 int timer6_counter1 = 0;
 int timer6_counter2 = 0;
 int timer6_counter3 = 0;
+uint8_t sendUartFlag = 1;
 /* USER CODE END 0 */
 
 TIM_HandleTypeDef htim1;
@@ -316,8 +317,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 		
 		if(timer6_counter1 >= SEND_SERIAL_DATA_PERIOD)
 		{
-			//inserire qui lo step che invia i dati su uart
-			GCU_Model_genCode_step3();
+			if(sendUartFlag)
+				//inserire qui lo step che invia i dati su uart
+				GCU_Model_genCode_step3();
 		 
 			timer6_counter1 = 0;		 
 		}

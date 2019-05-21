@@ -511,11 +511,6 @@
               <FilePath>..\Src\S-Function_Wrappers\PackUARTMsg_wrapper.c</FilePath>
             </File>
             <File>
-              <FileName>readValueEEPROM_wrapper.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\S-Function_Wrappers\readValueEEPROM_wrapper.c</FilePath>
-            </File>
-            <File>
               <FileName>sendCAN_wrapper.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Src\S-Function_Wrappers\sendCAN_wrapper.c</FilePath>
@@ -541,11 +536,6 @@
               <FilePath>..\Src\S-Function_Wrappers\update_ADC_data_wrapper.c</FilePath>
             </File>
             <File>
-              <FileName>writeValueEEPROM_wrapper.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\S-Function_Wrappers\writeValueEEPROM_wrapper.c</FilePath>
-            </File>
-            <File>
               <FileName>CAN_Filter_Setup_wrapper.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Src\S-Function_Wrappers\CAN_Filter_Setup_wrapper.c</FilePath>
@@ -569,6 +559,21 @@
               <FileName>CAN_Load_id_wrapper.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Src\S-Function_Wrappers\CAN_Load_id_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>Eeprom_init_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\Eeprom_init_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>Eeprom_read_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\Eeprom_read_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>Eeprom_write_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\Eeprom_write_wrapper.c</FilePath>
             </File>
           </Files>
         </Group>

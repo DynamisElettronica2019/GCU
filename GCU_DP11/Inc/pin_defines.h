@@ -41,6 +41,9 @@
 #define hadc_sensors hadc1
 #define ADC_SENSORS ADC1
 
+//Definizione i2c eeprom
+#define hi2cEeprom hi2c1
+
 //Definizione led ausiliari su scheda
 #define RedLed_GPIO_Port LED_RED_GPIO_Port 
 #define BlueLed_GPIO_Port LED_YELLOW_GPIO_Port
