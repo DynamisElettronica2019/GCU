@@ -39,6 +39,16 @@ gcu_dp11\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h
 gcu_dp11\main.o: ../Inc/constant_defines.h
 gcu_dp11\main.o: ../Inc/adc.h
 gcu_dp11\main.o: ../Inc/GCU_Model_genCode.h
-gcu_dp11\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 gcu_dp11\main.o: ../Inc/rtwtypes.h
 gcu_dp11\main.o: ../Inc/zero_crossing_types.h
+gcu_dp11\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+gcu_dp11\main.o: ../Inc/timings.h
+gcu_dp11\main.o: ../Inc/id_can.h
+gcu_dp11\main.o: ../Inc/pin_defines.h
+gcu_dp11\main.o: ../Inc/can.h
+gcu_dp11\main.o: ../Inc/dma.h
+gcu_dp11\main.o: ../Inc/gfxsimulator.h
+gcu_dp11\main.o: ../Inc/i2c.h
+gcu_dp11\main.o: ../Inc/tim.h
+gcu_dp11\main.o: ../Inc/usart.h
+gcu_dp11\main.o: ../Inc/gpio.h
