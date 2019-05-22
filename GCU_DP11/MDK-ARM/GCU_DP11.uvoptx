@@ -166,37 +166,42 @@
         <Ww>
           <count>3</count>
           <WinNumber>1</WinNumber>
-          <ItemText>rtDW.Eeprom_init_o2</ItemText>
+          <ItemText>rtDW.outputRequest,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>4</count>
           <WinNumber>1</WinNumber>
-          <ItemText>rtDW.outputRequest,0x0A</ItemText>
+          <ItemText>rtU.inputRequest,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>5</count>
           <WinNumber>1</WinNumber>
-          <ItemText>rtU.inputRequest</ItemText>
+          <ItemText>rtDW.lastInsertedIndex</ItemText>
         </Ww>
         <Ww>
           <count>6</count>
           <WinNumber>1</WinNumber>
-          <ItemText>rtDW.lastEvaluatedIndex</ItemText>
+          <ItemText>data</ItemText>
         </Ww>
         <Ww>
           <count>7</count>
           <WinNumber>1</WinNumber>
-          <ItemText>rtDW.lastInsertedIndex</ItemText>
+          <ItemText>rtY.dataRead,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>8</count>
           <WinNumber>1</WinNumber>
-          <ItemText>data</ItemText>
+          <ItemText>rtDW.is_c6_GCU_Model_genCode,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>9</count>
           <WinNumber>1</WinNumber>
-          <ItemText>rtY.dataRead</ItemText>
+          <ItemText>rtY.eepromStateDebug,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>10</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>rtDW.is_c6_GCU_Model_genCode</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>

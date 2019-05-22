@@ -77,7 +77,7 @@ extern uint32_t adc_buffer[];
   * @retval int
   */
 int main(void)
-{
+	{
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
