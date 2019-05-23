@@ -3,9 +3,9 @@
 <title>Static Call Graph - [GCU_DP11\GCU_DP11.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image GCU_DP11\GCU_DP11.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Thu May 23 18:42:26 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Thu May 23 19:37:08 2019
 <BR><P>
-<H3>Maximum Stack Usage =        408 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        416 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 TIM6_DAC_IRQHandler &rArr; HAL_TIM_IRQHandler &rArr; HAL_TIM_PeriodElapsedCallback &rArr; GCU_Model_genCode_step1 &rArr; testIndex &rArr; Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 <P>
@@ -726,7 +726,7 @@ Global Symbols
 <LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
 </UL>
 
-<P><STRONG><a name="[b4]"></a>GCU_Model_genCode_initialize</STRONG> (Thumb, 152 bytes, Stack size 24 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_initialize))
+<P><STRONG><a name="[b4]"></a>GCU_Model_genCode_initialize</STRONG> (Thumb, 154 bytes, Stack size 24 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_initialize))
 <BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = GCU_Model_genCode_initialize &rArr; Eeprom_init_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;load_default_timings_Outputs_wrapper
@@ -745,15 +745,15 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[be]"></a>GCU_Model_genCode_step1</STRONG> (Thumb, 1926 bytes, Stack size 112 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_step1))
-<BR><BR>[Stack]<UL><LI>Max Depth = 376<LI>Call Chain = GCU_Model_genCode_step1 &rArr; testIndex &rArr; Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
+<P><STRONG><a name="[be]"></a>GCU_Model_genCode_step1</STRONG> (Thumb, 2010 bytes, Stack size 120 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_step1))
+<BR><BR>[Stack]<UL><LI>Max Depth = 384<LI>Call Chain = GCU_Model_genCode_step1 &rArr; testIndex &rArr; Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EngineControl_stop_Outputs_wrapper
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;testIndex
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shiftArray_h
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shiftArray
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;extractValues
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;createRequest
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;testIndex
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shiftArray_h
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shiftArray
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;extractValues
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;createRequest
 <LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NEUTRAL_STATE
 <LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODES
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GEARSHIFT
@@ -1440,7 +1440,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[11e]"></a>HAL_TIM_IRQHandler</STRONG> (Thumb, 386 bytes, Stack size 16 bytes, stm32f7xx_hal_tim.o(i.HAL_TIM_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 408<LI>Call Chain = HAL_TIM_IRQHandler &rArr; HAL_TIM_PeriodElapsedCallback &rArr; GCU_Model_genCode_step1 &rArr; testIndex &rArr; Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
+<BR><BR>[Stack]<UL><LI>Max Depth = 416<LI>Call Chain = HAL_TIM_IRQHandler &rArr; HAL_TIM_PeriodElapsedCallback &rArr; GCU_Model_genCode_step1 &rArr; testIndex &rArr; Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
 <LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_TriggerCallback
@@ -1537,7 +1537,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[122]"></a>HAL_TIM_PeriodElapsedCallback</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, tim.o(i.HAL_TIM_PeriodElapsedCallback))
-<BR><BR>[Stack]<UL><LI>Max Depth = 392<LI>Call Chain = HAL_TIM_PeriodElapsedCallback &rArr; GCU_Model_genCode_step1 &rArr; testIndex &rArr; Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
+<BR><BR>[Stack]<UL><LI>Max Depth = 400<LI>Call Chain = HAL_TIM_PeriodElapsedCallback &rArr; GCU_Model_genCode_step1 &rArr; testIndex &rArr; Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_TogglePin
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step5
@@ -1838,7 +1838,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f767xx.o(.text)
 </UL>
 <P><STRONG><a name="[40]"></a>TIM6_DAC_IRQHandler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f7xx_it.o(i.TIM6_DAC_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 408<LI>Call Chain = TIM6_DAC_IRQHandler &rArr; HAL_TIM_IRQHandler &rArr; HAL_TIM_PeriodElapsedCallback &rArr; GCU_Model_genCode_step1 &rArr; testIndex &rArr; Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
+<BR><BR>[Stack]<UL><LI>Max Depth = 416<LI>Call Chain = TIM6_DAC_IRQHandler &rArr; HAL_TIM_IRQHandler &rArr; HAL_TIM_PeriodElapsedCallback &rArr; GCU_Model_genCode_step1 &rArr; testIndex &rArr; Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
 </UL>
@@ -2040,7 +2040,7 @@ Local Symbols
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step1
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;testIndex
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;testIndex
 </UL>
 
 <P><STRONG><a name="[c1]"></a>GEARSHIFT</STRONG> (Thumb, 670 bytes, Stack size 48 bytes, gcu_model_gencode.o(i.GEARSHIFT))
@@ -2128,13 +2128,13 @@ Local Symbols
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERATION
 </UL>
 
-<P><STRONG><a name="[c5]"></a>createRequest</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, gcu_model_gencode.o(i.createRequest))
+<P><STRONG><a name="[c3]"></a>createRequest</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, gcu_model_gencode.o(i.createRequest))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = createRequest
 </UL>
 <BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step1
 </UL>
 
-<P><STRONG><a name="[c6]"></a>extractValues</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, gcu_model_gencode.o(i.extractValues))
+<P><STRONG><a name="[c5]"></a>extractValues</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, gcu_model_gencode.o(i.extractValues))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = extractValues
 </UL>
 <BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step1
@@ -2160,19 +2160,19 @@ Local Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step2
 </UL>
 
-<P><STRONG><a name="[c7]"></a>shiftArray</STRONG> (Thumb, 180 bytes, Stack size 12 bytes, gcu_model_gencode.o(i.shiftArray))
+<P><STRONG><a name="[c6]"></a>shiftArray</STRONG> (Thumb, 180 bytes, Stack size 12 bytes, gcu_model_gencode.o(i.shiftArray))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = shiftArray
 </UL>
 <BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step1
 </UL>
 
-<P><STRONG><a name="[c3]"></a>shiftArray_h</STRONG> (Thumb, 180 bytes, Stack size 12 bytes, gcu_model_gencode.o(i.shiftArray_h))
+<P><STRONG><a name="[c4]"></a>shiftArray_h</STRONG> (Thumb, 180 bytes, Stack size 12 bytes, gcu_model_gencode.o(i.shiftArray_h))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = shiftArray_h
 </UL>
 <BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step1
 </UL>
 
-<P><STRONG><a name="[c4]"></a>testIndex</STRONG> (Thumb, 78 bytes, Stack size 32 bytes, gcu_model_gencode.o(i.testIndex))
+<P><STRONG><a name="[c7]"></a>testIndex</STRONG> (Thumb, 92 bytes, Stack size 32 bytes, gcu_model_gencode.o(i.testIndex))
 <BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = testIndex &rArr; Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;updateOutput
@@ -2196,7 +2196,7 @@ Local Symbols
 <P><STRONG><a name="[171]"></a>updateOutput</STRONG> (Thumb, 160 bytes, Stack size 20 bytes, gcu_model_gencode.o(i.updateOutput))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = updateOutput
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;testIndex
+<BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;testIndex
 </UL>
 
 <P><STRONG><a name="[79]"></a>ADC_DMAConvCplt</STRONG> (Thumb, 110 bytes, Stack size 8 bytes, stm32f7xx_hal_adc.o(i.ADC_DMAConvCplt))

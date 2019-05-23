@@ -223,7 +223,7 @@
         <Ww>
           <count>2</count>
           <WinNumber>2</WinNumber>
-          <ItemText>rtDW.load_accParameters,0x0A</ItemText>
+          <ItemText>data_16bit,0x0A</ItemText>
         </Ww>
       </WatchWindow2>
       <Tracepoint>
