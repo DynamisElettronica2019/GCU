@@ -69,6 +69,8 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN 0 */
 extern uint8_t rxData[];
 uint8_t tempMsg[UART_SENT_DATA_WIDTH + 4];
+uint8_t tempEepromUartMsg[UART_SENT_EEPROM_DATA_WIDTH+3];
+uint8_t tempEepromMsg[I2C_SENT_EEPROM_DATA_WIDTH];
 extern uint32_t adc_buffer[];
 /* USER CODE END 0 */
 

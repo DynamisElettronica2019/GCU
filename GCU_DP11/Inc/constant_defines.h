@@ -4,6 +4,7 @@
 //Dimensione dei vettori
 #define UART_SENT_DATA_WIDTH    		40  //dimensione dei dati inviati via seriale dal modello
 #define UART_SENT_EEPROM_DATA_WIDTH 19 	//dimensione dei dati inviati via serial al programma eeprom
+#define I2C_SENT_EEPROM_DATA_WIDTH 	16	//dimensione dei dati da scrivere via i2c su eeprom
 #define CAN_SENT_DATA_WIDTH     		8   //dimensione del vettore dei dati inviati CAN
 #define ADC_DATA_SIZE           		9   //numero di segnali campionati dall'adc
 #define UART_READ_DATA_WIDTH    		10  //dimensione del vettore dei dati letto da seriale

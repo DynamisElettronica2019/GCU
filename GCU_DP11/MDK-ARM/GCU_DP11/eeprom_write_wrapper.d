@@ -1,5 +1,6 @@
 gcu_dp11\eeprom_write_wrapper.o: ..\Src\S-Function_Wrappers\Eeprom_write_wrapper.c
 gcu_dp11\eeprom_write_wrapper.o: ../Inc/rtwtypes.h
+gcu_dp11\eeprom_write_wrapper.o: ../Inc/constant_defines.h
 gcu_dp11\eeprom_write_wrapper.o: ../Inc/pin_defines.h
 gcu_dp11\eeprom_write_wrapper.o: ../Inc/main.h
 gcu_dp11\eeprom_write_wrapper.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h
@@ -38,4 +39,3 @@ gcu_dp11\eeprom_write_wrapper.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_h
 gcu_dp11\eeprom_write_wrapper.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h
 gcu_dp11\eeprom_write_wrapper.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h
 gcu_dp11\eeprom_write_wrapper.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h
-gcu_dp11\eeprom_write_wrapper.o: ../Inc/constant_defines.h
