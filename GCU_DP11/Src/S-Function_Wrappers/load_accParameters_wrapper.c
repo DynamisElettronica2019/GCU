@@ -14,7 +14,7 @@
 
 /* %%%-SFUNWIZ_wrapper_includes_Changes_BEGIN --- EDIT HERE TO _END */
 #if defined(MATLAB_MEX_FILE)
-#include "C_includes\def_acc_parameters.h"
+#include "..\..\C_includes\def_acc_parameters.h"
 #else
 #include "def_acc_parameters.h"
 #endif
@@ -46,7 +46,8 @@ accParameters[6] = DEF_RPM_LIMIT_4_5;
 accParameters[7] = DEF_SPEED_LIMIT_1_2;
 accParameters[8] = DEF_SPEED_LIMIT_2_3;
 accParameters[9] = DEF_SPEED_LIMIT_3_4;
-accParameters[10] = DEF_SPEED_LIMIT_4_5;       
+accParameters[10] = DEF_SPEED_LIMIT_4_5;
+accParameters[11] = DEF_TPS_START_LIMIT;
 /* %%%-SFUNWIZ_wrapper_Outputs_Changes_END --- EDIT HERE TO _BEGIN */
 }
 
