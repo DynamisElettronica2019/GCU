@@ -38,6 +38,7 @@
 "gcu_dp11\eeprom_read_wrapper.o"
 "gcu_dp11\eeprom_write_wrapper.o"
 "gcu_dp11\sendeepromuart_wrapper.o"
+"gcu_dp11\load_autoxparameters_wrapper.o"
 "gcu_dp11\gcu_model_gencode.o"
 "gcu_dp11\gcu_model_gencode_data.o"
 "gcu_dp11\main.o"

@@ -3,7 +3,7 @@
 <title>Static Call Graph - [GCU_DP11\GCU_DP11.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image GCU_DP11\GCU_DP11.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Thu May 23 19:37:08 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Wed May 29 00:09:08 2019
 <BR><P>
 <H3>Maximum Stack Usage =        416 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -661,7 +661,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
 </UL>
 
-<P><STRONG><a name="[a9]"></a>Eeprom_read_Outputs_wrapper</STRONG> (Thumb, 40 bytes, Stack size 32 bytes, eeprom_read_wrapper.o(i.Eeprom_read_Outputs_wrapper))
+<P><STRONG><a name="[a9]"></a>Eeprom_read_Outputs_wrapper</STRONG> (Thumb, 44 bytes, Stack size 32 bytes, eeprom_read_wrapper.o(i.Eeprom_read_Outputs_wrapper))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Mem_Read
@@ -669,8 +669,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Evaluate_Request
 </UL>
 
-<P><STRONG><a name="[aa]"></a>Eeprom_write_Outputs_wrapper</STRONG> (Thumb, 78 bytes, Stack size 32 bytes, eeprom_write_wrapper.o(i.Eeprom_write_Outputs_wrapper))
-<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = Eeprom_write_Outputs_wrapper &rArr; HAL_I2C_Mem_Write_IT &rArr; I2C_RequestMemoryWrite &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
+<P><STRONG><a name="[aa]"></a>Eeprom_write_Outputs_wrapper</STRONG> (Thumb, 82 bytes, Stack size 40 bytes, eeprom_write_wrapper.o(i.Eeprom_write_Outputs_wrapper))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = Eeprom_write_Outputs_wrapper &rArr; HAL_I2C_Mem_Write_IT &rArr; I2C_RequestMemoryWrite &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Mem_Write_IT

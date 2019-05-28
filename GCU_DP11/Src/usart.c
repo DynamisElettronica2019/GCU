@@ -204,7 +204,6 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 	}
 	else HAL_UART_Receive_IT(&huartDebug, rxData, 1);
 	
-	
 		 __enable_irq();
 }	
 /* USER CODE END 1 */

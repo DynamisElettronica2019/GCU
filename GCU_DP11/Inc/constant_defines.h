@@ -39,6 +39,9 @@
 #define ACC_READY 			1
 #define ACC_GO			    2
 
-
+//Define dei comandi autoX
+#define AUTOX_DEFAULT       0
+#define AUTOX_READY         1
+#define AUTOX_GO            2
 
 #endif
