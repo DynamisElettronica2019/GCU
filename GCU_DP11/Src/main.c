@@ -79,7 +79,7 @@ extern uint32_t adc_buffer[];
   * @retval int
   */
 int main(void)
-	{
+{
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
@@ -111,6 +111,7 @@ int main(void)
   MX_UART4_Init();
   MX_GFXSIMULATOR_Init();
   MX_TIM6_Init();
+  MX_TIM5_Init();
   /* USER CODE BEGIN 2 */
 	/*
 	HAL_TIM_Base_Start_IT(&htim2);
