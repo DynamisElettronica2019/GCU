@@ -585,6 +585,21 @@
               <FileType>1</FileType>
               <FilePath>..\Src\S-Function_Wrappers\load_autoXParameters_wrapper.c</FilePath>
             </File>
+            <File>
+              <FileName>Buzzer_init_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\Buzzer_init_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>activateBuzzer_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\activateBuzzer_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>stopBuzzer_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\stopBuzzer_wrapper.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

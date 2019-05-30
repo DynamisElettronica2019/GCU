@@ -29,7 +29,7 @@
 
 //Definizione pwm per buzzer
 #define TIM_BUZZER_CHANNEL TIM_CHANNEL_4
-#define hBuzzerTimer htim5
+#define hBuzzerTim htim5
 #define CCR_BUZZER CCR4
 
 //Definizione uart utilizzata per debug
@@ -48,6 +48,10 @@
 
 //Definizione i2c eeprom
 #define hi2cEeprom hi2c1
+
+//Definizione pin per KEYON
+#define KEY_ON_GPIO_Port	KEY_CTRL_GPIO_Port
+#define KEY_ON_Pin				KEY_CTRL_Pin
 
 //Definizione led ausiliari su scheda
 #define RedLed_GPIO_Port LED_RED_GPIO_Port 
