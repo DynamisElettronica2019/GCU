@@ -600,6 +600,11 @@
               <FileType>1</FileType>
               <FilePath>..\Src\S-Function_Wrappers\stopBuzzer_wrapper.c</FilePath>
             </File>
+            <File>
+              <FileName>setKeyOn_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\setKeyOn_wrapper.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
