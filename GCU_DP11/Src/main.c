@@ -142,7 +142,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-		
+
     /* USER CODE BEGIN 3 */
 		//CAN1_Send_Nucleo_F7_Packet();
 		//HAL_Delay(500);
