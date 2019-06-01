@@ -239,7 +239,7 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* tim_baseHandle)
     __HAL_RCC_TIM6_CLK_ENABLE();
 
     /* TIM6 interrupt Init */
-    HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 0, 0);
+    HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 1, 0);
     HAL_NVIC_EnableIRQ(TIM6_DAC_IRQn);
   /* USER CODE BEGIN TIM6_MspInit 1 */
 
@@ -377,7 +377,7 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* tim_baseHandle)
 /* USER CODE BEGIN 1 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-	__disable_irq();
+	//__disable_irq();
 	
 	if(htim->Instance == TIM_1KHZ)
 	{	
@@ -410,7 +410,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 			timer6_counter3 = 0;		 
 		}
 	}
-  __enable_irq();
+ // __enable_irq();
 }
 /* USER CODE END 1 */
 

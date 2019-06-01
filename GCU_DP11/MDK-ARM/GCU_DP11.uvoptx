@@ -186,7 +186,7 @@
         <Ww>
           <count>7</count>
           <WinNumber>1</WinNumber>
-          <ItemText>rtY.dataRead,0x0A</ItemText>
+          <ItemText>rtDW.is_c6_GCU_Model_genCode,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>8</count>
@@ -196,20 +196,15 @@
         <Ww>
           <count>9</count>
           <WinNumber>1</WinNumber>
-          <ItemText>rtDW.is_c6_GCU_Model_genCode,0x0A</ItemText>
+          <ItemText>tempEepromMsg,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>10</count>
           <WinNumber>1</WinNumber>
-          <ItemText>tempEepromMsg,0x0A</ItemText>
-        </Ww>
-        <Ww>
-          <count>11</count>
-          <WinNumber>1</WinNumber>
           <ItemText>rxDataEeprom,0x0A</ItemText>
         </Ww>
         <Ww>
-          <count>12</count>
+          <count>11</count>
           <WinNumber>1</WinNumber>
           <ItemText>rtY.dataRead,0x0A</ItemText>
         </Ww>
