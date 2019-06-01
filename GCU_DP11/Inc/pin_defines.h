@@ -14,9 +14,9 @@
 
 //Definizione pin per EFI
 #define EFI_UPCUT_GPIO_PORT   EFI_COM_1_GPIO_Port
-#define EFI_RPM_LIMITER_GPIO_PORT EFI_COM_2_GPIO_Port
+#define EFI_RPM_LIMITER_GPIO_PORT EFI_COM_3_GPIO_Port
 #define EFI_UPCUT_Pin   EFI_COM_1_Pin
-#define EFI_RPM_LIMITER_Pin EFI_COM_2_Pin
+#define EFI_RPM_LIMITER_Pin EFI_COM_3_Pin
 
 //Definizione pin per livello olio
 //#define L_OIL_GPIO_Port L_OIL_GPIO_Port
@@ -34,7 +34,7 @@
 
 //Definizione pwm per pompa benzina
 #define TIM_PUMP_CHANNEL  TIM_CHANNEL_1
-#define hPumpTimer	htim1
+#define hPumpTim	htim1
 #define CCR_PUMP CCR1
 
 //Definizione pwm per stop light
