@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'GCU_Model_genCode'.
  *
- * Model version                  : 1.249
+ * Model version                  : 1.258
  * Simulink Coder version         : 8.14 (R2018a) 06-Feb-2018
- * C/C++ source code generated on : Sun Jun  2 10:41:53 2019
+ * C/C++ source code generated on : Sun Jun  2 16:37:50 2019
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -2297,9 +2297,9 @@ static void AUTOCROSS(void)
      case IN_LAUNCH:
       switch (rtDW.is_LAUNCH) {
        case IN_ACTIVE:
-        if ((rtDW.RateTransition4[0] != rtDW.lastAacCom) &&
-            (rtDW.RateTransition4[1] == ACC_OFF)) {
-          rtDW.lastAacCom = rtDW.RateTransition4[0];
+        if ((rtDW.RateTransition29[0] != rtDW.lastAutoXCom) &&
+            (rtDW.RateTransition29[1] == AUTOX_DEFAULT)) {
+          rtDW.lastAutoXCom = rtDW.RateTransition29[0];
           rtDW.is_ACTIVE_d = 0;
           rtDW.is_LAUNCH = 0;
           if (rtDW.is_LAUNCH != IN_STOPPING) {
@@ -3883,13 +3883,15 @@ void GCU_Model_genCode_step2(void)     /* Sample time: [0.001s, 0.0002s] */
     }
 
     sendModeCommand(rtDW.UnpackCanUart_o3);
-    rtDW.mapTarget = rtDW.UnpackCanUart_o4;
     if ((uint8_T)tmp > ACC_CLUTCH_NOISE_LEVEL) {
       sendAccCommand((uint16_T)ACC_OFF);
       sendAutoXCommand((uint16_T)AUTOX_DEFAULT);
     }
 
     sendClutchCommand((uint16_T)(uint8_T)tmp);
+    if (rtDW.UnpackCanUart_o4 != 0) {
+      rtDW.mapTarget = rtDW.UnpackCanUart_o4;
+    }
   } else if (rtDW.UnpackCanUart_o1 == SW_OK_BUTTON_GCU_ID) {
     if (rtDW.UnpackCanUart_o2 == ACCELERATION_MODE) {
       sendAccCommand(rtDW.UnpackCanUart_o3);
@@ -3906,12 +3908,8 @@ void GCU_Model_genCode_step2(void)     /* Sample time: [0.001s, 0.0002s] */
     }
   } else {
     if (rtDW.UnpackCanUart_o1 == SW_TRACTION_LIMITER_GCU_ID) {
-      i = rtDW.UnpackCanUart_o2 * 100;
-      if (i > 65535) {
-        i = 65535;
-      }
-
-      rtDW.tractionTarget = (uint16_T)i;
+      rtDW.tractionTarget = rtDW.UnpackCanUart_o2;
+      rtDW.rpmLimiterTarget = rtDW.UnpackCanUart_o3;
     }
   }
 
@@ -4138,7 +4136,7 @@ void GCU_Model_genCode_step3(void)     /* Sample time: [0.001s, 0.0004s] */
 /* Model step function for TID4 */
 void GCU_Model_genCode_step4(void)     /* Sample time: [0.001s, 0.0006s] */
 {
-  uint32_T rtb_Multiply1[9];
+  uint32_T CastToDouble[9];
   int32_T i;
 
   /* S-Function (fcncallgen): '<Root>/Function_Call_Generator1' incorporates:
@@ -4149,68 +4147,49 @@ void GCU_Model_genCode_step4(void)     /* Sample time: [0.001s, 0.0006s] */
    */
   update_ADC_data_Outputs_wrapper(&rtU.adc_buffer[0], &rtDW.update_ADC_data[0]);
 
-  /* Product: '<S11>/Multiply1' incorporates:
-   *  Constant: '<S11>/Gain'
+  /* DataTypeConversion: '<S11>/Cast To Double' incorporates:
    *  Constant: '<S11>/OffSet'
    *  Constant: '<S11>/OffSet1'
+   *  Constant: '<S11>/OffSet2'
    *  DataTypeConversion: '<S11>/Cast'
-   *  Product: '<S11>/Multiply'
+   *  Product: '<S11>/Multiply1'
+   *  Product: '<S11>/Multiply2'
    *  Sum: '<S11>/Sum'
+   *  Sum: '<S11>/Sum1'
    */
   for (i = 0; i < 9; i++) {
-    rtb_Multiply1[i] = (uint32_T)(((real_T)(uint32_T)((real_T)
-      rtDW.update_ADC_data[i] * rtConstP.Gain_Value[i]) +
-      rtConstP.OffSet_Value[i]) * rtConstP.OffSet1_Value[i]);
+    CastToDouble[i] = (uint32_T)(((real_T)rtDW.update_ADC_data[i] *
+      0.00080586080586080586 + rtConstP.OffSet_Value[i]) *
+      rtConstP.OffSet1_Value[i] + rtConstP.OffSet2_Value[i]);
   }
 
-  /* End of Product: '<S11>/Multiply1' */
+  /* End of DataTypeConversion: '<S11>/Cast To Double' */
 
   /* S-Function (Read_oil_sensor): '<S11>/Read_oil_sensor' */
   Read_oil_sensor_Outputs_wrapper(&rtDW.Read_oil_sensor);
 
   /* End of Outputs for S-Function (fcncallgen): '<Root>/Function_Call_Generator1' */
 
-  /* Outport: '<Root>/adc_data_vector' incorporates:
-   *  DataTypeConversion: '<S11>/Cast To Double'
-   */
+  /* Outport: '<Root>/adc_data_vector' */
   for (i = 0; i < 9; i++) {
-    /* S-Function (fcncallgen): '<Root>/Function_Call_Generator1' incorporates:
-     *  SubSystem: '<Root>/update_ADC_data'
-     */
-    rtY.adc_data_vector[i] = rtb_Multiply1[i];
-
-    /* End of Outputs for S-Function (fcncallgen): '<Root>/Function_Call_Generator1' */
+    rtY.adc_data_vector[i] = CastToDouble[i];
   }
 
   /* End of Outport: '<Root>/adc_data_vector' */
 
-  /* RateTransition: '<Root>/Rate Transition18' incorporates:
-   *  DataTypeConversion: '<S11>/Cast To Double'
-   */
+  /* RateTransition: '<Root>/Rate Transition18' */
   if (!(rtDW.RateTransition18_semaphoreTaken != 0)) {
     for (i = 0; i < 9; i++) {
-      /* S-Function (fcncallgen): '<Root>/Function_Call_Generator1' incorporates:
-       *  SubSystem: '<Root>/update_ADC_data'
-       */
-      rtDW.RateTransition18_Buffer0[i] = rtb_Multiply1[i];
-
-      /* End of Outputs for S-Function (fcncallgen): '<Root>/Function_Call_Generator1' */
+      rtDW.RateTransition18_Buffer0[i] = CastToDouble[i];
     }
   }
 
   /* End of RateTransition: '<Root>/Rate Transition18' */
 
-  /* Update for RateTransition: '<Root>/Rate Transition9' incorporates:
-   *  DataTypeConversion: '<S11>/Cast To Double'
-   */
+  /* Update for RateTransition: '<Root>/Rate Transition9' */
   for (i = 0; i < 9; i++) {
-    /* S-Function (fcncallgen): '<Root>/Function_Call_Generator1' incorporates:
-     *  SubSystem: '<Root>/update_ADC_data'
-     */
     rtDW.RateTransition9_Buffer[i + (rtDW.RateTransition9_ActiveBufIdx == 0) * 9]
-      = rtb_Multiply1[i];
-
-    /* End of Outputs for S-Function (fcncallgen): '<Root>/Function_Call_Generator1' */
+      = CastToDouble[i];
   }
 
   rtDW.RateTransition9_ActiveBufIdx = (int8_T)(rtDW.RateTransition9_ActiveBufIdx

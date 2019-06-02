@@ -129,12 +129,10 @@ int main(void)
 	lo step per l'interpretazione del messaggio (per entrare nel primo stato della macchina a stati
 	ed essere pronto a ricevere) e va selezionata su rtU.SelectMode la periferica da cui leggere i messaggi*/
 	GCU_Model_genCode_initialize();	
-	rtU.SelectMode = UART_READ_MODE;
+	rtU.SelectMode = CAN_READ_MODE;
 	GCU_Model_genCode_step2();
 	GCU_Model_genCode_step6();
 	
-	
-
   /* USER CODE END 2 */
 
   /* Infinite loop */

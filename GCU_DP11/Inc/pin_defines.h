@@ -62,6 +62,8 @@
 //Definizione pin per KEYON
 #define KEY_ON_GPIO_Port	KEY_CTRL_GPIO_Port
 #define KEY_ON_Pin				KEY_CTRL_Pin
+#define KEY_START_GPIO_Port STARTER_CTRL_GPIO_Port
+#define KEY_START_Pin		STARTER_CTRL_Pin
 
 //Definizione led ausiliari su scheda
 #define RedLed_GPIO_Port LED_RED_GPIO_Port 
