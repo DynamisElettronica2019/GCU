@@ -213,6 +213,11 @@
           <WinNumber>1</WinNumber>
           <ItemText>rtU.adc_buffer,0x0A</ItemText>
         </Ww>
+        <Ww>
+          <count>13</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>rtY.adc_data_vector,0x0A</ItemText>
+        </Ww>
       </WatchWindow1>
       <WatchWindow2>
         <Ww>
