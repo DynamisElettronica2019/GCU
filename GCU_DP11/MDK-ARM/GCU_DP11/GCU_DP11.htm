@@ -3,7 +3,7 @@
 <title>Static Call Graph - [GCU_DP11\GCU_DP11.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image GCU_DP11\GCU_DP11.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Mon Jun 03 22:44:17 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Tue Jun 04 09:39:18 2019
 <BR><P>
 <H3>Maximum Stack Usage =        480 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -500,9 +500,9 @@ Global Symbols
 
 <P><STRONG><a name="[182]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
 
-<P><STRONG><a name="[b9]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text))
+<P><STRONG><a name="[ba]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step1
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Evaluate_Request
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Evaluate_Request
 </UL>
 
 <P><STRONG><a name="[183]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
@@ -520,7 +520,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
-<P><STRONG><a name="[bd]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
+<P><STRONG><a name="[be]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 <LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_MspPostInit
 <LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MspInit
@@ -531,7 +531,7 @@ Global Symbols
 <LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM1_Init
 <LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 <LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
 </UL>
 
 <P><STRONG><a name="[186]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
@@ -585,7 +585,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Start
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
 </UL>
 
 <P><STRONG><a name="[4a]"></a>CAN2_RX0_IRQHandler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f7xx_it.o(i.CAN2_RX0_IRQHandler))
@@ -624,7 +624,7 @@ Global Symbols
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_ActivateNotification
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN_Filter_Setup_Outputs_wrapper
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
 </UL>
 
 <P><STRONG><a name="[a8]"></a>ClutchMotor_init_Outputs_wrapper</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, clutchmotor_init_wrapper.o(i.ClutchMotor_init_Outputs_wrapper))
@@ -633,7 +633,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Start
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClutchMotor_setPosition_Outputs_wrapper
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
 </UL>
 
 <P><STRONG><a name="[a9]"></a>ClutchMotor_setPosition_Outputs_wrapper</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, clutchmotor_setposition_wrapper.o(i.ClutchMotor_setPosition_Outputs_wrapper))
@@ -664,7 +664,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Mem_Read
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
 </UL>
 
 <P><STRONG><a name="[ae]"></a>Eeprom_read_Outputs_wrapper</STRONG> (Thumb, 44 bytes, Stack size 32 bytes, eeprom_read_wrapper.o(i.Eeprom_read_Outputs_wrapper))
@@ -672,7 +672,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Mem_Read
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Evaluate_Request
+<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Evaluate_Request
 </UL>
 
 <P><STRONG><a name="[af]"></a>Eeprom_write_Outputs_wrapper</STRONG> (Thumb, 82 bytes, Stack size 40 bytes, eeprom_write_wrapper.o(i.Eeprom_write_Outputs_wrapper))
@@ -681,20 +681,25 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Mem_Write_IT
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Evaluate_Request
+<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Evaluate_Request
 </UL>
 
-<P><STRONG><a name="[c2]"></a>Efi_init_Outputs_wrapper</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, efi_init_wrapper.o(i.Efi_init_Outputs_wrapper))
-<BR><BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
+<P><STRONG><a name="[b1]"></a>Efi_init_Outputs_wrapper</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, efi_init_wrapper.o(i.Efi_init_Outputs_wrapper))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Efi_init_Outputs_wrapper
+</UL>
+<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetCut_Outputs_wrapper
+</UL>
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
 </UL>
 
-<P><STRONG><a name="[b1]"></a>Efi_setCut_Outputs_wrapper</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, efi_setcut_wrapper.o(i.Efi_setCut_Outputs_wrapper))
+<P><STRONG><a name="[b4]"></a>Efi_setCut_Outputs_wrapper</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, efi_setcut_wrapper.o(i.Efi_setCut_Outputs_wrapper))
 <BR><BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GEARSHIFT
 </UL>
 
-<P><STRONG><a name="[b2]"></a>Efi_setRPMLimiter_Outputs_wrapper</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, efi_setrpmlimiter_wrapper.o(i.Efi_setRPMLimiter_Outputs_wrapper))
+<P><STRONG><a name="[b5]"></a>Efi_setRPMLimiter_Outputs_wrapper</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, efi_setrpmlimiter_wrapper.o(i.Efi_setRPMLimiter_Outputs_wrapper))
 <BR><BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetRPMLimiter
@@ -703,22 +708,24 @@ Global Symbols
 <P><STRONG><a name="[b3]"></a>Efi_unsetCut_Outputs_wrapper</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, efi_unsetcut_wrapper.o(i.Efi_unsetCut_Outputs_wrapper))
 <BR><BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GEARSHIFT
+<BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_init_Outputs_wrapper
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GEARSHIFT
 </UL>
 
-<P><STRONG><a name="[b4]"></a>Efi_unsetRPMLimiter_Outputs_wrapper</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, efi_unsetrpmlimiter_wrapper.o(i.Efi_unsetRPMLimiter_Outputs_wrapper))
+<P><STRONG><a name="[b2]"></a>Efi_unsetRPMLimiter_Outputs_wrapper</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, efi_unsetrpmlimiter_wrapper.o(i.Efi_unsetRPMLimiter_Outputs_wrapper))
 <BR><BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnsetRPMLimiter
+<BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_init_Outputs_wrapper
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnsetRPMLimiter
 </UL>
 
-<P><STRONG><a name="[b6]"></a>EngineControl_start_Outputs_wrapper</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, enginecontrol_start_wrapper.o(i.EngineControl_start_Outputs_wrapper))
+<P><STRONG><a name="[b7]"></a>EngineControl_start_Outputs_wrapper</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, enginecontrol_start_wrapper.o(i.EngineControl_start_Outputs_wrapper))
 <BR><BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EngineControl_Start
+<BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EngineControl_Start
 </UL>
 
-<P><STRONG><a name="[b7]"></a>EngineControl_stop_Outputs_wrapper</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, enginecontrol_stop_wrapper.o(i.EngineControl_stop_Outputs_wrapper))
+<P><STRONG><a name="[b8]"></a>EngineControl_stop_Outputs_wrapper</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, enginecontrol_stop_wrapper.o(i.EngineControl_stop_Outputs_wrapper))
 <BR><BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step1
@@ -737,33 +744,33 @@ Global Symbols
 <LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
 </UL>
 
-<P><STRONG><a name="[bb]"></a>FuelPump_init_Outputs_wrapper</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, fuelpump_init_wrapper.o(i.FuelPump_init_Outputs_wrapper))
+<P><STRONG><a name="[bc]"></a>FuelPump_init_Outputs_wrapper</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, fuelpump_init_wrapper.o(i.FuelPump_init_Outputs_wrapper))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = FuelPump_init_Outputs_wrapper &rArr; HAL_TIM_PWM_Start &rArr; TIM_CCxChannelCmd
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Start
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
 </UL>
 
-<P><STRONG><a name="[bc]"></a>GCU_Model_genCode_initialize</STRONG> (Thumb, 190 bytes, Stack size 32 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_initialize))
+<P><STRONG><a name="[bd]"></a>GCU_Model_genCode_initialize</STRONG> (Thumb, 190 bytes, Stack size 32 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_initialize))
 <BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = GCU_Model_genCode_initialize &rArr; Eeprom_init_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
-<BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;load_default_timings_Outputs_wrapper
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;load_accParameters_Outputs_wrapper
+<BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;load_default_timings_Outputs_wrapper
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;load_accParameters_Outputs_wrapper
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitUART_Outputs_wrapper
 <LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitTimer_Outputs_wrapper
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GearMotor_init_Outputs_wrapper
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_init_Outputs_wrapper
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_init_Outputs_wrapper
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClutchMotor_init_Outputs_wrapper
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FuelPump_init_Outputs_wrapper
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FuelPump_init_Outputs_wrapper
 <LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StopLight_init_Outputs_wrapper
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setKeyOn_Outputs_wrapper
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setKeyOn_Outputs_wrapper
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buzzer_init_Outputs_wrapper
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;load_autoXParameters_Outputs_wrapper
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;load_autoXParameters_Outputs_wrapper
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Eeprom_init_Outputs_wrapper
 <LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ScanADC_Outputs_wrapper
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN_Start_Outputs_wrapper
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -771,7 +778,7 @@ Global Symbols
 <P><STRONG><a name="[c8]"></a>GCU_Model_genCode_step1</STRONG> (Thumb, 2000 bytes, Stack size 152 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_step1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 448<LI>Call Chain = GCU_Model_genCode_step1 &rArr; testIndex &rArr; Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EngineControl_stop_Outputs_wrapper
+<BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EngineControl_stop_Outputs_wrapper
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;testIndex
 <LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shiftArray_h
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shiftArray
@@ -780,11 +787,11 @@ Global Symbols
 <LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NEUTRAL_STATE
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODES
 <LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GEARSHIFT
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Evaluate_Request
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EngineControl_Start
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Evaluate_Request
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EngineControl_Start
 <LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;activateBuzzer_Outputs_wrapper
 <LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ScanADC_Outputs_wrapper
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
 </UL>
@@ -854,7 +861,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GearMotor_release_Outputs_wrapper
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
 </UL>
 
 <P><STRONG><a name="[eb]"></a>GearMotor_release_Outputs_wrapper</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, gearmotor_release_wrapper.o(i.GearMotor_release_Outputs_wrapper))
@@ -941,7 +948,7 @@ Global Symbols
 <LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Init
 <LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Init
 </UL>
@@ -1017,7 +1024,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
 <LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
 <LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_Init
 </UL>
@@ -1150,14 +1157,14 @@ Global Symbols
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GearMotor_turnLeft_Outputs_wrapper
 <LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GearMotor_release_Outputs_wrapper
 <LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GearMotor_brake_Outputs_wrapper
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EngineControl_stop_Outputs_wrapper
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EngineControl_start_Outputs_wrapper
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EngineControl_stop_Outputs_wrapper
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EngineControl_start_Outputs_wrapper
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_setRPMLimiter_Outputs_wrapper
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_setCut_Outputs_wrapper
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetCut_Outputs_wrapper
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_setRPMLimiter_Outputs_wrapper
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_setCut_Outputs_wrapper
 <LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setKeyOn_Outputs_wrapper
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setKeyOn_Outputs_wrapper
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Eeprom_write_Outputs_wrapper
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Eeprom_init_Outputs_wrapper
 </UL>
@@ -1272,7 +1279,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
 <LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
 <LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Init
 </UL>
@@ -1477,7 +1484,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = HAL_TIM_MspPostInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM5_Init
 <LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
@@ -1556,7 +1563,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_CCxChannelCmd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClutchMotor_init_Outputs_wrapper
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FuelPump_init_Outputs_wrapper
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FuelPump_init_Outputs_wrapper
 <LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StopLight_init_Outputs_wrapper
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buzzer_init_Outputs_wrapper
 </UL>
@@ -1612,7 +1619,7 @@ Global Symbols
 <LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Init
 <LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
 </UL>
@@ -1642,7 +1649,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Start_IT
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendEepromUART_Outputs_wrapper
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendEepromUART_Outputs_wrapper
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendUART_Outputs_wrapper
 </UL>
 
@@ -1670,7 +1677,7 @@ Global Symbols
 <P><STRONG><a name="[c4]"></a>InitTimer_Outputs_wrapper</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, inittimer_wrapper.o(i.InitTimer_Outputs_wrapper))
 <BR><BR>[Calls]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Start_IT
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
 </UL>
 
 <P><STRONG><a name="[c5]"></a>InitUART_Outputs_wrapper</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, inituart_wrapper.o(i.InitUART_Outputs_wrapper))
@@ -1678,7 +1685,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive_IT
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
 </UL>
 
 <P><STRONG><a name="[162]"></a>MX_ADC1_Init</STRONG> (Thumb, 262 bytes, Stack size 40 bytes, adc_1.o(i.MX_ADC1_Init))
@@ -1718,7 +1725,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 <LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1745,7 +1752,7 @@ Global Symbols
 <LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_ConfigBreakDeadTime
 <LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_MspPostInit
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1758,7 +1765,7 @@ Global Symbols
 <LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_MasterConfigSynchronization
 <LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_MspPostInit
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1771,7 +1778,7 @@ Global Symbols
 <LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_MasterConfigSynchronization
 <LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_MspPostInit
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1843,7 +1850,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Start_DMA
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step1
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
 </UL>
 
 <P><STRONG><a name="[c7]"></a>StopLight_init_Outputs_wrapper</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stoplight_init_wrapper.o(i.StopLight_init_Outputs_wrapper))
@@ -1851,7 +1858,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Start
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
 </UL>
 
 <P><STRONG><a name="[9]"></a>SysTick_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f7xx_it.o(i.SysTick_Handler))
@@ -1866,7 +1873,7 @@ Global Symbols
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCCEx_PeriphCLKConfig
 <LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PWREx_EnableOverDrive
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1965,22 +1972,22 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step1
 </UL>
 
-<P><STRONG><a name="[be]"></a>load_accParameters_Outputs_wrapper</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, load_accparameters_wrapper.o(i.load_accParameters_Outputs_wrapper))
+<P><STRONG><a name="[bf]"></a>load_accParameters_Outputs_wrapper</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, load_accparameters_wrapper.o(i.load_accParameters_Outputs_wrapper))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = load_accParameters_Outputs_wrapper
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
 </UL>
 
-<P><STRONG><a name="[c0]"></a>load_autoXParameters_Outputs_wrapper</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, load_autoxparameters_wrapper.o(i.load_autoXParameters_Outputs_wrapper))
+<P><STRONG><a name="[c1]"></a>load_autoXParameters_Outputs_wrapper</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, load_autoxparameters_wrapper.o(i.load_autoXParameters_Outputs_wrapper))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = load_autoXParameters_Outputs_wrapper
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
 </UL>
 
-<P><STRONG><a name="[bf]"></a>load_default_timings_Outputs_wrapper</STRONG> (Thumb, 76 bytes, Stack size 20 bytes, load_default_timings_wrapper.o(i.load_default_timings_Outputs_wrapper))
+<P><STRONG><a name="[c0]"></a>load_default_timings_Outputs_wrapper</STRONG> (Thumb, 76 bytes, Stack size 20 bytes, load_default_timings_wrapper.o(i.load_default_timings_Outputs_wrapper))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = load_default_timings_Outputs_wrapper
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
 </UL>
 
 <P><STRONG><a name="[76]"></a>main</STRONG> (Thumb, 110 bytes, Stack size 8 bytes, main.o(i.main))
@@ -2002,7 +2009,7 @@ Global Symbols
 <LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step6
 <LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step2
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
@@ -2014,12 +2021,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step5
 </UL>
 
-<P><STRONG><a name="[ba]"></a>sendEepromUART_Outputs_wrapper</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, sendeepromuart_wrapper.o(i.sendEepromUART_Outputs_wrapper))
+<P><STRONG><a name="[bb]"></a>sendEepromUART_Outputs_wrapper</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, sendeepromuart_wrapper.o(i.sendEepromUART_Outputs_wrapper))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = sendEepromUART_Outputs_wrapper &rArr; HAL_UART_Transmit_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit_DMA
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Evaluate_Request
+<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Evaluate_Request
 </UL>
 
 <P><STRONG><a name="[db]"></a>sendUART_Outputs_wrapper</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, senduart_wrapper.o(i.sendUART_Outputs_wrapper))
@@ -2030,12 +2037,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step3
 </UL>
 
-<P><STRONG><a name="[c1]"></a>setKeyOn_Outputs_wrapper</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, setkeyon_wrapper.o(i.setKeyOn_Outputs_wrapper))
+<P><STRONG><a name="[c2]"></a>setKeyOn_Outputs_wrapper</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, setkeyon_wrapper.o(i.setKeyOn_Outputs_wrapper))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = setKeyOn_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
 </UL>
 
 <P><STRONG><a name="[161]"></a>stopBuzzer_Outputs_wrapper</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stopbuzzer_wrapper.o(i.stopBuzzer_Outputs_wrapper))
@@ -2094,21 +2101,21 @@ Local Symbols
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERATION
 </UL>
 
-<P><STRONG><a name="[b5]"></a>EngineControl_Start</STRONG> (Thumb, 18 bytes, Stack size 16 bytes, gcu_model_gencode.o(i.EngineControl_Start))
+<P><STRONG><a name="[b6]"></a>EngineControl_Start</STRONG> (Thumb, 18 bytes, Stack size 16 bytes, gcu_model_gencode.o(i.EngineControl_Start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = EngineControl_Start
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EngineControl_start_Outputs_wrapper
+<BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EngineControl_start_Outputs_wrapper
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step1
 </UL>
 
-<P><STRONG><a name="[b8]"></a>Evaluate_Request</STRONG> (Thumb, 540 bytes, Stack size 80 bytes, gcu_model_gencode.o(i.Evaluate_Request))
+<P><STRONG><a name="[b9]"></a>Evaluate_Request</STRONG> (Thumb, 540 bytes, Stack size 80 bytes, gcu_model_gencode.o(i.Evaluate_Request))
 <BR><BR>[Stack]<UL><LI>Max Depth = 248<LI>Call Chain = Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendEepromUART_Outputs_wrapper
+<BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendEepromUART_Outputs_wrapper
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Eeprom_write_Outputs_wrapper
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Eeprom_read_Outputs_wrapper
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step1
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;testIndex
@@ -2118,8 +2125,8 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GearMotor_turnLeft_Outputs_wrapper
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_setCut_Outputs_wrapper
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetCut_Outputs_wrapper
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_setCut_Outputs_wrapper
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gearshift_getTime
 <LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gearmotor_turnRight
 <LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gearmotor_release
@@ -2180,7 +2187,7 @@ Local Symbols
 <P><STRONG><a name="[98]"></a>SetRPMLimiter</STRONG> (Thumb, 18 bytes, Stack size 16 bytes, gcu_model_gencode.o(i.SetRPMLimiter))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = SetRPMLimiter
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_setRPMLimiter_Outputs_wrapper
+<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_setRPMLimiter_Outputs_wrapper
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AUTOCROSS
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERATION
@@ -2189,7 +2196,7 @@ Local Symbols
 <P><STRONG><a name="[91]"></a>UnsetRPMLimiter</STRONG> (Thumb, 18 bytes, Stack size 16 bytes, gcu_model_gencode.o(i.UnsetRPMLimiter))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = UnsetRPMLimiter
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
+<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AUTOCROSS
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERATION
@@ -2294,7 +2301,7 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 296<LI>Call Chain = testIndex &rArr; Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;updateOutput
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Evaluate_Request
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Evaluate_Request
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step1
 </UL>
