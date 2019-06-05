@@ -109,9 +109,9 @@ int main(void)
   MX_TIM1_Init();
   MX_TIM2_Init();
   MX_UART4_Init();
-  MX_GFXSIMULATOR_Init();
   MX_TIM6_Init();
   MX_TIM5_Init();
+  MX_GFXSIMULATOR_Init();
   /* USER CODE BEGIN 2 */
 	/*
 	HAL_TIM_Base_Start_IT(&htim2);
@@ -140,7 +140,11 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+		/*HAL_GPIO_TogglePin(EFI_COM_1_GPIO_Port,EFI_COM_1_Pin);
+		HAL_GPIO_TogglePin(EFI_COM_2_GPIO_Port,EFI_COM_2_Pin);
+		HAL_GPIO_TogglePin(EFI_COM_3_GPIO_Port,EFI_COM_3_Pin);
+		HAL_GPIO_TogglePin(EFI_COM_4_GPIO_Port,EFI_COM_4_Pin);
+		HAL_Delay(500);*/
     /* USER CODE BEGIN 3 */
 		//CAN1_Send_Nucleo_F7_Packet();
 		//HAL_Delay(500);

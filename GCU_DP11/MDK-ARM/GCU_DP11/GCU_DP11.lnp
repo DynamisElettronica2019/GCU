@@ -45,6 +45,7 @@
 "gcu_dp11\setkeyon_wrapper.o"
 "gcu_dp11\stoplight_init_wrapper.o"
 "gcu_dp11\fuelpump_init_wrapper.o"
+"gcu_dp11\efi_setmap_wrapper.o"
 "gcu_dp11\gcu_model_gencode.o"
 "gcu_dp11\gcu_model_gencode_data.o"
 "gcu_dp11\main.o"

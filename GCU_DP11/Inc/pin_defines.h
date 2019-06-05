@@ -17,7 +17,8 @@
 #define EFI_RPM_LIMITER_GPIO_PORT EFI_COM_3_GPIO_Port
 #define EFI_UPCUT_Pin   EFI_COM_1_Pin
 #define EFI_RPM_LIMITER_Pin EFI_COM_3_Pin
-
+#define EFI_MAP_GPIO_Port EFI_COM_2_GPIO_Port
+#define EFI_MAP_Pin	EFI_COM_2_Pin
 //Definizione pin per livello olio
 //#define L_OIL_GPIO_Port L_OIL_GPIO_Port
 //#define L_OIL_Pin       L_OIL_Pin

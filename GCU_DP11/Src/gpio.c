@@ -56,8 +56,8 @@ void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOE, GEAR_MOTOR_IN1_Pin|GEAR_MOTOR_IN2_Pin|GEAR_MOTOR_INHIBIT_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOD, LED_YELLOW_Pin|LED_GREEN_Pin|LED_RED_Pin|EFI_COM_1_Pin 
-                          |EFI_COM_2_Pin|EFI_COM_3_Pin|EFI_COM_4_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOD, LED_YELLOW_Pin|LED_GREEN_Pin|LED_RED_Pin|EFI_COM_4_Pin 
+                          |EFI_COM_3_Pin|EFI_COM_2_Pin|EFI_COM_1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOC, KEY_CTRL_Pin|STARTER_CTRL_Pin, GPIO_PIN_RESET);
@@ -74,8 +74,8 @@ void MX_GPIO_Init(void)
 
   /*Configure GPIO pins : PDPin PDPin PDPin PDPin 
                            PDPin PDPin PDPin */
-  GPIO_InitStruct.Pin = LED_YELLOW_Pin|LED_GREEN_Pin|LED_RED_Pin|EFI_COM_1_Pin 
-                          |EFI_COM_2_Pin|EFI_COM_3_Pin|EFI_COM_4_Pin;
+  GPIO_InitStruct.Pin = LED_YELLOW_Pin|LED_GREEN_Pin|LED_RED_Pin|EFI_COM_4_Pin 
+                          |EFI_COM_3_Pin|EFI_COM_2_Pin|EFI_COM_1_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
