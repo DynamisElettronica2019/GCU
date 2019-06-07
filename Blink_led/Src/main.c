@@ -113,6 +113,10 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+		HAL_GPIO_TogglePin(EFI_COM_1_GPIO_Port,EFI_COM_1_Pin);
+		HAL_GPIO_TogglePin(EFI_COM_2_GPIO_Port,EFI_COM_2_Pin);
+		HAL_GPIO_TogglePin(EFI_COM_3_GPIO_Port,EFI_COM_3_Pin);
+		HAL_GPIO_TogglePin(EFI_COM_4_GPIO_Port,EFI_COM_4_Pin);
 		HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
 		HAL_Delay(500);
     /* USER CODE BEGIN 3 */
