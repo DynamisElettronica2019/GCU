@@ -620,6 +620,11 @@
               <FileType>1</FileType>
               <FilePath>..\Src\S-Function_Wrappers\Efi_setMap_wrapper.c</FilePath>
             </File>
+            <File>
+              <FileName>load_antiStallParameters_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\load_antiStallParameters_wrapper.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
