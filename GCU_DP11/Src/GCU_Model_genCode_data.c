@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'GCU_Model_genCode'.
  *
- * Model version                  : 1.288
+ * Model version                  : 1.297
  * Simulink Coder version         : 8.14 (R2018a) 06-Feb-2018
- * C/C++ source code generated on : Sun Jun  9 17:13:37 2019
+ * C/C++ source code generated on : Tue Jun 11 00:04:57 2019
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -54,29 +54,7 @@ const ConstP rtConstP = {
    *   '<S2>/1-D Lookup Table2'
    *   '<S2>/1-D Lookup Table3'
    */
-  { 0U, 1U, 2U, 3U, 4U, 5U, 6U, 7U },
-
-  /* Pooled Parameter (Mixed Expressions)
-   * Referenced by:
-   *   '<Root>/Rate Transition'
-   *   '<Root>/Rate Transition3'
-   *   '<Root>/Rate Transition30'
-   *   '<Root>/Rate Transition33'
-   *   '<Root>/Rate Transition5'
-   *   '<S25>/dataRead'
-   *   '<S38>/Merge'
-   *   '<S41>/Pin_H'
-   *   '<S41>/Pin_In1'
-   *   '<S41>/Pin_In2'
-   *   '<S27>/loadResult'
-   *   '<S28>/readResult'
-   *   '<S28>/data'
-   *   '<S29>/writeResult'
-   *   '<S29>/wpState'
-   *   '<S46>/Constant'
-   *   '<S47>/Saturation'
-   */
-  0U
+  { 0U, 1U, 2U, 3U, 4U, 5U, 6U, 7U }
 };
 
 /*

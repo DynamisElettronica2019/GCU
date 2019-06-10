@@ -3,7 +3,7 @@
 <title>Static Call Graph - [GCU_DP11\GCU_DP11.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image GCU_DP11\GCU_DP11.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Mon Jun 10 07:12:52 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Tue Jun 11 00:07:38 2019
 <BR><P>
 <H3>Maximum Stack Usage =        552 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -591,21 +591,21 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[4a]"></a>CAN2_RX0_IRQHandler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f7xx_it.o(i.CAN2_RX0_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = CAN2_RX0_IRQHandler &rArr; HAL_CAN_IRQHandler &rArr; HAL_CAN_RxFifo0MsgPendingCallback &rArr; GCU_Model_genCode_step2 &rArr; PackCanUART_Outputs_wrapper
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = CAN2_RX0_IRQHandler &rArr; HAL_CAN_IRQHandler &rArr; HAL_CAN_RxFifo0MsgPendingCallback &rArr; GCU_Model_genCode_step2 &rArr; PackCanUART_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f767xx.o(RESET)
 </UL>
 <P><STRONG><a name="[4b]"></a>CAN2_RX1_IRQHandler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f7xx_it.o(i.CAN2_RX1_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = CAN2_RX1_IRQHandler &rArr; HAL_CAN_IRQHandler &rArr; HAL_CAN_RxFifo0MsgPendingCallback &rArr; GCU_Model_genCode_step2 &rArr; PackCanUART_Outputs_wrapper
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = CAN2_RX1_IRQHandler &rArr; HAL_CAN_IRQHandler &rArr; HAL_CAN_RxFifo0MsgPendingCallback &rArr; GCU_Model_genCode_step2 &rArr; PackCanUART_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f767xx.o(RESET)
 </UL>
 <P><STRONG><a name="[49]"></a>CAN2_TX_IRQHandler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f7xx_it.o(i.CAN2_TX_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = CAN2_TX_IRQHandler &rArr; HAL_CAN_IRQHandler &rArr; HAL_CAN_RxFifo0MsgPendingCallback &rArr; GCU_Model_genCode_step2 &rArr; PackCanUART_Outputs_wrapper
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = CAN2_TX_IRQHandler &rArr; HAL_CAN_IRQHandler &rArr; HAL_CAN_RxFifo0MsgPendingCallback &rArr; GCU_Model_genCode_step2 &rArr; PackCanUART_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_IRQHandler
 </UL>
@@ -640,7 +640,7 @@ Global Symbols
 
 <P><STRONG><a name="[a9]"></a>ClutchMotor_setPosition_Outputs_wrapper</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, clutchmotor_setposition_wrapper.o(i.ClutchMotor_setPosition_Outputs_wrapper))
 <BR><BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClutchMotor_init_Outputs_wrapper
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step1
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Clutch_setValue
 </UL>
 
@@ -763,8 +763,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
 </UL>
 
-<P><STRONG><a name="[bc]"></a>GCU_Model_genCode_initialize</STRONG> (Thumb, 216 bytes, Stack size 32 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_initialize))
-<BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = GCU_Model_genCode_initialize &rArr; Eeprom_init_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
+<P><STRONG><a name="[bc]"></a>GCU_Model_genCode_initialize</STRONG> (Thumb, 220 bytes, Stack size 40 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_initialize))
+<BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = GCU_Model_genCode_initialize &rArr; Eeprom_init_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;load_default_timings_Outputs_wrapper
 <LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;load_accParameters_Outputs_wrapper
@@ -772,7 +772,6 @@ Global Symbols
 <LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitTimer_Outputs_wrapper
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GearMotor_init_Outputs_wrapper
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_init_Outputs_wrapper
-<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClutchMotor_setPosition_Outputs_wrapper
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClutchMotor_init_Outputs_wrapper
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;load_antiStallParameters_Outputs_wrapper
 <LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FuelPump_init_Outputs_wrapper
@@ -788,10 +787,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c8]"></a>GCU_Model_genCode_step1</STRONG> (Thumb, 2552 bytes, Stack size 216 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_step1))
+<P><STRONG><a name="[c8]"></a>GCU_Model_genCode_step1</STRONG> (Thumb, 2836 bytes, Stack size 216 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_step1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 520<LI>Call Chain = GCU_Model_genCode_step1 &rArr; testIndex &rArr; Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EngineControl_stop_Outputs_wrapper
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClutchMotor_setPosition_Outputs_wrapper
 <LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;testIndex
 <LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shiftArray_hs
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shiftArray_h
@@ -811,16 +811,16 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
 </UL>
 
-<P><STRONG><a name="[d4]"></a>GCU_Model_genCode_step2</STRONG> (Thumb, 1364 bytes, Stack size 48 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_step2))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = GCU_Model_genCode_step2 &rArr; PackCanUART_Outputs_wrapper
+<P><STRONG><a name="[d4]"></a>GCU_Model_genCode_step2</STRONG> (Thumb, 1400 bytes, Stack size 56 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_step2))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = GCU_Model_genCode_step2 &rArr; PackCanUART_Outputs_wrapper
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PackCanUART_Outputs_wrapper
-<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;updateData
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAutoXCommand
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAccCommand
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AAC_ExternalValues
+<BR>[Calls]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PackCanUART_Outputs_wrapper
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;updateData
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAutoXCommand
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAccCommand
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AAC_ExternalValues
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_setMap_Outputs_wrapper
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnpackCanUART_Outputs_wrapper
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnpackCanUART_Outputs_wrapper
 </UL>
 <BR>[Called By]<UL><LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
 <LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_RxFifo0MsgPendingCallback
@@ -1004,7 +1004,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[a2]"></a>HAL_CAN_IRQHandler</STRONG> (Thumb, 508 bytes, Stack size 40 bytes, stm32f7xx_hal_can.o(i.HAL_CAN_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = HAL_CAN_IRQHandler &rArr; HAL_CAN_RxFifo0MsgPendingCallback &rArr; GCU_Model_genCode_step2 &rArr; PackCanUART_Outputs_wrapper
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = HAL_CAN_IRQHandler &rArr; HAL_CAN_RxFifo0MsgPendingCallback &rArr; GCU_Model_genCode_step2 &rArr; PackCanUART_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_RxFifo0MsgPendingCallback
 <LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_WakeUpFromRxMsgCallback
@@ -1050,7 +1050,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[102]"></a>HAL_CAN_RxFifo0MsgPendingCallback</STRONG> (Thumb, 86 bytes, Stack size 8 bytes, can.o(i.HAL_CAN_RxFifo0MsgPendingCallback))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = HAL_CAN_RxFifo0MsgPendingCallback &rArr; GCU_Model_genCode_step2 &rArr; PackCanUART_Outputs_wrapper
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = HAL_CAN_RxFifo0MsgPendingCallback &rArr; GCU_Model_genCode_step2 &rArr; PackCanUART_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_TogglePin
 <LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_GetRxMessage
@@ -1649,7 +1649,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[148]"></a>HAL_UART_RxCpltCallback</STRONG> (Thumb, 306 bytes, Stack size 32 bytes, usart.o(i.HAL_UART_RxCpltCallback))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = HAL_UART_RxCpltCallback &rArr; GCU_Model_genCode_step2 &rArr; PackCanUART_Outputs_wrapper
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = HAL_UART_RxCpltCallback &rArr; GCU_Model_genCode_step2 &rArr; PackCanUART_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive_IT
 <LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_TogglePin
@@ -1831,7 +1831,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step5
 </UL>
 
-<P><STRONG><a name="[d6]"></a>PackCanUART_Outputs_wrapper</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, packcanuart_wrapper.o(i.PackCanUART_Outputs_wrapper))
+<P><STRONG><a name="[da]"></a>PackCanUART_Outputs_wrapper</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, packcanuart_wrapper.o(i.PackCanUART_Outputs_wrapper))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = PackCanUART_Outputs_wrapper
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step2
@@ -1962,7 +1962,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_CheckIdleState
 </UL>
 
-<P><STRONG><a name="[d7]"></a>UnpackCanUART_Outputs_wrapper</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, unpackcanuart_wrapper.o(i.UnpackCanUART_Outputs_wrapper))
+<P><STRONG><a name="[d5]"></a>UnpackCanUART_Outputs_wrapper</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, unpackcanuart_wrapper.o(i.UnpackCanUART_Outputs_wrapper))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = UnpackCanUART_Outputs_wrapper
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step2
@@ -2072,7 +2072,7 @@ Global Symbols
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[d8]"></a>AAC_ExternalValues</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, gcu_model_gencode.o(i.AAC_ExternalValues))
+<P><STRONG><a name="[d6]"></a>AAC_ExternalValues</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, gcu_model_gencode.o(i.AAC_ExternalValues))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = AAC_ExternalValues
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step2
@@ -2216,7 +2216,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AUTOCROSS
 </UL>
 
-<P><STRONG><a name="[95]"></a>checkClutch</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, gcu_model_gencode.o(i.checkClutch))
+<P><STRONG><a name="[95]"></a>checkClutch</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, gcu_model_gencode.o(i.checkClutch))
 <BR><BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Clutch_setValue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enter_atomic_MANUAL_MODES
@@ -2275,11 +2275,11 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step5
 </UL>
 
-<P><STRONG><a name="[d9]"></a>sendAccCommand</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, gcu_model_gencode.o(i.sendAccCommand))
+<P><STRONG><a name="[d7]"></a>sendAccCommand</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, gcu_model_gencode.o(i.sendAccCommand))
 <BR><BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step2
 </UL>
 
-<P><STRONG><a name="[da]"></a>sendAutoXCommand</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, gcu_model_gencode.o(i.sendAutoXCommand))
+<P><STRONG><a name="[d8]"></a>sendAutoXCommand</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, gcu_model_gencode.o(i.sendAutoXCommand))
 <BR><BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step2
 </UL>
 
@@ -2316,7 +2316,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step6
 </UL>
 
-<P><STRONG><a name="[d5]"></a>updateData</STRONG> (Thumb, 164 bytes, Stack size 16 bytes, gcu_model_gencode.o(i.updateData))
+<P><STRONG><a name="[d9]"></a>updateData</STRONG> (Thumb, 164 bytes, Stack size 16 bytes, gcu_model_gencode.o(i.updateData))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = updateData
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step2
@@ -2683,14 +2683,14 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[7f]"></a>UART_RxISR_16BIT</STRONG> (Thumb, 90 bytes, Stack size 8 bytes, stm32f7xx_hal_uart.o(i.UART_RxISR_16BIT))
-<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = UART_RxISR_16BIT &rArr; HAL_UART_RxCpltCallback &rArr; GCU_Model_genCode_step2 &rArr; PackCanUART_Outputs_wrapper
+<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = UART_RxISR_16BIT &rArr; HAL_UART_RxCpltCallback &rArr; GCU_Model_genCode_step2 &rArr; PackCanUART_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> stm32f7xx_hal_uart.o(i.HAL_UART_Receive_IT)
 </UL>
 <P><STRONG><a name="[7e]"></a>UART_RxISR_8BIT</STRONG> (Thumb, 90 bytes, Stack size 8 bytes, stm32f7xx_hal_uart.o(i.UART_RxISR_8BIT))
-<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = UART_RxISR_8BIT &rArr; HAL_UART_RxCpltCallback &rArr; GCU_Model_genCode_step2 &rArr; PackCanUART_Outputs_wrapper
+<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = UART_RxISR_8BIT &rArr; HAL_UART_RxCpltCallback &rArr; GCU_Model_genCode_step2 &rArr; PackCanUART_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
 </UL>
