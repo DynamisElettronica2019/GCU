@@ -152,8 +152,8 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 		for(int i=0; i<UART_READ_DATA_WIDTH;i++)
 			rtU.UART_debug[i] = rxData[i];
 			
-			HAL_GPIO_TogglePin(RedLed_GPIO_Port, RedLed_Pin);
-			flag = 1;
+		HAL_GPIO_TogglePin(RedLed_GPIO_Port, RedLed_Pin);
+		flag = 1;
 
 		if(rtU.SelectMode == UART_READ_MODE)
 		{
