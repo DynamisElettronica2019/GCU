@@ -625,6 +625,11 @@
               <FileType>1</FileType>
               <FilePath>..\Src\S-Function_Wrappers\load_antiStallParameters_wrapper.c</FilePath>
             </File>
+            <File>
+              <FileName>ClutchMotor_setPWMRegister_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\ClutchMotor_setPWMRegister_wrapper.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
