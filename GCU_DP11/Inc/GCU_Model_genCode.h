@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'GCU_Model_genCode'.
  *
- * Model version                  : 1.349
+ * Model version                  : 1.350
  * Simulink Coder version         : 8.14 (R2018a) 06-Feb-2018
- * C/C++ source code generated on : Mon Jun 24 00:52:14 2019
+ * C/C++ source code generated on : Tue Jun 25 08:18:03 2019
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -411,24 +411,24 @@ typedef struct {
   uint16_T buzzerCounter;              /* '<S5>/GCULogic' */
   uint16_T aacCounter;                 /* '<S5>/GCULogic' */
   uint16_T autoXCounter;               /* '<S5>/GCULogic' */
-  uint16_T autoXCounter_f;             /* '<S5>/GCULogic' */
+  uint16_T autoXCounter_c;             /* '<S5>/GCULogic' */
   uint16_T lastSlip;                   /* '<S5>/GCULogic' */
-  uint16_T autoXCounter_j;             /* '<S5>/GCULogic' */
-  uint16_T lastSlip_e;                 /* '<S5>/GCULogic' */
-  uint16_T autoXCounter_a;             /* '<S5>/GCULogic' */
-  uint16_T lastSlip_l;                 /* '<S5>/GCULogic' */
-  uint16_T autoXCounter_b;             /* '<S5>/GCULogic' */
+  uint16_T autoXCounter_f;             /* '<S5>/GCULogic' */
+  uint16_T lastSlip_m;                 /* '<S5>/GCULogic' */
+  uint16_T autoXCounter_m;             /* '<S5>/GCULogic' */
   uint16_T lastSlip_h;                 /* '<S5>/GCULogic' */
-  uint16_T autoXCounter_f5;            /* '<S5>/GCULogic' */
-  uint16_T lastSlip_n;                 /* '<S5>/GCULogic' */
-  uint16_T autoXCounter_jp;            /* '<S5>/GCULogic' */
+  uint16_T autoXCounter_n;             /* '<S5>/GCULogic' */
+  uint16_T lastSlip_p;                 /* '<S5>/GCULogic' */
+  uint16_T autoXCounter_fc;            /* '<S5>/GCULogic' */
+  uint16_T lastSlip_f;                 /* '<S5>/GCULogic' */
+  uint16_T autoXCounter_k;             /* '<S5>/GCULogic' */
+  uint16_T lastSlip_l;                 /* '<S5>/GCULogic' */
+  uint16_T autoXCounter_n5;            /* '<S5>/GCULogic' */
+  uint16_T lastSlip_fc;                /* '<S5>/GCULogic' */
+  uint16_T autoXCounter_l;             /* '<S5>/GCULogic' */
   uint16_T lastSlip_g;                 /* '<S5>/GCULogic' */
-  uint16_T autoXCounter_b5;            /* '<S5>/GCULogic' */
-  uint16_T lastSlip_hf;                /* '<S5>/GCULogic' */
-  uint16_T autoXCounter_bb;            /* '<S5>/GCULogic' */
-  uint16_T lastSlip_d;                 /* '<S5>/GCULogic' */
-  uint16_T autoXCounter_ag;            /* '<S5>/GCULogic' */
-  uint16_T lastSlip_ns;                /* '<S5>/GCULogic' */
+  uint16_T autoXCounter_g;             /* '<S5>/GCULogic' */
+  uint16_T lastSlip_fh;                /* '<S5>/GCULogic' */
   uint16_T timerCounter;               /* '<S5>/GCULogic' */
   volatile int8_T RateTransition9_ActiveBufIdx;/* '<Root>/Rate Transition9' */
   volatile int8_T RateTransition2_ActiveBufIdx;/* '<Root>/Rate Transition2' */
@@ -494,40 +494,41 @@ typedef struct {
   uint8_T is_active_c1_GCU_Model_genCode;/* '<S5>/GCULogic' */
   uint8_T is_MODES;                    /* '<S5>/GCULogic' */
   uint8_T is_active_MODES;             /* '<S5>/GCULogic' */
+  uint8_T is_MANUAL_MODES;             /* '<S5>/GCULogic' */
   uint8_T is_ACCELERATION;             /* '<S5>/GCULogic' */
   uint8_T is_ACC;                      /* '<S5>/GCULogic' */
   uint8_T is_ACTIVE;                   /* '<S5>/GCULogic' */
   uint8_T is_AUTOCROSS;                /* '<S5>/GCULogic' */
   uint8_T is_LAUNCH;                   /* '<S5>/GCULogic' */
-  uint8_T is_ACTIVE_m;                 /* '<S5>/GCULogic' */
+  uint8_T is_ACTIVE_a;                 /* '<S5>/GCULogic' */
   uint8_T is_ACCELERATION_PID;         /* '<S5>/GCULogic' */
   uint8_T is_LAUNCH0;                  /* '<S5>/GCULogic' */
-  uint8_T is_ACTIVE_i;                 /* '<S5>/GCULogic' */
+  uint8_T is_ACTIVE_b;                 /* '<S5>/GCULogic' */
   uint8_T is_RELEASE;                  /* '<S5>/GCULogic' */
   uint8_T is_LAUNCH1;                  /* '<S5>/GCULogic' */
-  uint8_T is_ACTIVE_j;                 /* '<S5>/GCULogic' */
-  uint8_T is_RELEASE_o;                /* '<S5>/GCULogic' */
-  uint8_T is_LAUNCH2;                  /* '<S5>/GCULogic' */
-  uint8_T is_ACTIVE_e;                 /* '<S5>/GCULogic' */
-  uint8_T is_RELEASE_p;                /* '<S5>/GCULogic' */
-  uint8_T is_LAUNCH3;                  /* '<S5>/GCULogic' */
-  uint8_T is_ACTIVE_h;                 /* '<S5>/GCULogic' */
-  uint8_T is_RELEASE_ps;               /* '<S5>/GCULogic' */
-  uint8_T is_LAUNCH4;                  /* '<S5>/GCULogic' */
-  uint8_T is_ACTIVE_p;                 /* '<S5>/GCULogic' */
-  uint8_T is_RELEASE_j;                /* '<S5>/GCULogic' */
-  uint8_T is_LAUNCH5;                  /* '<S5>/GCULogic' */
-  uint8_T is_ACTIVE_f;                 /* '<S5>/GCULogic' */
-  uint8_T is_RELEASE_b;                /* '<S5>/GCULogic' */
-  uint8_T is_LAUNCH6;                  /* '<S5>/GCULogic' */
-  uint8_T is_ACTIVE_c;                 /* '<S5>/GCULogic' */
+  uint8_T is_ACTIVE_bl;                /* '<S5>/GCULogic' */
   uint8_T is_RELEASE_k;                /* '<S5>/GCULogic' */
+  uint8_T is_LAUNCH2;                  /* '<S5>/GCULogic' */
+  uint8_T is_ACTIVE_d;                 /* '<S5>/GCULogic' */
+  uint8_T is_RELEASE_kf;               /* '<S5>/GCULogic' */
+  uint8_T is_LAUNCH3;                  /* '<S5>/GCULogic' */
+  uint8_T is_ACTIVE_n;                 /* '<S5>/GCULogic' */
+  uint8_T is_RELEASE_p;                /* '<S5>/GCULogic' */
+  uint8_T is_LAUNCH4;                  /* '<S5>/GCULogic' */
+  uint8_T is_ACTIVE_o;                 /* '<S5>/GCULogic' */
+  uint8_T is_RELEASE_n;                /* '<S5>/GCULogic' */
+  uint8_T is_LAUNCH5;                  /* '<S5>/GCULogic' */
+  uint8_T is_ACTIVE_p;                 /* '<S5>/GCULogic' */
+  uint8_T is_RELEASE_i;                /* '<S5>/GCULogic' */
+  uint8_T is_LAUNCH6;                  /* '<S5>/GCULogic' */
+  uint8_T is_ACTIVE_f;                 /* '<S5>/GCULogic' */
+  uint8_T is_RELEASE_iv;               /* '<S5>/GCULogic' */
   uint8_T is_LAUNCH7;                  /* '<S5>/GCULogic' */
-  uint8_T is_ACTIVE_f1;                /* '<S5>/GCULogic' */
-  uint8_T is_RELEASE_c;                /* '<S5>/GCULogic' */
+  uint8_T is_ACTIVE_g;                 /* '<S5>/GCULogic' */
+  uint8_T is_RELEASE_h;                /* '<S5>/GCULogic' */
   uint8_T is_LAUNCH8;                  /* '<S5>/GCULogic' */
-  uint8_T is_ACTIVE_hw;                /* '<S5>/GCULogic' */
-  uint8_T is_RELEASE_f;                /* '<S5>/GCULogic' */
+  uint8_T is_ACTIVE_d2;                /* '<S5>/GCULogic' */
+  uint8_T is_RELEASE_id;               /* '<S5>/GCULogic' */
   uint8_T is_NEUTRAL_STATE;            /* '<S5>/GCULogic' */
   uint8_T is_active_NEUTRAL_STATE;     /* '<S5>/GCULogic' */
   uint8_T is_GEARSHIFT;                /* '<S5>/GCULogic' */

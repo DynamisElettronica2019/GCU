@@ -158,8 +158,6 @@ int main(void)
 			GCU_Model_genCode_step2();
 			HAL_Delay(100);
 		}
-		
-
   }
   /* USER CODE END 3 */
 }

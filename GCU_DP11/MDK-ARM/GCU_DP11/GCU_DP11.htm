@@ -3,7 +3,7 @@
 <title>Static Call Graph - [GCU_DP11\GCU_DP11.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image GCU_DP11\GCU_DP11.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Mon Jun 24 00:54:54 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Tue Jun 25 14:26:09 2019
 <BR><P>
 <H3>Maximum Stack Usage =        584 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -723,8 +723,10 @@ Global Symbols
 <P><STRONG><a name="[96]"></a>Efi_setRPMLimiter_Outputs_wrapper</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, efi_setrpmlimiter_wrapper.o(i.Efi_setRPMLimiter_Outputs_wrapper))
 <BR><BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DEFAULT
+<BR>[Called By]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODES
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DEFAULT
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AUTOCROSS
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERATION_PID
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERATION
 </UL>
 
@@ -739,6 +741,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_init_Outputs_wrapper
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODES
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LAUNCH8
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LAUNCH7
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LAUNCH6
@@ -817,7 +820,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[dc]"></a>GCU_Model_genCode_step1</STRONG> (Thumb, 3036 bytes, Stack size 232 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_step1))
+<P><STRONG><a name="[dc]"></a>GCU_Model_genCode_step1</STRONG> (Thumb, 2848 bytes, Stack size 232 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_step1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 552<LI>Call Chain = GCU_Model_genCode_step1 &rArr; testIndex &rArr; Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EngineControl_stop_Outputs_wrapper
@@ -2101,29 +2104,30 @@ Global Symbols
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[90]"></a>ACCELERATION</STRONG> (Thumb, 992 bytes, Stack size 48 bytes, gcu_model_gencode.o(i.ACCELERATION))
+<P><STRONG><a name="[90]"></a>ACCELERATION</STRONG> (Thumb, 1068 bytes, Stack size 48 bytes, gcu_model_gencode.o(i.ACCELERATION))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = ACCELERATION &rArr; enter_atomic_MANUAL_MODES &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_setRPMLimiter_Outputs_wrapper
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAacParam
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enter_atomic_MANUAL_MODES
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enter_atomic_MANUAL_MODES
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aacCheckShift
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Clutch_setValue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODES
 </UL>
 
-<P><STRONG><a name="[99]"></a>ACCELERATION_PID</STRONG> (Thumb, 768 bytes, Stack size 48 bytes, gcu_model_gencode.o(i.ACCELERATION_PID))
+<P><STRONG><a name="[99]"></a>ACCELERATION_PID</STRONG> (Thumb, 836 bytes, Stack size 48 bytes, gcu_model_gencode.o(i.ACCELERATION_PID))
 <BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = ACCELERATION_PID &rArr; LAUNCH7 &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
-<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
+<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_setRPMLimiter_Outputs_wrapper
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAutoXParam
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit_internal_ACCELERATION_PID
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;autoXCheckShift
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODESACCELERATION_PIDLAUNCH
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LAUNCH8
@@ -2140,15 +2144,15 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODES
 </UL>
 
-<P><STRONG><a name="[ab]"></a>AUTOCROSS</STRONG> (Thumb, 1004 bytes, Stack size 48 bytes, gcu_model_gencode.o(i.AUTOCROSS))
+<P><STRONG><a name="[ab]"></a>AUTOCROSS</STRONG> (Thumb, 1078 bytes, Stack size 48 bytes, gcu_model_gencode.o(i.AUTOCROSS))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = AUTOCROSS &rArr; enter_atomic_MANUAL_MODES &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_setRPMLimiter_Outputs_wrapper
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAutoXParam
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enter_atomic_MANUAL_MODES
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enter_atomic_MANUAL_MODES
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;autoXCheckShift
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Clutch_setValue
 </UL>
@@ -2158,7 +2162,7 @@ Local Symbols
 <P><STRONG><a name="[92]"></a>Clutch_setValue</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, gcu_model_gencode.o(i.Clutch_setValue))
 <BR><BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClutchMotor_setPosition_Outputs_wrapper
 </UL>
-<BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
+<BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LAUNCH8
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LAUNCH7
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LAUNCH6
@@ -2178,8 +2182,8 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = DEFAULT &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_setRPMLimiter_Outputs_wrapper
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
 <LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODESACCELERATION_di_Enable
 <LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODESACCELERATION__o_Enable
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODESACCELERATION__n_Enable
@@ -2226,7 +2230,7 @@ Local Symbols
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Clutch_setValue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step1
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;autoXCheckShift
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aacCheckShift
 </UL>
@@ -2264,8 +2268,8 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAutoXParam
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;autoXCheckShift
 <LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODESACCELERATION_PIDLAUN_g
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Clutch_setValue
@@ -2278,8 +2282,8 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAutoXParam
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;autoXCheckShift
 <LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODESACCELERATION_PIDLAUN_m
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Clutch_setValue
@@ -2292,8 +2296,8 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAutoXParam
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;autoXCheckShift
 <LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODESACCELERATION_PIDLAUN_k
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Clutch_setValue
@@ -2306,8 +2310,8 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAutoXParam
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;autoXCheckShift
 <LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODESACCELERATION_PIDLAU_gp
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Clutch_setValue
@@ -2320,8 +2324,8 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAutoXParam
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;autoXCheckShift
 <LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODESACCELERATION_PIDLAUN_i
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Clutch_setValue
@@ -2334,8 +2338,8 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAutoXParam
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;autoXCheckShift
 <LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODESACCELERATION_PIDLAUN_n
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Clutch_setValue
@@ -2348,8 +2352,8 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAutoXParam
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;autoXCheckShift
 <LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODESACCELERATION_PIDLAUN_b
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Clutch_setValue
@@ -2362,8 +2366,8 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAutoXParam
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;autoXCheckShift
 <LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODESACCELERATION_PIDLAU_bj
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Clutch_setValue
@@ -2371,11 +2375,13 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERATION_PID
 </UL>
 
-<P><STRONG><a name="[dd]"></a>MODES</STRONG> (Thumb, 344 bytes, Stack size 24 bytes, gcu_model_gencode.o(i.MODES))
+<P><STRONG><a name="[dd]"></a>MODES</STRONG> (Thumb, 480 bytes, Stack size 24 bytes, gcu_model_gencode.o(i.MODES))
 <BR><BR>[Stack]<UL><LI>Max Depth = 248<LI>Call Chain = MODES &rArr; ACCELERATION_PID &rArr; LAUNCH7 &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
-<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
+<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_setRPMLimiter_Outputs_wrapper
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AUTOCROSS
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERATION_PID
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERATION
@@ -2384,7 +2390,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step1
 </UL>
 
-<P><STRONG><a name="[9d]"></a>MODESACCELERATION_PIDLAUNCH</STRONG> (Thumb, 250 bytes, Stack size 56 bytes, gcu_model_gencode.o(i.MODESACCELERATION_PIDLAUNCH))
+<P><STRONG><a name="[9d]"></a>MODESACCELERATION_PIDLAUNCH</STRONG> (Thumb, 252 bytes, Stack size 56 bytes, gcu_model_gencode.o(i.MODESACCELERATION_PIDLAUNCH))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = MODESACCELERATION_PIDLAUNCH
 </UL>
 <BR>[Calls]<UL><LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClutchMotor_setPWMRegister_Outputs_wrapper
@@ -2400,7 +2406,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LAUNCH7
 </UL>
 
-<P><STRONG><a name="[176]"></a>MODESACCELERATION_PIDLAUN_g</STRONG> (Thumb, 250 bytes, Stack size 56 bytes, gcu_model_gencode.o(i.MODESACCELERATION_PIDLAUN_g))
+<P><STRONG><a name="[176]"></a>MODESACCELERATION_PIDLAUN_g</STRONG> (Thumb, 252 bytes, Stack size 56 bytes, gcu_model_gencode.o(i.MODESACCELERATION_PIDLAUN_g))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = MODESACCELERATION_PIDLAUN_g
 </UL>
 <BR>[Calls]<UL><LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClutchMotor_setPWMRegister_Outputs_wrapper
@@ -2498,7 +2504,7 @@ Local Symbols
 
 <P><STRONG><a name="[de]"></a>NEUTRAL_STATE</STRONG> (Thumb, 94 bytes, Stack size 0 bytes, gcu_model_gencode.o(i.NEUTRAL_STATE))
 <BR><BR>[Called By]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step1
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
 </UL>
 
 <P><STRONG><a name="[98]"></a>aacCheckShift</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, gcu_model_gencode.o(i.aacCheckShift))
@@ -2526,10 +2532,10 @@ Local Symbols
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERATION_PID
 </UL>
 
-<P><STRONG><a name="[95]"></a>checkClutch</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, gcu_model_gencode.o(i.checkClutch))
+<P><STRONG><a name="[94]"></a>checkClutch</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, gcu_model_gencode.o(i.checkClutch))
 <BR><BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Clutch_setValue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enter_atomic_MANUAL_MODES
+<BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enter_atomic_MANUAL_MODES
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODES
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LAUNCH8
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LAUNCH7
@@ -2545,13 +2551,13 @@ Local Symbols
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERATION
 </UL>
 
-<P><STRONG><a name="[94]"></a>checkShift</STRONG> (Thumb, 138 bytes, Stack size 24 bytes, gcu_model_gencode.o(i.checkShift))
+<P><STRONG><a name="[93]"></a>checkShift</STRONG> (Thumb, 138 bytes, Stack size 24 bytes, gcu_model_gencode.o(i.checkShift))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NEUTRAL_STATE
 <LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GEARSHIFT
 </UL>
-<BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enter_atomic_MANUAL_MODES
+<BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enter_atomic_MANUAL_MODES
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODES
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LAUNCH8
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LAUNCH7
@@ -2573,11 +2579,11 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step1
 </UL>
 
-<P><STRONG><a name="[93]"></a>enter_atomic_MANUAL_MODES</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, gcu_model_gencode.o(i.enter_atomic_MANUAL_MODES))
+<P><STRONG><a name="[95]"></a>enter_atomic_MANUAL_MODES</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, gcu_model_gencode.o(i.enter_atomic_MANUAL_MODES))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = enter_atomic_MANUAL_MODES &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
-<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
+<BR>[Calls]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AUTOCROSS
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERATION
