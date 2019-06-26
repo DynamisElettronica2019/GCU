@@ -23,7 +23,7 @@
 #include "adc.h"
 #include "can.h"
 #include "dma.h"
-//#include "gfxsimulator.h"
+#include "gfxsimulator.h"
 #include "i2c.h"
 #include "tim.h"
 #include "usart.h"
@@ -111,7 +111,7 @@ int main(void)
   MX_UART4_Init();
   MX_TIM6_Init();
   MX_TIM5_Init();
-  //MX_GFXSIMULATOR_Init();
+  MX_GFXSIMULATOR_Init();
   /* USER CODE BEGIN 2 */
 	/*
 	HAL_TIM_Base_Start_IT(&htim2);
@@ -133,6 +133,9 @@ int main(void)
 	GCU_Model_genCode_step2();
 	GCU_Model_genCode_step6();
 	
+	uint32_t ESR_reg=0;
+	uint32_t TEC_reg=0;
+	uint32_t REC_reg=0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -140,17 +143,15 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-		//HAL_GPIO_TogglePin(EFI_COM_1_GPIO_Port,EFI_COM_1_Pin);
-		/*uint8_T map=0;
-		Efi_setMap_Outputs_wrapper(&map);
-		//HAL_GPIO_TogglePin(EFI_MAP_GPIO_Port,EFI_MAP_Pin);
-		//HAL_GPIO_TogglePin(EFI_COM_3_GPIO_Port,EFI_COM_3_Pin);
-		//HAL_GPIO_TogglePin(EFI_COM_4_GPIO_Port,EFI_COM_4_Pin);
-		HAL_Delay(500);
-		map = 1;
-		Efi_setMap_Outputs_wrapper(&map);
-		HAL_Delay(500);*/
+
     /* USER CODE BEGIN 3 */
+		ESR_reg= hcan2.Instance->ESR;
+		TEC_reg = ESR_reg & 0x00FF0000;
+		REC_reg= ESR_reg & 0xFF000000;
+			
+		if(TEC_reg==0x00FF0000)
+			if(REC_reg != 0xFF000000)
+				activateBuzzer_Outputs_wrapper();
 		//CAN1_Send_Nucleo_F7_Packet();
 		//HAL_Delay(500);
 		if(rtU.SelectMode == DEMO_READ_MODE)

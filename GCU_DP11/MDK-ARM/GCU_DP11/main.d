@@ -46,6 +46,7 @@ gcu_dp11\main.o: ../Inc/id_can.h
 gcu_dp11\main.o: ../Inc/pin_defines.h
 gcu_dp11\main.o: ../Inc/can.h
 gcu_dp11\main.o: ../Inc/dma.h
+gcu_dp11\main.o: ../Inc/gfxsimulator.h
 gcu_dp11\main.o: ../Inc/i2c.h
 gcu_dp11\main.o: ../Inc/tim.h
 gcu_dp11\main.o: ../Inc/usart.h
