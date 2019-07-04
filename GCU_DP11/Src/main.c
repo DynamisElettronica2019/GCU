@@ -145,13 +145,13 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		ESR_reg= hcan2.Instance->ESR;
+		/*ESR_reg= hcan2.Instance->ESR;
 		TEC_reg = ESR_reg & 0x00FF0000;
 		REC_reg= ESR_reg & 0xFF000000;
 			
 		if(TEC_reg==0x00FF0000)
 			if(REC_reg != 0xFF000000)
-				activateBuzzer_Outputs_wrapper();
+				activateBuzzer_Outputs_wrapper();*/
 		//CAN1_Send_Nucleo_F7_Packet();
 		//HAL_Delay(500);
 		if(rtU.SelectMode == DEMO_READ_MODE)

@@ -630,6 +630,11 @@
               <FileType>1</FileType>
               <FilePath>..\Src\S-Function_Wrappers\ClutchMotor_setPWMRegister_wrapper.c</FilePath>
             </File>
+            <File>
+              <FileName>CAN_Restart_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\CAN_Restart_wrapper.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

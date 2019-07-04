@@ -48,6 +48,7 @@
 "gcu_dp11\efi_setmap_wrapper.o"
 "gcu_dp11\load_antistallparameters_wrapper.o"
 "gcu_dp11\clutchmotor_setpwmregister_wrapper.o"
+"gcu_dp11\can_restart_wrapper.o"
 "gcu_dp11\gcu_model_gencode.o"
 "gcu_dp11\gcu_model_gencode_data.o"
 "gcu_dp11\main.o"
