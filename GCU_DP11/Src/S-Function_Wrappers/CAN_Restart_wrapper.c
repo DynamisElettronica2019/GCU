@@ -29,7 +29,6 @@ extern void CAN_Filter_Setup_Outputs_wrapper(void);
 extern CAN_HandleTypeDef hcan_active;
 #endif
 /* %%%-SFUNWIZ_wrapper_externs_Changes_END --- EDIT HERE TO _BEGIN */
-
 /*
  * Output function
  *
@@ -39,10 +38,21 @@ void CAN_Restart_Outputs_wrapper(void)
 /* %%%-SFUNWIZ_wrapper_Outputs_Changes_BEGIN --- EDIT HERE TO _END */
   #if !defined(MATLAB_MEX_FILE)
   
-  HAL_CAN_Stop(&hcan_active);
-  HAL_CAN_DeInit(&hcan_active);
-  HAL_CAN_Init(&hcan_active);
-  CAN_Start_Outputs_wrapper();
+//  HAL_CAN_Stop(&hcan_active);
+//  HAL_CAN_DeInit(&hcan_active);
+//  HAL_CAN_Init(&hcan_active);
+//  CAN_Start_Outputs_wrapper();
+	
+	hcan_active.Instance->MCR |= 1; //setto la richiesta di reset
+	HAL_Delay(10);
+	hcan_active.Instance->MCR &= 0;
+	
+	while(hcan_active.Instance->MSR & 1)
+	{
+		//confronto bit a bit set MSR con 1, quindi se INAK = 1 allora la periferica è ancora in inizializzatione
+		//se INAK = 0 esco dal while 
+	}
+	
   #endif
 /* %%%-SFUNWIZ_wrapper_Outputs_Changes_END --- EDIT HERE TO _BEGIN */
 }

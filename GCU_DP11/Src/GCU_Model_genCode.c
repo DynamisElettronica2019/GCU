@@ -8379,16 +8379,16 @@ void GCU_Model_genCode_step2(void)     /* Sample time: [0.001s, 0.0002s] */
   } else {
     if (!((rtDW.UnpackCanUart_o1 == DCU_AUTOGEARSHIFT_GCU_ID) ||
           (!(rtDW.UnpackCanUart_o1 == SW_CAN_ERROR_GCU_ID)))) {
-      if (rtDW.canErrorCommand >= 255) {
-        rtDW.canErrorCommand = 0U;
-      } else {
-        i = rtDW.canErrorCommand + 1;
-        if (i > 65535) {
-          i = 65535;
-        }
-
-        rtDW.canErrorCommand = (uint16_T)i;
-      }
+				CAN_Restart_Outputs_wrapper();
+//      if (rtDW.canErrorCommand >= 255) {
+//        rtDW.canErrorCommand = 0U;
+//      } else {
+//        i = rtDW.canErrorCommand + 1;
+//        if (i > 65535) {
+//          i = 65535;
+//        }		
+//        rtDW.canErrorCommand = (uint16_T)i;
+//      }
     }
   }
 
