@@ -36,8 +36,9 @@ void FuelPump_init_Outputs_wrapper(void)
 {
 /* %%%-SFUNWIZ_wrapper_Outputs_Changes_BEGIN --- EDIT HERE TO _END */
 #if !defined(MATLAB_MEX_FILE)
-  hPumpTim.Instance->CCR_PUMP = hPumpTim.Init.Period; 
-
+  //hPumpTim.Instance->CCR_PUMP = hPumpTim.Init.Period; 
+	hPumpTim.Instance->CCR_PUMP = hPumpTim.Init.Period;
+	
   HAL_TIM_PWM_Start(&hPumpTim, TIM_PUMP_CHANNEL);
 #endif
 /* %%%-SFUNWIZ_wrapper_Outputs_Changes_END --- EDIT HERE TO _BEGIN */

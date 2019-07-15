@@ -8453,7 +8453,7 @@ void GCU_Model_genCode_step1(void)     /* Sample time: [0.001s, 0.0s] */
             /* Outputs for Function Call SubSystem: '<S47>/CAN_ERROR_RESTART.CAN_restart' */
 
             /* S-Function (CAN_Restart): '<S69>/CAN_Restart ' */
-            CAN_Restart_Outputs_wrapper();
+            //CAN_Restart_Outputs_wrapper();
 
             /* End of Outputs for SubSystem: '<S47>/CAN_ERROR_RESTART.CAN_restart' */
           }
@@ -8482,7 +8482,7 @@ void GCU_Model_genCode_step1(void)     /* Sample time: [0.001s, 0.0s] */
             /* Outputs for Function Call SubSystem: '<S47>/CAN_ERROR_RESTART.CAN_reset' */
 
             /* S-Function (CAN_Reset): '<S68>/CAN_Reset' */
-            CAN_Reset_Outputs_wrapper();
+            //CAN_Reset_Outputs_wrapper();
 
             /* End of Outputs for SubSystem: '<S47>/CAN_ERROR_RESTART.CAN_reset' */
           }
@@ -8501,7 +8501,7 @@ void GCU_Model_genCode_step1(void)     /* Sample time: [0.001s, 0.0s] */
         /* Outputs for Function Call SubSystem: '<S47>/CAN_ERROR_RESTART.CAN_checkStatus' */
 
         /* S-Function (CAN_checkStatus): '<S67>/CAN_checkStatus' */
-        CAN_checkStatus_Outputs_wrapper(&rtDW.CAN_checkStatus);
+        //CAN_checkStatus_Outputs_wrapper(&rtDW.CAN_checkStatus);
 
         /* End of Outputs for SubSystem: '<S47>/CAN_ERROR_RESTART.CAN_checkStatus' */
         if (rtDW.CAN_checkStatus && (rtDW.delayCounter >= 1000)) {
@@ -8844,16 +8844,18 @@ void GCU_Model_genCode_step2(void)     /* Sample time: [0.001s, 0.0002s] */
   } else {
     if (!((rtDW.UnpackCanUart_o1 == DCU_AUTOGEARSHIFT_GCU_ID) ||
           (!(rtDW.UnpackCanUart_o1 == SW_CAN_ERROR_GCU_ID)))) {
-      if (rtDW.canErrorCommand >= 255) {
-        rtDW.canErrorCommand = 0U;
-      } else {
-        i = rtDW.canErrorCommand + 1;
-        if (i > 65535) {
-          i = 65535;
-        }
+//      if (rtDW.canErrorCommand >= 255) {
+//        rtDW.canErrorCommand = 0U;
+//      } else {
+//        i = rtDW.canErrorCommand + 1;
+//        if (i > 65535) {
+//          i = 65535;
+//        }
 
-        rtDW.canErrorCommand = (uint16_T)i;
-      }
+//        rtDW.canErrorCommand = (uint16_T)i;
+//      }
+				CAN_Restart_Outputs_wrapper();
+	
     }
   }
 
