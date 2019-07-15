@@ -23,8 +23,6 @@
  *
  */
 /* %%%-SFUNWIZ_wrapper_externs_Changes_BEGIN --- EDIT HERE TO _END */
-extern void CAN_Start_Outputs_wrapper(void);
-extern void CAN_Filter_Setup_Outputs_wrapper(void);
 #if !defined(MATLAB_MEX_FILE)
 extern CAN_HandleTypeDef hcan_active;
 #endif
