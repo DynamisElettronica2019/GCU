@@ -43,7 +43,7 @@ void CAN_Filter_Setup_Outputs_wrapper(void)
   CAN_Filter_Config.FilterScale = CAN_FILTERSCALE_32BIT;
   CAN_Filter_Config.FilterIdHigh = (0x304 << 5);
   CAN_Filter_Config.FilterIdLow = 0x0000;
-  CAN_Filter_Config.FilterMaskIdHigh = (0x3FC << 5);//(0x7F0  << 5);
+  CAN_Filter_Config.FilterMaskIdHigh = (0x3FC << 5);
   CAN_Filter_Config.FilterMaskIdLow = 0x0000;
   CAN_Filter_Config.FilterFIFOAssignment = CAN_RX_FIFO0;
   CAN_Filter_Config.FilterActivation = ENABLE;	
@@ -56,7 +56,7 @@ void CAN_Filter_Setup_Outputs_wrapper(void)
   CAN_Filter_Config.FilterScale = CAN_FILTERSCALE_32BIT;
   CAN_Filter_Config.FilterIdHigh = (0x30C << 5);
   CAN_Filter_Config.FilterIdLow = 0x0000;
-  CAN_Filter_Config.FilterMaskIdHigh = (0x3FC << 5);//(0x7F0  << 5);
+  CAN_Filter_Config.FilterMaskIdHigh = (0x3FC << 5);
   CAN_Filter_Config.FilterMaskIdLow = 0x0000;
   CAN_Filter_Config.FilterFIFOAssignment = CAN_RX_FIFO0;
   CAN_Filter_Config.FilterActivation = ENABLE;	
@@ -69,7 +69,7 @@ void CAN_Filter_Setup_Outputs_wrapper(void)
 //  CAN_Filter_Config.FilterScale = CAN_FILTERSCALE_32BIT;
 //  CAN_Filter_Config.FilterIdHigh = (0x200 << 5);
 //  CAN_Filter_Config.FilterIdLow = 0x0000;
-//  CAN_Filter_Config.FilterMaskIdHigh = (0x3FC << 5);//(0x7F0  << 5);
+//  CAN_Filter_Config.FilterMaskIdHigh = (0x3FC << 5);
 //  CAN_Filter_Config.FilterMaskIdLow = 0x0000;
 //  CAN_Filter_Config.FilterFIFOAssignment = CAN_RX_FIFO0;
 //  CAN_Filter_Config.FilterActivation = ENABLE;	
@@ -82,7 +82,7 @@ void CAN_Filter_Setup_Outputs_wrapper(void)
   CAN_Filter_Config.FilterScale = CAN_FILTERSCALE_32BIT;
   CAN_Filter_Config.FilterIdHigh = (0x200 << 5);
   CAN_Filter_Config.FilterIdLow = 0x0000;
-  CAN_Filter_Config.FilterMaskIdHigh = (0x3F8 << 5);//(0x7F0  << 5);
+   CAN_Filter_Config.FilterMaskIdHigh = (0x3F8 << 5);
   CAN_Filter_Config.FilterMaskIdLow = 0x0000;
   CAN_Filter_Config.FilterFIFOAssignment = CAN_RX_FIFO0;
   CAN_Filter_Config.FilterActivation = ENABLE;	
@@ -95,7 +95,7 @@ void CAN_Filter_Setup_Outputs_wrapper(void)
   CAN_Filter_Config.FilterScale = CAN_FILTERSCALE_32BIT;
   CAN_Filter_Config.FilterIdHigh = (0x400 << 5);
   CAN_Filter_Config.FilterIdLow = 0x0000;
-  CAN_Filter_Config.FilterMaskIdHigh = (0x3FE << 5);//(0x7F0  << 5);
+  CAN_Filter_Config.FilterMaskIdHigh = (0x3FE << 5);
   CAN_Filter_Config.FilterMaskIdLow = 0x0000;
   CAN_Filter_Config.FilterFIFOAssignment = CAN_RX_FIFO0;
   CAN_Filter_Config.FilterActivation = ENABLE;	
@@ -108,7 +108,7 @@ void CAN_Filter_Setup_Outputs_wrapper(void)
 //  CAN_Filter_Config.FilterScale = CAN_FILTERSCALE_32BIT;
 //  CAN_Filter_Config.FilterIdHigh = (0x204 << 5);
 //  CAN_Filter_Config.FilterIdLow = 0x0000;
-//  CAN_Filter_Config.FilterMaskIdHigh = (0x3FF << 5);//(0x7F0  << 5);
+//  CAN_Filter_Config.FilterMaskIdHigh = (0x3FF << 5);
 //  CAN_Filter_Config.FilterMaskIdLow = 0x0000;
 //  CAN_Filter_Config.FilterFIFOAssignment = CAN_RX_FIFO0;
 //  CAN_Filter_Config.FilterActivation = ENABLE;	
@@ -121,7 +121,7 @@ void CAN_Filter_Setup_Outputs_wrapper(void)
 //  CAN_Filter_Config.FilterScale = CAN_FILTERSCALE_32BIT;
 //  CAN_Filter_Config.FilterIdHigh = (0x207 << 5);
 //  CAN_Filter_Config.FilterIdLow = 0x0000;
-//  CAN_Filter_Config.FilterMaskIdHigh = (0x3FF << 5);//(0x7F0  << 5);
+//  CAN_Filter_Config.FilterMaskIdHigh = (0x3FF << 5);
 //  CAN_Filter_Config.FilterMaskIdLow = 0x0000;
 //  CAN_Filter_Config.FilterFIFOAssignment = CAN_RX_FIFO0;
 //  CAN_Filter_Config.FilterActivation = ENABLE;	
@@ -134,7 +134,7 @@ void CAN_Filter_Setup_Outputs_wrapper(void)
   CAN_Filter_Config.FilterScale = CAN_FILTERSCALE_32BIT;
   CAN_Filter_Config.FilterIdHigh = (0x700 << 5);
   CAN_Filter_Config.FilterIdLow = 0x0000;
-  CAN_Filter_Config.FilterMaskIdHigh = (0x3FF << 5);//(0x7F0  << 5);
+  CAN_Filter_Config.FilterMaskIdHigh = (0x3FF << 5);
   CAN_Filter_Config.FilterMaskIdLow = 0x0000;
   CAN_Filter_Config.FilterFIFOAssignment = CAN_RX_FIFO0;
   CAN_Filter_Config.FilterActivation = ENABLE;	

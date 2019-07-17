@@ -157,7 +157,7 @@ int main(void)
 		else if(REC_reg >= 0xF0000000)
 		{
 			activateBuzzer_Outputs_wrapper();
-			CAN_Restart_Outputs_wrapper();
+			//CAN_Restart_Outputs_wrapper();
 		}
 		else
 		{

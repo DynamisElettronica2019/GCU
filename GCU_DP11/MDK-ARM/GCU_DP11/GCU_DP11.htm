@@ -3,9 +3,9 @@
 <title>Static Call Graph - [GCU_DP11\GCU_DP11.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image GCU_DP11\GCU_DP11.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Wed Jul 17 12:48:22 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Thu Jul 18 01:11:59 2019
 <BR><P>
-<H3>Maximum Stack Usage =        608 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        600 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 TIM6_DAC_IRQHandler &rArr; HAL_TIM_IRQHandler &rArr; HAL_TIM_PeriodElapsedCallback &rArr; GCU_Model_genCode_step1 &rArr; testIndex &rArr; Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 <P>
@@ -533,6 +533,7 @@ Global Symbols
 <LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM1_Init
 <LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 <LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step1
 <LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
 </UL>
 
@@ -591,21 +592,21 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[4a]"></a>CAN2_RX0_IRQHandler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f7xx_it.o(i.CAN2_RX0_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = CAN2_RX0_IRQHandler &rArr; HAL_CAN_IRQHandler &rArr; HAL_CAN_RxFifo0MsgPendingCallback &rArr; GCU_Model_genCode_step2 &rArr; CAN_Restart_Outputs_wrapper &rArr; HAL_Delay
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = CAN2_RX0_IRQHandler &rArr; HAL_CAN_IRQHandler &rArr; HAL_CAN_RxFifo0MsgPendingCallback &rArr; GCU_Model_genCode_step2 &rArr; CAN_Restart_Outputs_wrapper &rArr; HAL_Delay
 </UL>
 <BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f767xx.o(RESET)
 </UL>
 <P><STRONG><a name="[4b]"></a>CAN2_RX1_IRQHandler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f7xx_it.o(i.CAN2_RX1_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = CAN2_RX1_IRQHandler &rArr; HAL_CAN_IRQHandler &rArr; HAL_CAN_RxFifo0MsgPendingCallback &rArr; GCU_Model_genCode_step2 &rArr; CAN_Restart_Outputs_wrapper &rArr; HAL_Delay
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = CAN2_RX1_IRQHandler &rArr; HAL_CAN_IRQHandler &rArr; HAL_CAN_RxFifo0MsgPendingCallback &rArr; GCU_Model_genCode_step2 &rArr; CAN_Restart_Outputs_wrapper &rArr; HAL_Delay
 </UL>
 <BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f767xx.o(RESET)
 </UL>
 <P><STRONG><a name="[49]"></a>CAN2_TX_IRQHandler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f7xx_it.o(i.CAN2_TX_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = CAN2_TX_IRQHandler &rArr; HAL_CAN_IRQHandler &rArr; HAL_CAN_RxFifo0MsgPendingCallback &rArr; GCU_Model_genCode_step2 &rArr; CAN_Restart_Outputs_wrapper &rArr; HAL_Delay
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = CAN2_TX_IRQHandler &rArr; HAL_CAN_IRQHandler &rArr; HAL_CAN_RxFifo0MsgPendingCallback &rArr; GCU_Model_genCode_step2 &rArr; CAN_Restart_Outputs_wrapper &rArr; HAL_Delay
 </UL>
 <BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_IRQHandler
 </UL>
@@ -799,7 +800,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
 </UL>
 
-<P><STRONG><a name="[d5]"></a>GCU_Model_genCode_initialize</STRONG> (Thumb, 458 bytes, Stack size 64 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_initialize))
+<P><STRONG><a name="[d5]"></a>GCU_Model_genCode_initialize</STRONG> (Thumb, 460 bytes, Stack size 64 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_initialize))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = GCU_Model_genCode_initialize &rArr; Eeprom_init_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;load_default_timings_Outputs_wrapper
@@ -834,8 +835,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[e2]"></a>GCU_Model_genCode_step1</STRONG> (Thumb, 3020 bytes, Stack size 256 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_step1))
-<BR><BR>[Stack]<UL><LI>Max Depth = 576<LI>Call Chain = GCU_Model_genCode_step1 &rArr; testIndex &rArr; Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
+<P><STRONG><a name="[e2]"></a>GCU_Model_genCode_step1</STRONG> (Thumb, 2880 bytes, Stack size 248 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_step1))
+<BR><BR>[Stack]<UL><LI>Max Depth = 568<LI>Call Chain = GCU_Model_genCode_step1 &rArr; testIndex &rArr; Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EngineControl_stop_Outputs_wrapper
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClutchMotor_setPosition_Outputs_wrapper
@@ -852,14 +853,15 @@ Global Symbols
 <LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EngineControl_Start
 <LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;activateBuzzer_Outputs_wrapper
 <LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ScanADC_Outputs_wrapper
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
 </UL>
 
-<P><STRONG><a name="[ee]"></a>GCU_Model_genCode_step2</STRONG> (Thumb, 1136 bytes, Stack size 32 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_step2))
-<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = GCU_Model_genCode_step2 &rArr; CAN_Restart_Outputs_wrapper &rArr; HAL_Delay
+<P><STRONG><a name="[ee]"></a>GCU_Model_genCode_step2</STRONG> (Thumb, 1168 bytes, Stack size 24 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_step2))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = GCU_Model_genCode_step2 &rArr; CAN_Restart_Outputs_wrapper &rArr; HAL_Delay
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAutoXCommand
 <LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAccCommand
@@ -872,7 +874,7 @@ Global Symbols
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[f2]"></a>GCU_Model_genCode_step3</STRONG> (Thumb, 290 bytes, Stack size 144 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_step3))
+<P><STRONG><a name="[f2]"></a>GCU_Model_genCode_step3</STRONG> (Thumb, 286 bytes, Stack size 144 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_step3))
 <BR><BR>[Stack]<UL><LI>Max Depth = 204<LI>Call Chain = GCU_Model_genCode_step3 &rArr; sendUART_Outputs_wrapper &rArr; HAL_UART_Transmit_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PackUARTMsg_Outputs_wrapper
@@ -890,7 +892,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConvCpltCallback
 </UL>
 
-<P><STRONG><a name="[f8]"></a>GCU_Model_genCode_step5</STRONG> (Thumb, 472 bytes, Stack size 24 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_step5))
+<P><STRONG><a name="[f8]"></a>GCU_Model_genCode_step5</STRONG> (Thumb, 454 bytes, Stack size 24 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_step5))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = GCU_Model_genCode_step5 &rArr; look1_iu16lu64n48_binlcse &rArr; __aeabi_uldivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PackCANMsg_Outputs_wrapper
@@ -1049,7 +1051,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[af]"></a>HAL_CAN_IRQHandler</STRONG> (Thumb, 508 bytes, Stack size 40 bytes, stm32f7xx_hal_can.o(i.HAL_CAN_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = HAL_CAN_IRQHandler &rArr; HAL_CAN_RxFifo0MsgPendingCallback &rArr; GCU_Model_genCode_step2 &rArr; CAN_Restart_Outputs_wrapper &rArr; HAL_Delay
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = HAL_CAN_IRQHandler &rArr; HAL_CAN_RxFifo0MsgPendingCallback &rArr; GCU_Model_genCode_step2 &rArr; CAN_Restart_Outputs_wrapper &rArr; HAL_Delay
 </UL>
 <BR>[Calls]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_WakeUpFromRxMsgCallback
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_TxMailbox2CompleteCallback
@@ -1095,7 +1097,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[11a]"></a>HAL_CAN_RxFifo0MsgPendingCallback</STRONG> (Thumb, 86 bytes, Stack size 8 bytes, can.o(i.HAL_CAN_RxFifo0MsgPendingCallback))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = HAL_CAN_RxFifo0MsgPendingCallback &rArr; GCU_Model_genCode_step2 &rArr; CAN_Restart_Outputs_wrapper &rArr; HAL_Delay
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = HAL_CAN_RxFifo0MsgPendingCallback &rArr; GCU_Model_genCode_step2 &rArr; CAN_Restart_Outputs_wrapper &rArr; HAL_Delay
 </UL>
 <BR>[Calls]<UL><LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_TogglePin
 <LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_GetRxMessage
@@ -1529,7 +1531,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[13e]"></a>HAL_TIM_IRQHandler</STRONG> (Thumb, 386 bytes, Stack size 16 bytes, stm32f7xx_hal_tim.o(i.HAL_TIM_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 608<LI>Call Chain = HAL_TIM_IRQHandler &rArr; HAL_TIM_PeriodElapsedCallback &rArr; GCU_Model_genCode_step1 &rArr; testIndex &rArr; Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
+<BR><BR>[Stack]<UL><LI>Max Depth = 600<LI>Call Chain = HAL_TIM_IRQHandler &rArr; HAL_TIM_PeriodElapsedCallback &rArr; GCU_Model_genCode_step1 &rArr; testIndex &rArr; Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
 <LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_TriggerCallback
@@ -1632,7 +1634,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[142]"></a>HAL_TIM_PeriodElapsedCallback</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, tim.o(i.HAL_TIM_PeriodElapsedCallback))
-<BR><BR>[Stack]<UL><LI>Max Depth = 592<LI>Call Chain = HAL_TIM_PeriodElapsedCallback &rArr; GCU_Model_genCode_step1 &rArr; testIndex &rArr; Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
+<BR><BR>[Stack]<UL><LI>Max Depth = 584<LI>Call Chain = HAL_TIM_PeriodElapsedCallback &rArr; GCU_Model_genCode_step1 &rArr; testIndex &rArr; Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_TogglePin
 <LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step5
@@ -1695,7 +1697,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[15f]"></a>HAL_UART_RxCpltCallback</STRONG> (Thumb, 306 bytes, Stack size 32 bytes, usart.o(i.HAL_UART_RxCpltCallback))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = HAL_UART_RxCpltCallback &rArr; GCU_Model_genCode_step2 &rArr; CAN_Restart_Outputs_wrapper &rArr; HAL_Delay
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = HAL_UART_RxCpltCallback &rArr; GCU_Model_genCode_step6 &rArr; updateBuffer
 </UL>
 <BR>[Calls]<UL><LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive_IT
 <LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_TogglePin
@@ -1761,7 +1763,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[187]"></a>MX_CAN2_Init</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, can.o(i.MX_CAN2_Init))
+<P><STRONG><a name="[187]"></a>MX_CAN2_Init</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, can.o(i.MX_CAN2_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = MX_CAN2_Init &rArr; HAL_CAN_Init &rArr; HAL_CAN_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_Init
@@ -1941,7 +1943,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f767xx.o(.text)
 </UL>
 <P><STRONG><a name="[40]"></a>TIM6_DAC_IRQHandler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f7xx_it.o(i.TIM6_DAC_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 608<LI>Call Chain = TIM6_DAC_IRQHandler &rArr; HAL_TIM_IRQHandler &rArr; HAL_TIM_PeriodElapsedCallback &rArr; GCU_Model_genCode_step1 &rArr; testIndex &rArr; Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
+<BR><BR>[Stack]<UL><LI>Max Depth = 600<LI>Call Chain = TIM6_DAC_IRQHandler &rArr; HAL_TIM_IRQHandler &rArr; HAL_TIM_PeriodElapsedCallback &rArr; GCU_Model_genCode_step1 &rArr; testIndex &rArr; Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
 </UL>
@@ -2052,7 +2054,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
 </UL>
 
-<P><STRONG><a name="[76]"></a>main</STRONG> (Thumb, 150 bytes, Stack size 8 bytes, main.o(i.main))
+<P><STRONG><a name="[76]"></a>main</STRONG> (Thumb, 156 bytes, Stack size 8 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 320<LI>Call Chain = main &rArr; SystemClock_Config &rArr; HAL_RCC_ClockConfig &rArr; HAL_RCC_GetSysClockFreq &rArr; __aeabi_uldivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_UART4_Init
@@ -2155,7 +2157,7 @@ Global Symbols
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[90]"></a>ACCELERATION</STRONG> (Thumb, 1096 bytes, Stack size 48 bytes, gcu_model_gencode.o(i.ACCELERATION))
+<P><STRONG><a name="[90]"></a>ACCELERATION</STRONG> (Thumb, 1068 bytes, Stack size 48 bytes, gcu_model_gencode.o(i.ACCELERATION))
 <BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = ACCELERATION &rArr; enter_atomic_MANUAL_MODES &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_setRPMLimiter_Outputs_wrapper
@@ -2170,8 +2172,8 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODES
 </UL>
 
-<P><STRONG><a name="[99]"></a>ACCELERATION_PID</STRONG> (Thumb, 868 bytes, Stack size 56 bytes, gcu_model_gencode.o(i.ACCELERATION_PID))
-<BR><BR>[Stack]<UL><LI>Max Depth = 256<LI>Call Chain = ACCELERATION_PID &rArr; LAUNCH9 &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
+<P><STRONG><a name="[99]"></a>ACCELERATION_PID</STRONG> (Thumb, 844 bytes, Stack size 48 bytes, gcu_model_gencode.o(i.ACCELERATION_PID))
+<BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = ACCELERATION_PID &rArr; LAUNCH9 &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_setRPMLimiter_Outputs_wrapper
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
@@ -2196,7 +2198,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODES
 </UL>
 
-<P><STRONG><a name="[ac]"></a>AUTOCROSS</STRONG> (Thumb, 1122 bytes, Stack size 48 bytes, gcu_model_gencode.o(i.AUTOCROSS))
+<P><STRONG><a name="[ac]"></a>AUTOCROSS</STRONG> (Thumb, 1078 bytes, Stack size 48 bytes, gcu_model_gencode.o(i.AUTOCROSS))
 <BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = AUTOCROSS &rArr; enter_atomic_MANUAL_MODES &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_setRPMLimiter_Outputs_wrapper
@@ -2211,7 +2213,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODES
 </UL>
 
-<P><STRONG><a name="[92]"></a>Clutch_setValue</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, gcu_model_gencode.o(i.Clutch_setValue))
+<P><STRONG><a name="[92]"></a>Clutch_setValue</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, gcu_model_gencode.o(i.Clutch_setValue))
 <BR><BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClutchMotor_setPosition_Outputs_wrapper
 </UL>
 <BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
@@ -2231,7 +2233,7 @@ Local Symbols
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERATION
 </UL>
 
-<P><STRONG><a name="[9b]"></a>DEFAULT</STRONG> (Thumb, 620 bytes, Stack size 24 bytes, gcu_model_gencode.o(i.DEFAULT))
+<P><STRONG><a name="[9b]"></a>DEFAULT</STRONG> (Thumb, 616 bytes, Stack size 24 bytes, gcu_model_gencode.o(i.DEFAULT))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = DEFAULT &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_setRPMLimiter_Outputs_wrapper
@@ -2272,7 +2274,7 @@ Local Symbols
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;testIndex
 </UL>
 
-<P><STRONG><a name="[e5]"></a>GEARSHIFT</STRONG> (Thumb, 796 bytes, Stack size 80 bytes, gcu_model_gencode.o(i.GEARSHIFT))
+<P><STRONG><a name="[e5]"></a>GEARSHIFT</STRONG> (Thumb, 736 bytes, Stack size 80 bytes, gcu_model_gencode.o(i.GEARSHIFT))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GearMotor_turnLeft_Outputs_wrapper
@@ -2303,7 +2305,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GEARSHIFT
 </UL>
 
-<P><STRONG><a name="[100]"></a>Gearmotor_release</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, gcu_model_gencode.o(i.Gearmotor_release))
+<P><STRONG><a name="[100]"></a>Gearmotor_release</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, gcu_model_gencode.o(i.Gearmotor_release))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Gearmotor_release
 </UL>
 <BR>[Calls]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GearMotor_release_Outputs_wrapper
@@ -2319,12 +2321,12 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GEARSHIFT
 </UL>
 
-<P><STRONG><a name="[ff]"></a>Gearshift_getTime</STRONG> (Thumb, 172 bytes, Stack size 0 bytes, gcu_model_gencode.o(i.Gearshift_getTime))
+<P><STRONG><a name="[ff]"></a>Gearshift_getTime</STRONG> (Thumb, 168 bytes, Stack size 0 bytes, gcu_model_gencode.o(i.Gearshift_getTime))
 <BR><BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GEARSHIFT
 </UL>
 
-<P><STRONG><a name="[9f]"></a>LAUNCH1</STRONG> (Thumb, 544 bytes, Stack size 56 bytes, gcu_model_gencode.o(i.LAUNCH1))
-<BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = LAUNCH1 &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
+<P><STRONG><a name="[9f]"></a>LAUNCH1</STRONG> (Thumb, 516 bytes, Stack size 40 bytes, gcu_model_gencode.o(i.LAUNCH1))
+<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = LAUNCH1 &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAutoXParam
@@ -2337,8 +2339,8 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERATION_PID
 </UL>
 
-<P><STRONG><a name="[a0]"></a>LAUNCH2</STRONG> (Thumb, 524 bytes, Stack size 56 bytes, gcu_model_gencode.o(i.LAUNCH2))
-<BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = LAUNCH2 &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
+<P><STRONG><a name="[a0]"></a>LAUNCH2</STRONG> (Thumb, 496 bytes, Stack size 40 bytes, gcu_model_gencode.o(i.LAUNCH2))
+<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = LAUNCH2 &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAutoXParam
@@ -2351,8 +2353,8 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERATION_PID
 </UL>
 
-<P><STRONG><a name="[a1]"></a>LAUNCH3</STRONG> (Thumb, 524 bytes, Stack size 56 bytes, gcu_model_gencode.o(i.LAUNCH3))
-<BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = LAUNCH3 &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
+<P><STRONG><a name="[a1]"></a>LAUNCH3</STRONG> (Thumb, 496 bytes, Stack size 40 bytes, gcu_model_gencode.o(i.LAUNCH3))
+<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = LAUNCH3 &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAutoXParam
@@ -2365,8 +2367,8 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERATION_PID
 </UL>
 
-<P><STRONG><a name="[a2]"></a>LAUNCH4</STRONG> (Thumb, 524 bytes, Stack size 56 bytes, gcu_model_gencode.o(i.LAUNCH4))
-<BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = LAUNCH4 &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
+<P><STRONG><a name="[a2]"></a>LAUNCH4</STRONG> (Thumb, 496 bytes, Stack size 40 bytes, gcu_model_gencode.o(i.LAUNCH4))
+<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = LAUNCH4 &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAutoXParam
@@ -2379,8 +2381,8 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERATION_PID
 </UL>
 
-<P><STRONG><a name="[a3]"></a>LAUNCH5</STRONG> (Thumb, 524 bytes, Stack size 56 bytes, gcu_model_gencode.o(i.LAUNCH5))
-<BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = LAUNCH5 &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
+<P><STRONG><a name="[a3]"></a>LAUNCH5</STRONG> (Thumb, 496 bytes, Stack size 40 bytes, gcu_model_gencode.o(i.LAUNCH5))
+<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = LAUNCH5 &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAutoXParam
@@ -2393,8 +2395,8 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERATION_PID
 </UL>
 
-<P><STRONG><a name="[a4]"></a>LAUNCH6</STRONG> (Thumb, 524 bytes, Stack size 56 bytes, gcu_model_gencode.o(i.LAUNCH6))
-<BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = LAUNCH6 &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
+<P><STRONG><a name="[a4]"></a>LAUNCH6</STRONG> (Thumb, 496 bytes, Stack size 40 bytes, gcu_model_gencode.o(i.LAUNCH6))
+<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = LAUNCH6 &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAutoXParam
@@ -2407,8 +2409,8 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERATION_PID
 </UL>
 
-<P><STRONG><a name="[a5]"></a>LAUNCH7</STRONG> (Thumb, 524 bytes, Stack size 56 bytes, gcu_model_gencode.o(i.LAUNCH7))
-<BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = LAUNCH7 &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
+<P><STRONG><a name="[a5]"></a>LAUNCH7</STRONG> (Thumb, 496 bytes, Stack size 40 bytes, gcu_model_gencode.o(i.LAUNCH7))
+<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = LAUNCH7 &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAutoXParam
@@ -2421,8 +2423,8 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERATION_PID
 </UL>
 
-<P><STRONG><a name="[a6]"></a>LAUNCH8</STRONG> (Thumb, 524 bytes, Stack size 56 bytes, gcu_model_gencode.o(i.LAUNCH8))
-<BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = LAUNCH8 &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
+<P><STRONG><a name="[a6]"></a>LAUNCH8</STRONG> (Thumb, 496 bytes, Stack size 40 bytes, gcu_model_gencode.o(i.LAUNCH8))
+<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = LAUNCH8 &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAutoXParam
@@ -2435,8 +2437,8 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERATION_PID
 </UL>
 
-<P><STRONG><a name="[a7]"></a>LAUNCH9</STRONG> (Thumb, 524 bytes, Stack size 56 bytes, gcu_model_gencode.o(i.LAUNCH9))
-<BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = LAUNCH9 &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
+<P><STRONG><a name="[a7]"></a>LAUNCH9</STRONG> (Thumb, 496 bytes, Stack size 40 bytes, gcu_model_gencode.o(i.LAUNCH9))
+<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = LAUNCH9 &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAutoXParam
@@ -2449,8 +2451,8 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERATION_PID
 </UL>
 
-<P><STRONG><a name="[e3]"></a>MODES</STRONG> (Thumb, 454 bytes, Stack size 32 bytes, gcu_model_gencode.o(i.MODES))
-<BR><BR>[Stack]<UL><LI>Max Depth = 288<LI>Call Chain = MODES &rArr; ACCELERATION_PID &rArr; LAUNCH9 &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
+<P><STRONG><a name="[e3]"></a>MODES</STRONG> (Thumb, 480 bytes, Stack size 24 bytes, gcu_model_gencode.o(i.MODES))
+<BR><BR>[Stack]<UL><LI>Max Depth = 256<LI>Call Chain = MODES &rArr; ACCELERATION_PID &rArr; LAUNCH9 &rArr; checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_setRPMLimiter_Outputs_wrapper
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Efi_unsetRPMLimiter_Outputs_wrapper
@@ -2594,14 +2596,12 @@ Local Symbols
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DEFAULT
 </UL>
 
-<P><STRONG><a name="[e4]"></a>NEUTRAL_STATE</STRONG> (Thumb, 98 bytes, Stack size 8 bytes, gcu_model_gencode.o(i.NEUTRAL_STATE))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = NEUTRAL_STATE
-</UL>
-<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step1
+<P><STRONG><a name="[e4]"></a>NEUTRAL_STATE</STRONG> (Thumb, 94 bytes, Stack size 0 bytes, gcu_model_gencode.o(i.NEUTRAL_STATE))
+<BR><BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step1
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkShift
 </UL>
 
-<P><STRONG><a name="[98]"></a>aacCheckShift</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, gcu_model_gencode.o(i.aacCheckShift))
+<P><STRONG><a name="[98]"></a>aacCheckShift</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, gcu_model_gencode.o(i.aacCheckShift))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = aacCheckShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GEARSHIFT
@@ -2609,7 +2609,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERATION
 </UL>
 
-<P><STRONG><a name="[9e]"></a>autoXCheckShift</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, gcu_model_gencode.o(i.autoXCheckShift))
+<P><STRONG><a name="[9e]"></a>autoXCheckShift</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, gcu_model_gencode.o(i.autoXCheckShift))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = autoXCheckShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GEARSHIFT
@@ -2627,7 +2627,7 @@ Local Symbols
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERATION_PID
 </UL>
 
-<P><STRONG><a name="[94]"></a>checkClutch</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, gcu_model_gencode.o(i.checkClutch))
+<P><STRONG><a name="[94]"></a>checkClutch</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, gcu_model_gencode.o(i.checkClutch))
 <BR><BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Clutch_setValue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enter_atomic_MANUAL_MODES
@@ -2647,7 +2647,7 @@ Local Symbols
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERATION
 </UL>
 
-<P><STRONG><a name="[93]"></a>checkShift</STRONG> (Thumb, 222 bytes, Stack size 32 bytes, gcu_model_gencode.o(i.checkShift))
+<P><STRONG><a name="[93]"></a>checkShift</STRONG> (Thumb, 214 bytes, Stack size 32 bytes, gcu_model_gencode.o(i.checkShift))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = checkShift &rArr; GEARSHIFT &rArr; Gearmotor_turnRight &rArr; GearMotor_turnRight_Outputs_wrapper
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NEUTRAL_STATE
@@ -2748,7 +2748,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step1
 </UL>
 
-<P><STRONG><a name="[ec]"></a>testIndex</STRONG> (Thumb, 148 bytes, Stack size 72 bytes, gcu_model_gencode.o(i.testIndex))
+<P><STRONG><a name="[ec]"></a>testIndex</STRONG> (Thumb, 134 bytes, Stack size 72 bytes, gcu_model_gencode.o(i.testIndex))
 <BR><BR>[Stack]<UL><LI>Max Depth = 320<LI>Call Chain = testIndex &rArr; Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;updateOutput
@@ -3124,14 +3124,14 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[7f]"></a>UART_RxISR_16BIT</STRONG> (Thumb, 90 bytes, Stack size 8 bytes, stm32f7xx_hal_uart.o(i.UART_RxISR_16BIT))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = UART_RxISR_16BIT &rArr; HAL_UART_RxCpltCallback &rArr; GCU_Model_genCode_step2 &rArr; CAN_Restart_Outputs_wrapper &rArr; HAL_Delay
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = UART_RxISR_16BIT &rArr; HAL_UART_RxCpltCallback &rArr; GCU_Model_genCode_step6 &rArr; updateBuffer
 </UL>
 <BR>[Calls]<UL><LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> stm32f7xx_hal_uart.o(i.HAL_UART_Receive_IT)
 </UL>
 <P><STRONG><a name="[7e]"></a>UART_RxISR_8BIT</STRONG> (Thumb, 90 bytes, Stack size 8 bytes, stm32f7xx_hal_uart.o(i.UART_RxISR_8BIT))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = UART_RxISR_8BIT &rArr; HAL_UART_RxCpltCallback &rArr; GCU_Model_genCode_step2 &rArr; CAN_Restart_Outputs_wrapper &rArr; HAL_Delay
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = UART_RxISR_8BIT &rArr; HAL_UART_RxCpltCallback &rArr; GCU_Model_genCode_step6 &rArr; updateBuffer
 </UL>
 <BR>[Calls]<UL><LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
 </UL>

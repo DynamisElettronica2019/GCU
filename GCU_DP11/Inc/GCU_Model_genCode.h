@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'GCU_Model_genCode'.
  *
- * Model version                  : 1.389
+ * Model version                  : 1.390
  * Simulink Coder version         : 8.14 (R2018a) 06-Feb-2018
- * C/C++ source code generated on : Mon Jul 15 17:30:28 2019
+ * C/C++ source code generated on : Thu Jul 18 00:58:39 2019
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -318,8 +318,6 @@ typedef struct {
   real_T RateTransition40;             /* '<Root>/Rate Transition40' */
   real_T RateTransition41;             /* '<Root>/Rate Transition41' */
   real_T RateTransition1;              /* '<S3>/Rate Transition1' */
-  real_T time;                         /* '<S5>/GCULogic' */
-  real_T current;                      /* '<S5>/GCULogic' */
   real_T deltaTime;                    /* '<S42>/timeCounter' */
   real_T lastInsertedIndex;            /* '<S3>/EEPROM_Load_Buffer' */
   real_T Internal_DSTATE;              /* '<S47>/Internal' */
@@ -333,22 +331,22 @@ typedef struct {
   real_T autoX_clutchStep;             /* '<S5>/GCULogic' */
   real_T delayCount;                   /* '<S5>/GCULogic' */
   real_T retryCount;                   /* '<S5>/GCULogic' */
+  real_T lastShiftCom;                 /* '<S5>/GCULogic' */
   real_T counterWait;                  /* '<S5>/GCULogic' */
   real_T lastEvaluatedIndex;           /* '<S3>/EEPROM_OutputRequest' */
   real_T reloadFlag;                   /* '<S3>/EEPROM_OutputRequest' */
   real_T timeMs;                       /* '<S42>/timeCounter' */
-  int32_T UnitDelay[16];               /* '<Root>/Unit Delay' */
   int32_T UnitDelay1[24];              /* '<Root>/Unit Delay1' */
   int32_T UnitDelay2[16];              /* '<Root>/Unit Delay2' */
   int32_T load_accParameters[13];      /* '<S6>/load_accParameters' */
   int32_T load_default_timings[23];    /* '<S6>/load_default_timings' */
   int32_T load_accParameters1[13];     /* '<S6>/load_accParameters1' */
   int32_T load_antiStall_default[3];   /* '<S6>/load_antiStall_default' */
+  int32_T TmpSignalConversionAtSFunctionI[16];/* '<S5>/GCULogic' */
   int32_T Merge_d[24];                 /* '<S30>/Merge' */
   int32_T Merge1[16];                  /* '<S30>/Merge1' */
   int32_T Merge2[16];                  /* '<S30>/Merge2' */
   int32_T Merge3[8];                   /* '<S30>/Merge3' */
-  int32_T UnitDelay_DSTATE_b[16];      /* '<Root>/Unit Delay' */
   int32_T UnitDelay1_DSTATE[24];       /* '<Root>/Unit Delay1' */
   int32_T UnitDelay2_DSTATE[16];       /* '<Root>/Unit Delay2' */
   int32_T UnitDelay3_DSTATE[8];        /* '<Root>/Unit Delay3' */
@@ -391,7 +389,7 @@ typedef struct {
   uint16_T RateTransition26;           /* '<Root>/Rate Transition26' */
   uint16_T RateTransition28;           /* '<Root>/Rate Transition28' */
   uint16_T RateTransition31;           /* '<Root>/Rate Transition31' */
-  uint16_T UnitDelay_b;                /* '<S5>/Unit Delay' */
+  uint16_T UnitDelay;                  /* '<S5>/Unit Delay' */
   uint16_T stateFb;                    /* '<S5>/GCULogic' */
   uint16_T last_rpmValue;              /* '<S42>/timeCounter' */
   uint16_T antiStallFb;                /* '<S42>/antiStallLogic' */
@@ -429,7 +427,7 @@ typedef struct {
   volatile uint16_T RateTransition1_Buffer0_m;/* '<Root>/Rate Transition1' */
   volatile uint16_T RateTransition42_Buffer0;/* '<Root>/Rate Transition42' */
   uint16_T lastAacCom;                 /* '<S5>/GCULogic' */
-  uint16_T lastShiftCom;               /* '<S5>/GCULogic' */
+  uint16_T lastShiftCom_d;             /* '<S5>/GCULogic' */
   uint16_T lastAutoXCom;               /* '<S5>/GCULogic' */
   uint16_T buzzerCounter;              /* '<S5>/GCULogic' */
   uint16_T aacCounter;                 /* '<S5>/GCULogic' */
@@ -551,6 +549,8 @@ typedef struct {
   uint8_T is_LAUNCH7;                  /* '<S5>/GCULogic' */
   uint8_T is_ACTIVE_n;                 /* '<S5>/GCULogic' */
   uint8_T is_RELEASE_a4;               /* '<S5>/GCULogic' */
+  uint8_T is_RETRY_LOGIC;              /* '<S5>/GCULogic' */
+  uint8_T is_active_RETRY_LOGIC;       /* '<S5>/GCULogic' */
   uint8_T is_NEUTRAL_STATE;            /* '<S5>/GCULogic' */
   uint8_T is_active_NEUTRAL_STATE;     /* '<S5>/GCULogic' */
   uint8_T is_GEARSHIFT;                /* '<S5>/GCULogic' */
@@ -570,8 +570,6 @@ typedef struct {
   uint8_T is_active_SCAN_ADC;          /* '<S5>/GCULogic' */
   uint8_T is_ANTISTALL_ENABLE;         /* '<S5>/GCULogic' */
   uint8_T is_active_ANTISTALL_ENABLE;  /* '<S5>/GCULogic' */
-  uint8_T is_RETRY_LOGIC;              /* '<S5>/GCULogic' */
-  uint8_T is_active_RETRY_LOGIC;       /* '<S5>/GCULogic' */
   uint8_T lastShift;                   /* '<S5>/GCULogic' */
   uint8_T lastCom;                     /* '<S5>/GCULogic' */
   uint8_T startCounter;                /* '<S5>/GCULogic' */
@@ -702,6 +700,7 @@ extern RT_MODEL *const rtM;
  * Block '<Root>/Cast' : Unused code path elimination
  * Block '<S42>/Scope' : Unused code path elimination
  * Block '<Root>/Rate Transition39' : Unused code path elimination
+ * Block '<Root>/Unit Delay' : Unused code path elimination
  * Block '<S2>/Cast' : Eliminate redundant data type conversion
  * Block '<S2>/Cast1' : Eliminate redundant data type conversion
  * Block '<S21>/Cast' : Eliminate redundant data type conversion
@@ -715,7 +714,7 @@ extern RT_MODEL *const rtM;
  * Block '<S27>/Cast1' : Eliminate redundant data type conversion
  * Block '<S27>/Cast2' : Eliminate redundant data type conversion
  * Block '<S27>/Cast3' : Eliminate redundant data type conversion
- * Block '<S117>/Cast To Double11' : Eliminate redundant data type conversion
+ * Block '<S125>/Cast To Double11' : Eliminate redundant data type conversion
  */
 
 /*-
@@ -847,10 +846,18 @@ extern RT_MODEL *const rtM;
  * '<S112>' : 'GCU_Model_genCode/Simulink_Acc_Debug/AccelerationRoutine'
  * '<S113>' : 'GCU_Model_genCode/Simulink_Acc_Debug1/AccelerationRoutine'
  * '<S114>' : 'GCU_Model_genCode/Subsystem/Subsystem'
- * '<S115>' : 'GCU_Model_genCode/Subsystem/Subsystem/MATLAB Function'
- * '<S116>' : 'GCU_Model_genCode/update_ADC_data/Mean Value'
- * '<S117>' : 'GCU_Model_genCode/update_ADC_data/Subsystem'
- * '<S118>' : 'GCU_Model_genCode/update_ADC_data/Subsystem/f_T_lt'
+ * '<S115>' : 'GCU_Model_genCode/Subsystem/servo 1'
+ * '<S116>' : 'GCU_Model_genCode/Subsystem/Subsystem/LTI System'
+ * '<S117>' : 'GCU_Model_genCode/Subsystem/Subsystem/MATLAB Function'
+ * '<S118>' : 'GCU_Model_genCode/Subsystem/Subsystem/LTI System/IO Delay'
+ * '<S119>' : 'GCU_Model_genCode/Subsystem/Subsystem/LTI System/Input Delay'
+ * '<S120>' : 'GCU_Model_genCode/Subsystem/Subsystem/LTI System/Output Delay'
+ * '<S121>' : 'GCU_Model_genCode/Subsystem/servo 1/IO Delay'
+ * '<S122>' : 'GCU_Model_genCode/Subsystem/servo 1/Input Delay'
+ * '<S123>' : 'GCU_Model_genCode/Subsystem/servo 1/Output Delay'
+ * '<S124>' : 'GCU_Model_genCode/update_ADC_data/Mean Value'
+ * '<S125>' : 'GCU_Model_genCode/update_ADC_data/Subsystem'
+ * '<S126>' : 'GCU_Model_genCode/update_ADC_data/Subsystem/f_T_lt'
  */
 #endif                                 /* RTW_HEADER_GCU_Model_genCode_h_ */
 

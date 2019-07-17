@@ -248,15 +248,10 @@
         <Ww>
           <count>2</count>
           <WinNumber>2</WinNumber>
-          <ItemText>rtDW.autoXCounter_f,0x0A</ItemText>
-        </Ww>
-        <Ww>
-          <count>3</count>
-          <WinNumber>2</WinNumber>
           <ItemText>rtDW.stateFb,0x0A</ItemText>
         </Ww>
         <Ww>
-          <count>4</count>
+          <count>3</count>
           <WinNumber>2</WinNumber>
           <ItemText>rtDW.pidCounter,0x0A</ItemText>
         </Ww>
