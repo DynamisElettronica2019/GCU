@@ -150,8 +150,14 @@ int main(void)
 		REC_reg= ESR_reg & 0xFF000000;
 			
 		if(TEC_reg>=0x00F50000)
-			if(REC_reg != 0xFF000000)
-				activateBuzzer_Outputs_wrapper();
+		{
+			activateBuzzer_Outputs_wrapper();
+			CAN_Restart_Outputs_wrapper();
+		}
+		else
+		{
+			stopBuzzer_Outputs_wrapper();
+		}
 		//CAN1_Send_Nucleo_F7_Packet();
 		//HAL_Delay(500);
 		if(rtU.SelectMode == DEMO_READ_MODE)

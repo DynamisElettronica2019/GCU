@@ -3,7 +3,7 @@
 <title>Static Call Graph - [GCU_DP11\GCU_DP11.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image GCU_DP11\GCU_DP11.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Mon Jul 15 17:45:32 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Wed Jul 17 12:40:51 2019
 <BR><P>
 <H3>Maximum Stack Usage =        608 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -624,7 +624,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step2
+<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step2
 </UL>
 
 <P><STRONG><a name="[b4]"></a>CAN_Start_Outputs_wrapper</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, can_start_wrapper.o(i.CAN_Start_Outputs_wrapper))
@@ -2051,7 +2052,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
 </UL>
 
-<P><STRONG><a name="[76]"></a>main</STRONG> (Thumb, 142 bytes, Stack size 8 bytes, main.o(i.main))
+<P><STRONG><a name="[76]"></a>main</STRONG> (Thumb, 140 bytes, Stack size 8 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 320<LI>Call Chain = main &rArr; SystemClock_Config &rArr; HAL_RCC_ClockConfig &rArr; HAL_RCC_GetSysClockFreq &rArr; __aeabi_uldivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_UART4_Init
@@ -2071,6 +2072,8 @@ Global Symbols
 <LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_step2
 <LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GCU_Model_genCode_initialize
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN_Restart_Outputs_wrapper
+<LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stopBuzzer_Outputs_wrapper
 <LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;activateBuzzer_Outputs_wrapper
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
@@ -2141,7 +2144,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[183]"></a>stopBuzzer_Outputs_wrapper</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stopbuzzer_wrapper.o(i.stopBuzzer_Outputs_wrapper))
-<BR><BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODES
+<BR><BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODES
 </UL>
 
 <P><STRONG><a name="[f6]"></a>update_ADC_data_Outputs_wrapper</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, update_adc_data_wrapper.o(i.update_ADC_data_Outputs_wrapper))
