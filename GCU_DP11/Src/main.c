@@ -145,11 +145,16 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		ESR_reg= hcan2.Instance->ESR;
+		ESR_reg = hcan2.Instance->ESR;
 		TEC_reg = ESR_reg & 0x00FF0000;
-		REC_reg= ESR_reg & 0xFF000000;
+		REC_reg = ESR_reg & 0xFF000000;
 			
-		if(TEC_reg>=0x00F50000)
+		if(TEC_reg >= 0x00F00000)
+		{
+			activateBuzzer_Outputs_wrapper();
+			CAN_Restart_Outputs_wrapper();
+		}
+		else if(REC_reg >= 0xF0000000)
 		{
 			activateBuzzer_Outputs_wrapper();
 			CAN_Restart_Outputs_wrapper();
@@ -158,6 +163,7 @@ int main(void)
 		{
 			stopBuzzer_Outputs_wrapper();
 		}
+		
 		//CAN1_Send_Nucleo_F7_Packet();
 		//HAL_Delay(500);
 		if(rtU.SelectMode == DEMO_READ_MODE)

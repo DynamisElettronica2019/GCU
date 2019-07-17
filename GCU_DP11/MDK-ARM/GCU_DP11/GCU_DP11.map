@@ -2439,39 +2439,39 @@ Image Symbol Table
     i.look1_iu16lu64n48_binlcse              0x0800b2d0   Section        0  gcu_model_gencode.o(i.look1_iu16lu64n48_binlcse)
     look1_iu16lu64n48_binlcse                0x0800b2d1   Thumb Code   160  gcu_model_gencode.o(i.look1_iu16lu64n48_binlcse)
     i.main                                   0x0800b370   Section        0  main.o(i.main)
-    i.rtGetInf                               0x0800b404   Section        0  gcu_model_gencode.o(i.rtGetInf)
-    i.rtGetMinusInf                          0x0800b418   Section        0  gcu_model_gencode.o(i.rtGetMinusInf)
-    i.rtGetNaN                               0x0800b42c   Section        0  gcu_model_gencode.o(i.rtGetNaN)
-    i.rtGetNaNF                              0x0800b440   Section        0  gcu_model_gencode.o(i.rtGetNaNF)
-    i.rt_InitInfAndNaN                       0x0800b44c   Section        0  gcu_model_gencode.o(i.rt_InitInfAndNaN)
-    i.sendAccCommand                         0x0800b484   Section        0  gcu_model_gencode.o(i.sendAccCommand)
-    sendAccCommand                           0x0800b485   Thumb Code    36  gcu_model_gencode.o(i.sendAccCommand)
-    i.sendAutoXCommand                       0x0800b4ac   Section        0  gcu_model_gencode.o(i.sendAutoXCommand)
-    sendAutoXCommand                         0x0800b4ad   Thumb Code    36  gcu_model_gencode.o(i.sendAutoXCommand)
-    i.sendCAN_Outputs_wrapper                0x0800b4d4   Section        0  sendcan_wrapper.o(i.sendCAN_Outputs_wrapper)
-    i.sendEepromUART_Outputs_wrapper         0x0800b510   Section        0  sendeepromuart_wrapper.o(i.sendEepromUART_Outputs_wrapper)
-    i.sendUART_Outputs_wrapper               0x0800b548   Section        0  senduart_wrapper.o(i.sendUART_Outputs_wrapper)
-    i.setKeyOn_Outputs_wrapper               0x0800b588   Section        0  setkeyon_wrapper.o(i.setKeyOn_Outputs_wrapper)
-    i.shiftArray                             0x0800b5a0   Section        0  gcu_model_gencode.o(i.shiftArray)
-    shiftArray                               0x0800b5a1   Thumb Code   180  gcu_model_gencode.o(i.shiftArray)
-    i.shiftArray_h                           0x0800b658   Section        0  gcu_model_gencode.o(i.shiftArray_h)
-    shiftArray_h                             0x0800b659   Thumb Code   180  gcu_model_gencode.o(i.shiftArray_h)
-    i.shiftArray_hs                          0x0800b710   Section        0  gcu_model_gencode.o(i.shiftArray_hs)
-    shiftArray_hs                            0x0800b711   Thumb Code   180  gcu_model_gencode.o(i.shiftArray_hs)
-    i.stopBuzzer_Outputs_wrapper             0x0800b7c8   Section        0  stopbuzzer_wrapper.o(i.stopBuzzer_Outputs_wrapper)
-    i.testIndex                              0x0800b7d8   Section        0  gcu_model_gencode.o(i.testIndex)
-    testIndex                                0x0800b7d9   Thumb Code   148  gcu_model_gencode.o(i.testIndex)
-    i.updateBuffer                           0x0800b870   Section        0  gcu_model_gencode.o(i.updateBuffer)
-    updateBuffer                             0x0800b871   Thumb Code   118  gcu_model_gencode.o(i.updateBuffer)
-    i.updateOutput                           0x0800b8f0   Section        0  gcu_model_gencode.o(i.updateOutput)
-    updateOutput                             0x0800b8f1   Thumb Code   160  gcu_model_gencode.o(i.updateOutput)
-    i.update_ADC_data_Outputs_wrapper        0x0800b998   Section        0  update_adc_data_wrapper.o(i.update_ADC_data_Outputs_wrapper)
-    .constdata                               0x0800b9ac   Section        8  gcu_model_gencode.o(.constdata)
-    .constdata                               0x0800b9b8   Section      248  gcu_model_gencode_data.o(.constdata)
-    .constdata                               0x0800bab0   Section        8  stm32f7xx_hal_dma.o(.constdata)
-    flagBitshiftOffset                       0x0800bab0   Data           8  stm32f7xx_hal_dma.o(.constdata)
-    .constdata                               0x0800bab8   Section       16  system_stm32f7xx.o(.constdata)
-    .constdata                               0x0800bac8   Section        8  system_stm32f7xx.o(.constdata)
+    i.rtGetInf                               0x0800b410   Section        0  gcu_model_gencode.o(i.rtGetInf)
+    i.rtGetMinusInf                          0x0800b424   Section        0  gcu_model_gencode.o(i.rtGetMinusInf)
+    i.rtGetNaN                               0x0800b438   Section        0  gcu_model_gencode.o(i.rtGetNaN)
+    i.rtGetNaNF                              0x0800b44c   Section        0  gcu_model_gencode.o(i.rtGetNaNF)
+    i.rt_InitInfAndNaN                       0x0800b458   Section        0  gcu_model_gencode.o(i.rt_InitInfAndNaN)
+    i.sendAccCommand                         0x0800b490   Section        0  gcu_model_gencode.o(i.sendAccCommand)
+    sendAccCommand                           0x0800b491   Thumb Code    36  gcu_model_gencode.o(i.sendAccCommand)
+    i.sendAutoXCommand                       0x0800b4b8   Section        0  gcu_model_gencode.o(i.sendAutoXCommand)
+    sendAutoXCommand                         0x0800b4b9   Thumb Code    36  gcu_model_gencode.o(i.sendAutoXCommand)
+    i.sendCAN_Outputs_wrapper                0x0800b4e0   Section        0  sendcan_wrapper.o(i.sendCAN_Outputs_wrapper)
+    i.sendEepromUART_Outputs_wrapper         0x0800b51c   Section        0  sendeepromuart_wrapper.o(i.sendEepromUART_Outputs_wrapper)
+    i.sendUART_Outputs_wrapper               0x0800b554   Section        0  senduart_wrapper.o(i.sendUART_Outputs_wrapper)
+    i.setKeyOn_Outputs_wrapper               0x0800b594   Section        0  setkeyon_wrapper.o(i.setKeyOn_Outputs_wrapper)
+    i.shiftArray                             0x0800b5ac   Section        0  gcu_model_gencode.o(i.shiftArray)
+    shiftArray                               0x0800b5ad   Thumb Code   180  gcu_model_gencode.o(i.shiftArray)
+    i.shiftArray_h                           0x0800b664   Section        0  gcu_model_gencode.o(i.shiftArray_h)
+    shiftArray_h                             0x0800b665   Thumb Code   180  gcu_model_gencode.o(i.shiftArray_h)
+    i.shiftArray_hs                          0x0800b71c   Section        0  gcu_model_gencode.o(i.shiftArray_hs)
+    shiftArray_hs                            0x0800b71d   Thumb Code   180  gcu_model_gencode.o(i.shiftArray_hs)
+    i.stopBuzzer_Outputs_wrapper             0x0800b7d4   Section        0  stopbuzzer_wrapper.o(i.stopBuzzer_Outputs_wrapper)
+    i.testIndex                              0x0800b7e4   Section        0  gcu_model_gencode.o(i.testIndex)
+    testIndex                                0x0800b7e5   Thumb Code   148  gcu_model_gencode.o(i.testIndex)
+    i.updateBuffer                           0x0800b87c   Section        0  gcu_model_gencode.o(i.updateBuffer)
+    updateBuffer                             0x0800b87d   Thumb Code   118  gcu_model_gencode.o(i.updateBuffer)
+    i.updateOutput                           0x0800b8fc   Section        0  gcu_model_gencode.o(i.updateOutput)
+    updateOutput                             0x0800b8fd   Thumb Code   160  gcu_model_gencode.o(i.updateOutput)
+    i.update_ADC_data_Outputs_wrapper        0x0800b9a4   Section        0  update_adc_data_wrapper.o(i.update_ADC_data_Outputs_wrapper)
+    .constdata                               0x0800b9b8   Section        8  gcu_model_gencode.o(.constdata)
+    .constdata                               0x0800b9c0   Section      248  gcu_model_gencode_data.o(.constdata)
+    .constdata                               0x0800bab8   Section        8  stm32f7xx_hal_dma.o(.constdata)
+    flagBitshiftOffset                       0x0800bab8   Data           8  stm32f7xx_hal_dma.o(.constdata)
+    .constdata                               0x0800bac0   Section       16  system_stm32f7xx.o(.constdata)
+    .constdata                               0x0800bad0   Section        8  system_stm32f7xx.o(.constdata)
     .data                                    0x20000000   Section        8  gcu_model_gencode.o(.data)
     .data                                    0x20000008   Section       40  gcu_model_gencode.o(.data)
     .data                                    0x20000030   Section       16  can.o(.data)
@@ -2821,25 +2821,25 @@ Image Symbol Table
     load_antiStallParameters_Outputs_wrapper 0x0800b241   Thumb Code    16  load_antistallparameters_wrapper.o(i.load_antiStallParameters_Outputs_wrapper)
     load_autoXParameters_Outputs_wrapper     0x0800b251   Thumb Code    52  load_autoxparameters_wrapper.o(i.load_autoXParameters_Outputs_wrapper)
     load_default_timings_Outputs_wrapper     0x0800b285   Thumb Code    76  load_default_timings_wrapper.o(i.load_default_timings_Outputs_wrapper)
-    main                                     0x0800b371   Thumb Code   140  main.o(i.main)
-    rtGetInf                                 0x0800b405   Thumb Code    16  gcu_model_gencode.o(i.rtGetInf)
-    rtGetMinusInf                            0x0800b419   Thumb Code    16  gcu_model_gencode.o(i.rtGetMinusInf)
-    rtGetNaN                                 0x0800b42d   Thumb Code    16  gcu_model_gencode.o(i.rtGetNaN)
-    rtGetNaNF                                0x0800b441   Thumb Code     8  gcu_model_gencode.o(i.rtGetNaNF)
-    rt_InitInfAndNaN                         0x0800b44d   Thumb Code    48  gcu_model_gencode.o(i.rt_InitInfAndNaN)
-    sendCAN_Outputs_wrapper                  0x0800b4d5   Thumb Code    48  sendcan_wrapper.o(i.sendCAN_Outputs_wrapper)
-    sendEepromUART_Outputs_wrapper           0x0800b511   Thumb Code    44  sendeepromuart_wrapper.o(i.sendEepromUART_Outputs_wrapper)
-    sendUART_Outputs_wrapper                 0x0800b549   Thumb Code    50  senduart_wrapper.o(i.sendUART_Outputs_wrapper)
-    setKeyOn_Outputs_wrapper                 0x0800b589   Thumb Code    20  setkeyon_wrapper.o(i.setKeyOn_Outputs_wrapper)
-    stopBuzzer_Outputs_wrapper               0x0800b7c9   Thumb Code    10  stopbuzzer_wrapper.o(i.stopBuzzer_Outputs_wrapper)
-    update_ADC_data_Outputs_wrapper          0x0800b999   Thumb Code    20  update_adc_data_wrapper.o(i.update_ADC_data_Outputs_wrapper)
-    GCU_Model_genCode_U16GND                 0x0800b9ac   Data           2  gcu_model_gencode.o(.constdata)
-    rtM                                      0x0800b9b0   Data           4  gcu_model_gencode.o(.constdata)
-    rtConstP                                 0x0800b9b8   Data         248  gcu_model_gencode_data.o(.constdata)
-    AHBPrescTable                            0x0800bab8   Data          16  system_stm32f7xx.o(.constdata)
-    APBPrescTable                            0x0800bac8   Data           8  system_stm32f7xx.o(.constdata)
-    Region$$Table$$Base                      0x0800bad0   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0800baf0   Number         0  anon$$obj.o(Region$$Table)
+    main                                     0x0800b371   Thumb Code   150  main.o(i.main)
+    rtGetInf                                 0x0800b411   Thumb Code    16  gcu_model_gencode.o(i.rtGetInf)
+    rtGetMinusInf                            0x0800b425   Thumb Code    16  gcu_model_gencode.o(i.rtGetMinusInf)
+    rtGetNaN                                 0x0800b439   Thumb Code    16  gcu_model_gencode.o(i.rtGetNaN)
+    rtGetNaNF                                0x0800b44d   Thumb Code     8  gcu_model_gencode.o(i.rtGetNaNF)
+    rt_InitInfAndNaN                         0x0800b459   Thumb Code    48  gcu_model_gencode.o(i.rt_InitInfAndNaN)
+    sendCAN_Outputs_wrapper                  0x0800b4e1   Thumb Code    48  sendcan_wrapper.o(i.sendCAN_Outputs_wrapper)
+    sendEepromUART_Outputs_wrapper           0x0800b51d   Thumb Code    44  sendeepromuart_wrapper.o(i.sendEepromUART_Outputs_wrapper)
+    sendUART_Outputs_wrapper                 0x0800b555   Thumb Code    50  senduart_wrapper.o(i.sendUART_Outputs_wrapper)
+    setKeyOn_Outputs_wrapper                 0x0800b595   Thumb Code    20  setkeyon_wrapper.o(i.setKeyOn_Outputs_wrapper)
+    stopBuzzer_Outputs_wrapper               0x0800b7d5   Thumb Code    10  stopbuzzer_wrapper.o(i.stopBuzzer_Outputs_wrapper)
+    update_ADC_data_Outputs_wrapper          0x0800b9a5   Thumb Code    20  update_adc_data_wrapper.o(i.update_ADC_data_Outputs_wrapper)
+    GCU_Model_genCode_U16GND                 0x0800b9b8   Data           2  gcu_model_gencode.o(.constdata)
+    rtM                                      0x0800b9bc   Data           4  gcu_model_gencode.o(.constdata)
+    rtConstP                                 0x0800b9c0   Data         248  gcu_model_gencode_data.o(.constdata)
+    AHBPrescTable                            0x0800bac0   Data          16  system_stm32f7xx.o(.constdata)
+    APBPrescTable                            0x0800bad0   Data           8  system_stm32f7xx.o(.constdata)
+    Region$$Table$$Base                      0x0800bad8   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0800baf8   Number         0  anon$$obj.o(Region$$Table)
     rtM_                                     0x20000000   Data           8  gcu_model_gencode.o(.data)
     rtInfF                                   0x20000008   Data           4  gcu_model_gencode.o(.data)
     rtMinusInfF                              0x2000000c   Data           4  gcu_model_gencode.o(.data)
@@ -2894,9 +2894,9 @@ Memory Map of the image
 
   Image Entry point : 0x080001f9
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000bb64, Max: 0x00200000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000bb6c, Max: 0x00200000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000baf0, Max: 0x00200000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000baf8, Max: 0x00200000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -3243,58 +3243,57 @@ Memory Map of the image
     0x0800b250   0x0800b250   0x00000034   Code   RO          920    i.load_autoXParameters_Outputs_wrapper  load_autoxparameters_wrapper.o
     0x0800b284   0x0800b284   0x0000004c   Code   RO          562    i.load_default_timings_Outputs_wrapper  load_default_timings_wrapper.o
     0x0800b2d0   0x0800b2d0   0x000000a0   Code   RO         1285    i.look1_iu16lu64n48_binlcse  gcu_model_gencode.o
-    0x0800b370   0x0800b370   0x00000094   Code   RO         1684    i.main              main.o
-    0x0800b404   0x0800b404   0x00000014   Code   RO         1286    i.rtGetInf          gcu_model_gencode.o
-    0x0800b418   0x0800b418   0x00000014   Code   RO         1288    i.rtGetMinusInf     gcu_model_gencode.o
-    0x0800b42c   0x0800b42c   0x00000014   Code   RO         1290    i.rtGetNaN          gcu_model_gencode.o
-    0x0800b440   0x0800b440   0x0000000c   Code   RO         1291    i.rtGetNaNF         gcu_model_gencode.o
-    0x0800b44c   0x0800b44c   0x00000038   Code   RO         1296    i.rt_InitInfAndNaN  gcu_model_gencode.o
-    0x0800b484   0x0800b484   0x00000028   Code   RO         1297    i.sendAccCommand    gcu_model_gencode.o
-    0x0800b4ac   0x0800b4ac   0x00000028   Code   RO         1298    i.sendAutoXCommand  gcu_model_gencode.o
-    0x0800b4d4   0x0800b4d4   0x0000003c   Code   RO          616    i.sendCAN_Outputs_wrapper  sendcan_wrapper.o
-    0x0800b510   0x0800b510   0x00000038   Code   RO          898    i.sendEepromUART_Outputs_wrapper  sendeepromuart_wrapper.o
-    0x0800b548   0x0800b548   0x00000040   Code   RO          641    i.sendUART_Outputs_wrapper  senduart_wrapper.o
-    0x0800b588   0x0800b588   0x00000018   Code   RO         1013    i.setKeyOn_Outputs_wrapper  setkeyon_wrapper.o
-    0x0800b5a0   0x0800b5a0   0x000000b8   Code   RO         1299    i.shiftArray        gcu_model_gencode.o
-    0x0800b658   0x0800b658   0x000000b8   Code   RO         1300    i.shiftArray_h      gcu_model_gencode.o
-    0x0800b710   0x0800b710   0x000000b8   Code   RO         1301    i.shiftArray_hs     gcu_model_gencode.o
-    0x0800b7c8   0x0800b7c8   0x00000010   Code   RO          988    i.stopBuzzer_Outputs_wrapper  stopbuzzer_wrapper.o
-    0x0800b7d8   0x0800b7d8   0x00000098   Code   RO         1302    i.testIndex         gcu_model_gencode.o
-    0x0800b870   0x0800b870   0x00000080   Code   RO         1303    i.updateBuffer      gcu_model_gencode.o
-    0x0800b8f0   0x0800b8f0   0x000000a8   Code   RO         1304    i.updateOutput      gcu_model_gencode.o
-    0x0800b998   0x0800b998   0x00000014   Code   RO          687    i.update_ADC_data_Outputs_wrapper  update_adc_data_wrapper.o
-    0x0800b9ac   0x0800b9ac   0x00000008   Data   RO         1306    .constdata          gcu_model_gencode.o
-    0x0800b9b4   0x0800b9b4   0x00000004   PAD
-    0x0800b9b8   0x0800b9b8   0x000000f8   Data   RO         1666    .constdata          gcu_model_gencode_data.o
-    0x0800bab0   0x0800bab0   0x00000008   Data   RO         5154    .constdata          stm32f7xx_hal_dma.o
-    0x0800bab8   0x0800bab8   0x00000010   Data   RO         5786    .constdata          system_stm32f7xx.o
-    0x0800bac8   0x0800bac8   0x00000008   Data   RO         5787    .constdata          system_stm32f7xx.o
-    0x0800bad0   0x0800bad0   0x00000020   Data   RO         5852    Region$$Table       anon$$obj.o
+    0x0800b370   0x0800b370   0x000000a0   Code   RO         1684    i.main              main.o
+    0x0800b410   0x0800b410   0x00000014   Code   RO         1286    i.rtGetInf          gcu_model_gencode.o
+    0x0800b424   0x0800b424   0x00000014   Code   RO         1288    i.rtGetMinusInf     gcu_model_gencode.o
+    0x0800b438   0x0800b438   0x00000014   Code   RO         1290    i.rtGetNaN          gcu_model_gencode.o
+    0x0800b44c   0x0800b44c   0x0000000c   Code   RO         1291    i.rtGetNaNF         gcu_model_gencode.o
+    0x0800b458   0x0800b458   0x00000038   Code   RO         1296    i.rt_InitInfAndNaN  gcu_model_gencode.o
+    0x0800b490   0x0800b490   0x00000028   Code   RO         1297    i.sendAccCommand    gcu_model_gencode.o
+    0x0800b4b8   0x0800b4b8   0x00000028   Code   RO         1298    i.sendAutoXCommand  gcu_model_gencode.o
+    0x0800b4e0   0x0800b4e0   0x0000003c   Code   RO          616    i.sendCAN_Outputs_wrapper  sendcan_wrapper.o
+    0x0800b51c   0x0800b51c   0x00000038   Code   RO          898    i.sendEepromUART_Outputs_wrapper  sendeepromuart_wrapper.o
+    0x0800b554   0x0800b554   0x00000040   Code   RO          641    i.sendUART_Outputs_wrapper  senduart_wrapper.o
+    0x0800b594   0x0800b594   0x00000018   Code   RO         1013    i.setKeyOn_Outputs_wrapper  setkeyon_wrapper.o
+    0x0800b5ac   0x0800b5ac   0x000000b8   Code   RO         1299    i.shiftArray        gcu_model_gencode.o
+    0x0800b664   0x0800b664   0x000000b8   Code   RO         1300    i.shiftArray_h      gcu_model_gencode.o
+    0x0800b71c   0x0800b71c   0x000000b8   Code   RO         1301    i.shiftArray_hs     gcu_model_gencode.o
+    0x0800b7d4   0x0800b7d4   0x00000010   Code   RO          988    i.stopBuzzer_Outputs_wrapper  stopbuzzer_wrapper.o
+    0x0800b7e4   0x0800b7e4   0x00000098   Code   RO         1302    i.testIndex         gcu_model_gencode.o
+    0x0800b87c   0x0800b87c   0x00000080   Code   RO         1303    i.updateBuffer      gcu_model_gencode.o
+    0x0800b8fc   0x0800b8fc   0x000000a8   Code   RO         1304    i.updateOutput      gcu_model_gencode.o
+    0x0800b9a4   0x0800b9a4   0x00000014   Code   RO          687    i.update_ADC_data_Outputs_wrapper  update_adc_data_wrapper.o
+    0x0800b9b8   0x0800b9b8   0x00000008   Data   RO         1306    .constdata          gcu_model_gencode.o
+    0x0800b9c0   0x0800b9c0   0x000000f8   Data   RO         1666    .constdata          gcu_model_gencode_data.o
+    0x0800bab8   0x0800bab8   0x00000008   Data   RO         5154    .constdata          stm32f7xx_hal_dma.o
+    0x0800bac0   0x0800bac0   0x00000010   Data   RO         5786    .constdata          system_stm32f7xx.o
+    0x0800bad0   0x0800bad0   0x00000008   Data   RO         5787    .constdata          system_stm32f7xx.o
+    0x0800bad8   0x0800bad8   0x00000020   Data   RO         5852    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0800baf0, Size: 0x00001a88, Max: 0x00080000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0800baf8, Size: 0x00001a88, Max: 0x00080000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x0800baf0   0x00000008   Data   RW         1307    .data               gcu_model_gencode.o
-    0x20000008   0x0800baf8   0x00000028   Data   RW         1308    .data               gcu_model_gencode.o
-    0x20000030   0x0800bb20   0x00000010   Data   RW         1835    .data               can.o
-    0x20000040   0x0800bb30   0x00000010   Data   RW         1996    .data               tim.o
-    0x20000050   0x0800bb40   0x00000014   Data   RW         2075    .data               usart.o
-    0x20000064   0x0800bb54   0x0000000c   Data   RW         5533    .data               stm32f7xx_hal.o
-    0x20000070   0x0800bb60   0x00000004   Data   RW         5788    .data               system_stm32f7xx.o
-    0x20000074   0x0800bb64   0x00000004   PAD
+    0x20000000   0x0800baf8   0x00000008   Data   RW         1307    .data               gcu_model_gencode.o
+    0x20000008   0x0800bb00   0x00000028   Data   RW         1308    .data               gcu_model_gencode.o
+    0x20000030   0x0800bb28   0x00000010   Data   RW         1835    .data               can.o
+    0x20000040   0x0800bb38   0x00000010   Data   RW         1996    .data               tim.o
+    0x20000050   0x0800bb48   0x00000014   Data   RW         2075    .data               usart.o
+    0x20000064   0x0800bb5c   0x0000000c   Data   RW         5533    .data               stm32f7xx_hal.o
+    0x20000070   0x0800bb68   0x00000004   Data   RW         5788    .data               system_stm32f7xx.o
+    0x20000074   0x0800bb6c   0x00000004   PAD
     0x20000078        -       0x00001240   Zero   RW         1305    .bss                gcu_model_gencode.o
     0x200012b8        -       0x0000002c   Zero   RW         1685    .bss                main.o
     0x200012e4        -       0x00000016   Zero   RW         1686    .bss                main.o
     0x200012fa        -       0x00000010   Zero   RW         1687    .bss                main.o
-    0x2000130a   0x0800bb64   0x00000002   PAD
+    0x2000130a   0x0800bb6c   0x00000002   PAD
     0x2000130c        -       0x000000a8   Zero   RW         1782    .bss                adc_1.o
     0x200013b4        -       0x00000084   Zero   RW         1833    .bss                can.o
     0x20001438        -       0x0000004c   Zero   RW         1946    .bss                i2c.o
     0x20001484        -       0x00000100   Zero   RW         1995    .bss                tim.o
     0x20001584        -       0x00000100   Zero   RW         2074    .bss                usart.o
-    0x20001684   0x0800bb64   0x00000004   PAD
+    0x20001684   0x0800bb6c   0x00000004   PAD
     0x20001688        -       0x00000400   Zero   RW            1    STACK               startup_stm32f767xx.o
 
 
@@ -3344,7 +3343,7 @@ Image component sizes
         16          0          0          0          0       1051   load_antistallparameters_wrapper.o
         52          0          0          0          0       1071   load_autoxparameters_wrapper.o
         76          0          0          0          0       1079   load_default_timings_wrapper.o
-       310         18          0          0         82       2740   main.o
+       322         20          0          0         82       2832   main.o
         46          0          0          0          0       1145   packcanmsg_wrapper.o
         32          0          0          0          0       1082   packuartmsg_wrapper.o
         20          4          0          0          0       1006   read_oil_sensor_wrapper.o
@@ -3380,9 +3379,9 @@ Image component sizes
        560         50          0         20        256       3242   usart.o
 
     ----------------------------------------------------------------------
-     46678       2578        828        116       6676    1236398   Object Totals
+     46690       2580        824        116       6676    1236490   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        72          0          4          0         10          0   (incl. Padding)
+        72          0          0          0         10          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -3425,15 +3424,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     47028       2594        828        116       6676    1207646   Grand Totals
-     47028       2594        828        116       6676    1207646   ELF Image Totals
-     47028       2594        828        116          0          0   ROM Totals
+     47040       2596        824        116       6676    1207738   Grand Totals
+     47040       2596        824        116       6676    1207738   ELF Image Totals
+     47040       2596        824        116          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                47856 (  46.73kB)
+    Total RO  Size (Code + RO Data)                47864 (  46.74kB)
     Total RW  Size (RW Data + ZI Data)              6792 (   6.63kB)
-    Total ROM Size (Code + RO Data + RW Data)      47972 (  46.85kB)
+    Total ROM Size (Code + RO Data + RW Data)      47980 (  46.86kB)
 
 ==============================================================================
 
