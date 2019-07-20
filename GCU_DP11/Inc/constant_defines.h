@@ -43,7 +43,7 @@
 #define ENDURANCE_MODE	   0
 
 //Define di accelerationFB
-#define ACC_OFF 				0
+#define ACC_OFF 			0
 #define ACC_READY 			1
 #define ACC_GO			    2
 
@@ -57,8 +57,10 @@
 #define ANTISTALL_OFF       0
 
 //Velocità di uscita da release
-#define RELEASE_END_SPEED 10
-#define SLIP_TARGET 7
+#define RELEASE_END_SPEED   10
+#define SLIP_TARGET         7
 
+//Retry logic
+#define RETRY_DELAYc         500
 
 #endif
