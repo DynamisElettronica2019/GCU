@@ -27,6 +27,7 @@
 #include "i2c.h"
 #include "tim.h"
 #include "usart.h"
+#include "wwdg.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -112,6 +113,7 @@ int main(void)
   MX_TIM6_Init();
   MX_TIM5_Init();
   MX_GFXSIMULATOR_Init();
+  MX_WWDG_Init();
   /* USER CODE BEGIN 2 */
 	/*
 	HAL_TIM_Base_Start_IT(&htim2);

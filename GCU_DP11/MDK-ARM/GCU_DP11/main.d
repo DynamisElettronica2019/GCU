@@ -36,6 +36,7 @@ gcu_dp11\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h
 gcu_dp11\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h
 gcu_dp11\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h
 gcu_dp11\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h
+gcu_dp11\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_wwdg.h
 gcu_dp11\main.o: ../Inc/constant_defines.h
 gcu_dp11\main.o: ../Inc/adc.h
 gcu_dp11\main.o: ../Inc/GCU_Model_genCode.h
@@ -50,4 +51,5 @@ gcu_dp11\main.o: ../Inc/gfxsimulator.h
 gcu_dp11\main.o: ../Inc/i2c.h
 gcu_dp11\main.o: ../Inc/tim.h
 gcu_dp11\main.o: ../Inc/usart.h
+gcu_dp11\main.o: ../Inc/wwdg.h
 gcu_dp11\main.o: ../Inc/gpio.h
