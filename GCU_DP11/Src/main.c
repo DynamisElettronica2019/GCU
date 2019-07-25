@@ -27,7 +27,6 @@
 #include "i2c.h"
 #include "tim.h"
 #include "usart.h"
-#include "wwdg.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -113,7 +112,6 @@ int main(void)
   MX_TIM6_Init();
   MX_TIM5_Init();
   MX_GFXSIMULATOR_Init();
-  MX_WWDG_Init();
   /* USER CODE BEGIN 2 */
 	/*
 	HAL_TIM_Base_Start_IT(&htim2);
@@ -153,19 +151,19 @@ int main(void)
 			
 		if(TEC_reg >= 0x00F00000)
 		{
-			activateBuzzer_Outputs_wrapper();
+			//activateBuzzer_Outputs_wrapper();
 			CAN_Restart_Outputs_wrapper();
 		}
 		else if(REC_reg >= 0xF0000000)
 		{
-			activateBuzzer_Outputs_wrapper();
+			//activateBuzzer_Outputs_wrapper();
 			//CAN_Restart_Outputs_wrapper();
 		}
 		else
 		{
-			stopBuzzer_Outputs_wrapper();
+			//stopBuzzer_Outputs_wrapper();
 		}
-		
+		//activateBuzzer_Outputs_wrapper();
 		//CAN1_Send_Nucleo_F7_Packet();
 		//HAL_Delay(500);
 		if(rtU.SelectMode == DEMO_READ_MODE)

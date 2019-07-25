@@ -134,11 +134,11 @@
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <DriverSelection>4100</DriverSelection>
+            <DriverSelection>4107</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>STLink\ST-LINKIII-KEIL_SWO.dll</Flash2>
-          <Flash3>"" ()</Flash3>
+          <Flash3></Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F767xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;             ../Drivers/STM32F7xx_HAL_Driver/Inc;             ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy;             ../Drivers/CMSIS/Device/ST/STM32F7xx/Include;             ../Drivers/CMSIS/Include</IncludePath>
+              <IncludePath>../Inc;../Drivers/STM32F7xx_HAL_Driver/Inc;../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F7xx/Include;../Drivers/CMSIS/Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -388,8 +388,48 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>S-Function Wrappers</GroupName>
+          <GroupName>S-function Wrappers</GroupName>
           <Files>
+            <File>
+              <FileName>activateBuzzer_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\activateBuzzer_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>Buzzer_init_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\Buzzer_init_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>CAN_checkStatus_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\CAN_checkStatus_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>CAN_Filter_Setup_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\CAN_Filter_Setup_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>CAN_Load_id_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\CAN_Load_id_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>CAN_Reset_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\CAN_Reset_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>CAN_Restart_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\CAN_Restart_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>CAN_Start_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\CAN_Start_wrapper.c</FilePath>
+            </File>
             <File>
               <FileName>ClutchMotor_init_wrapper.c</FileName>
               <FileType>1</FileType>
@@ -401,9 +441,29 @@
               <FilePath>..\Src\S-Function_Wrappers\ClutchMotor_setPosition_wrapper.c</FilePath>
             </File>
             <File>
+              <FileName>ClutchMotor_setPWMRegister_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\ClutchMotor_setPWMRegister_wrapper.c</FilePath>
+            </File>
+            <File>
               <FileName>ClutchMotor_setupPWM_wrapper.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Src\S-Function_Wrappers\ClutchMotor_setupPWM_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>Eeprom_init_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\Eeprom_init_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>Eeprom_read_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\Eeprom_read_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>Eeprom_write_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\Eeprom_write_wrapper.c</FilePath>
             </File>
             <File>
               <FileName>Efi_init_wrapper.c</FileName>
@@ -419,6 +479,11 @@
               <FileName>Efi_setCut_wrapper.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Src\S-Function_Wrappers\Efi_setCut_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>Efi_setMap_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\Efi_setMap_wrapper.c</FilePath>
             </File>
             <File>
               <FileName>Efi_setRPMLimiter_wrapper.c</FileName>
@@ -449,6 +514,11 @@
               <FileName>EngineControl_stop_wrapper.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Src\S-Function_Wrappers\EngineControl_stop_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>FuelPump_init_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\FuelPump_init_wrapper.c</FilePath>
             </File>
             <File>
               <FileName>GearMotor_brake_wrapper.c</FileName>
@@ -491,6 +561,16 @@
               <FilePath>..\Src\S-Function_Wrappers\load_accParameters_wrapper.c</FilePath>
             </File>
             <File>
+              <FileName>load_antiStallParameters_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\load_antiStallParameters_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>load_autoXParameters_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\load_autoXParameters_wrapper.c</FilePath>
+            </File>
+            <File>
               <FileName>load_default_timings_wrapper.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Src\S-Function_Wrappers\load_default_timings_wrapper.c</FilePath>
@@ -511,14 +591,44 @@
               <FilePath>..\Src\S-Function_Wrappers\PackUARTMsg_wrapper.c</FilePath>
             </File>
             <File>
+              <FileName>Read_oil_sensor_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\Read_oil_sensor_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>ScanADC_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\ScanADC_wrapper.c</FilePath>
+            </File>
+            <File>
               <FileName>sendCAN_wrapper.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Src\S-Function_Wrappers\sendCAN_wrapper.c</FilePath>
             </File>
             <File>
+              <FileName>sendEepromUART_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\sendEepromUART_wrapper.c</FilePath>
+            </File>
+            <File>
               <FileName>sendUART_wrapper.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Src\S-Function_Wrappers\sendUART_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>setKeyOn_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\setKeyOn_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>stopBuzzer_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\stopBuzzer_wrapper.c</FilePath>
+            </File>
+            <File>
+              <FileName>StopLight_init_wrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\S-Function_Wrappers\StopLight_init_wrapper.c</FilePath>
             </File>
             <File>
               <FileName>UnpackCanUART_wrapper.c</FileName>
@@ -535,131 +645,11 @@
               <FileType>1</FileType>
               <FilePath>..\Src\S-Function_Wrappers\update_ADC_data_wrapper.c</FilePath>
             </File>
-            <File>
-              <FileName>CAN_Filter_Setup_wrapper.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\S-Function_Wrappers\CAN_Filter_Setup_wrapper.c</FilePath>
-            </File>
-            <File>
-              <FileName>CAN_Start_wrapper.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\S-Function_Wrappers\CAN_Start_wrapper.c</FilePath>
-            </File>
-            <File>
-              <FileName>Read_oil_sensor_wrapper.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\S-Function_Wrappers\Read_oil_sensor_wrapper.c</FilePath>
-            </File>
-            <File>
-              <FileName>ScanADC_wrapper.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\S-Function_Wrappers\ScanADC_wrapper.c</FilePath>
-            </File>
-            <File>
-              <FileName>CAN_Load_id_wrapper.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\S-Function_Wrappers\CAN_Load_id_wrapper.c</FilePath>
-            </File>
-            <File>
-              <FileName>Eeprom_init_wrapper.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\S-Function_Wrappers\Eeprom_init_wrapper.c</FilePath>
-            </File>
-            <File>
-              <FileName>Eeprom_read_wrapper.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\S-Function_Wrappers\Eeprom_read_wrapper.c</FilePath>
-            </File>
-            <File>
-              <FileName>Eeprom_write_wrapper.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\S-Function_Wrappers\Eeprom_write_wrapper.c</FilePath>
-            </File>
-            <File>
-              <FileName>sendEepromUART_wrapper.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\S-Function_Wrappers\sendEepromUART_wrapper.c</FilePath>
-            </File>
-            <File>
-              <FileName>load_autoXParameters_wrapper.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\S-Function_Wrappers\load_autoXParameters_wrapper.c</FilePath>
-            </File>
-            <File>
-              <FileName>Buzzer_init_wrapper.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\S-Function_Wrappers\Buzzer_init_wrapper.c</FilePath>
-            </File>
-            <File>
-              <FileName>activateBuzzer_wrapper.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\S-Function_Wrappers\activateBuzzer_wrapper.c</FilePath>
-            </File>
-            <File>
-              <FileName>stopBuzzer_wrapper.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\S-Function_Wrappers\stopBuzzer_wrapper.c</FilePath>
-            </File>
-            <File>
-              <FileName>setKeyOn_wrapper.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\S-Function_Wrappers\setKeyOn_wrapper.c</FilePath>
-            </File>
-            <File>
-              <FileName>StopLight_init_wrapper.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\S-Function_Wrappers\StopLight_init_wrapper.c</FilePath>
-            </File>
-            <File>
-              <FileName>FuelPump_init_wrapper.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\S-Function_Wrappers\FuelPump_init_wrapper.c</FilePath>
-            </File>
-            <File>
-              <FileName>Efi_setMap_wrapper.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\S-Function_Wrappers\Efi_setMap_wrapper.c</FilePath>
-            </File>
-            <File>
-              <FileName>load_antiStallParameters_wrapper.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\S-Function_Wrappers\load_antiStallParameters_wrapper.c</FilePath>
-            </File>
-            <File>
-              <FileName>ClutchMotor_setPWMRegister_wrapper.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\S-Function_Wrappers\ClutchMotor_setPWMRegister_wrapper.c</FilePath>
-            </File>
-            <File>
-              <FileName>CAN_Restart_wrapper.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\S-Function_Wrappers\CAN_Restart_wrapper.c</FilePath>
-            </File>
-            <File>
-              <FileName>CAN_checkStatus_wrapper.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\S-Function_Wrappers\CAN_checkStatus_wrapper.c</FilePath>
-            </File>
-            <File>
-              <FileName>CAN_Reset_wrapper.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\S-Function_Wrappers\CAN_Reset_wrapper.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>Application/User</GroupName>
           <Files>
-            <File>
-              <FileName>GCU_Model_genCode.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\GCU_Model_genCode.c</FilePath>
-            </File>
-            <File>
-              <FileName>GCU_Model_genCode_data.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\GCU_Model_genCode_data.c</FilePath>
-            </File>
             <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
@@ -714,6 +704,16 @@
               <FileName>stm32f7xx_hal_msp.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/stm32f7xx_hal_msp.c</FilePath>
+            </File>
+            <File>
+              <FileName>GCU_Model_genCode.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\GCU_Model_genCode.c</FilePath>
+            </File>
+            <File>
+              <FileName>GCU_Model_genCode_data.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\GCU_Model_genCode_data.c</FilePath>
             </File>
           </Files>
         </Group>
