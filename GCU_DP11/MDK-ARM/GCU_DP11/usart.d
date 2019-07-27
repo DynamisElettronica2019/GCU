@@ -40,6 +40,7 @@ gcu_dp11\usart.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h
 gcu_dp11\usart.o: ../Inc/constant_defines.h
 gcu_dp11\usart.o: ../Inc/GCU_Model_genCode.h
 gcu_dp11\usart.o: ../Inc/rtwtypes.h
+gcu_dp11\usart.o: ../Inc/zero_crossing_types.h
 gcu_dp11\usart.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 gcu_dp11\usart.o: ../Inc/timings.h
 gcu_dp11\usart.o: ../Inc/id_can.h

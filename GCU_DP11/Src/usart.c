@@ -137,7 +137,7 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 /* USER CODE BEGIN 1 */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-	__disable_irq();
+	//__disable_irq();
 	
 	if(!readData)
 	{	
@@ -204,7 +204,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 	}
 	else HAL_UART_Receive_IT(&huartDebug, rxData, 1);
 	
-		 __enable_irq();
+	//__enable_irq();
 }	
 /* USER CODE END 1 */
 
