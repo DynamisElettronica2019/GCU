@@ -3,7 +3,7 @@
 <title>Static Call Graph - [GCU_DP11\GCU_DP11.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image GCU_DP11\GCU_DP11.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Sat Jul 27 14:20:56 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Sat Jul 27 23:07:57 2019
 <BR><P>
 <H3>Maximum Stack Usage =        592 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -824,7 +824,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[de]"></a>GCU_Model_genCode_step1</STRONG> (Thumb, 2750 bytes, Stack size 240 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_step1))
+<P><STRONG><a name="[de]"></a>GCU_Model_genCode_step1</STRONG> (Thumb, 2842 bytes, Stack size 240 bytes, gcu_model_gencode.o(i.GCU_Model_genCode_step1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 560<LI>Call Chain = GCU_Model_genCode_step1 &rArr; testIndex &rArr; Evaluate_Request &rArr; Eeprom_read_Outputs_wrapper &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClutchMotor_setPosition_Outputs_wrapper
@@ -1645,9 +1645,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = HAL_UART_IRQHandler &rArr; UART_EndRxTransfer
 </UL>
 <BR>[Calls]<UL><LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Abort_IT
-<LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_EndRxTransfer
 <LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_TxCpltCallback
 <LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_ErrorCallback
+<LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_EndRxTransfer
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART4_IRQHandler
 </UL>
@@ -2204,7 +2204,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MODES
 </UL>
 
-<P><STRONG><a name="[92]"></a>Clutch_setValue</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, gcu_model_gencode.o(i.Clutch_setValue))
+<P><STRONG><a name="[92]"></a>Clutch_setValue</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, gcu_model_gencode.o(i.Clutch_setValue))
 <BR><BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClutchMotor_setPosition_Outputs_wrapper
 </UL>
 <BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkClutch
@@ -3012,9 +3012,9 @@ Local Symbols
 <P><STRONG><a name="[82]"></a>UART_DMAError</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, stm32f7xx_hal_uart.o(i.UART_DMAError))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = UART_DMAError &rArr; UART_EndRxTransfer
 </UL>
-<BR>[Calls]<UL><LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_EndTxTransfer
+<BR>[Calls]<UL><LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_ErrorCallback
+<LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_EndTxTransfer
 <LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_EndRxTransfer
-<LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_ErrorCallback
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> stm32f7xx_hal_uart.o(i.HAL_UART_Transmit_DMA)
 </UL>
