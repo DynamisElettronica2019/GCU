@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'GCU_Model_genCode'.
  *
- * Model version                  : 1.399
+ * Model version                  : 1.405
  * Simulink Coder version         : 8.14 (R2018a) 06-Feb-2018
- * C/C++ source code generated on : Sat Jul 27 23:05:21 2019
+ * C/C++ source code generated on : Sat Aug  3 16:22:17 2019
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -21,14 +21,11 @@
 
 #ifndef RTW_HEADER_GCU_Model_genCode_h_
 #define RTW_HEADER_GCU_Model_genCode_h_
-#include <stddef.h>
 #include "rtwtypes.h"
-#include "zero_crossing_types.h"
 #include <string.h>
 #ifndef GCU_Model_genCode_COMMON_INCLUDES_
 # define GCU_Model_genCode_COMMON_INCLUDES_
 #include "rtwtypes.h"
-#include "zero_crossing_types.h"
 #endif                                 /* GCU_Model_genCode_COMMON_INCLUDES_ */
 
 /* Macros for accessing real-time model data structure */
@@ -152,16 +149,16 @@ typedef enum {
 
 /* Block signals and states (default storage) for system '<S49>/Gearmotor_turnRight' */
 typedef struct {
-  uint8_T GearMotorTurnRight_o1;       /* '<S125>/GearMotor Turn Right' */
-  uint8_T GearMotorTurnRight_o2;       /* '<S125>/GearMotor Turn Right' */
-  uint8_T GearMotorTurnRight_o3;       /* '<S125>/GearMotor Turn Right' */
+  uint8_T GearMotorTurnRight_o1;       /* '<S117>/GearMotor Turn Right' */
+  uint8_T GearMotorTurnRight_o2;       /* '<S117>/GearMotor Turn Right' */
+  uint8_T GearMotorTurnRight_o3;       /* '<S117>/GearMotor Turn Right' */
 } DW_Gearmotor_turnRight;
 
 /* Block signals and states (default storage) for system '<S49>/Gearmotor_brake' */
 typedef struct {
-  uint8_T GearMotorBrake_o1;           /* '<S122>/GearMotor Brake' */
-  uint8_T GearMotorBrake_o2;           /* '<S122>/GearMotor Brake' */
-  uint8_T GearMotorBrake_o3;           /* '<S122>/GearMotor Brake' */
+  uint8_T GearMotorBrake_o1;           /* '<S114>/GearMotor Brake' */
+  uint8_T GearMotorBrake_o2;           /* '<S114>/GearMotor Brake' */
+  uint8_T GearMotorBrake_o3;           /* '<S114>/GearMotor Brake' */
 } DW_Gearmotor_brake;
 
 /* Block signals and states (default storage) for system '<S46>/EngineControl_Start' */
@@ -186,90 +183,23 @@ typedef struct {
   real_T Minus;                        /* '<S72>/Minus' */
   real_T DiscreteTimeIntegrator1_DSTATE;/* '<S72>/Discrete-Time Integrator1' */
   real_T DiscreteTimeIntegrator1_PREV_U;/* '<S72>/Discrete-Time Integrator1' */
+  uint32_T MODESACCELERATION_PIDLAUNCH0ACT;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH0.ACTIVE.ramp' */
   uint32_T MODESACCELERATION_PIDLAUNCH0A_b;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH0.ACTIVE.ramp' */
   uint8_T DiscreteTimeIntegrator1_SYSTEM_;/* '<S72>/Discrete-Time Integrator1' */
   boolean_T MODESACCELERATION_PIDLAUNCH0A_k;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH0.ACTIVE.ramp' */
 } DW_MODESACCELERATION_PIDLAUNCH0;
 
-/* Block signals and states (default storage) for system '<S48>/MODES.ACCELERATION_PID.LAUNCH1.ACTIVE.ramp' */
+/* Block signals and states (default storage) for system '<S48>/GEARSHIFT.checkCurrent' */
 typedef struct {
-  real_T Minus;                        /* '<S73>/Minus' */
-  real_T DiscreteTimeIntegrator1_DSTATE;/* '<S73>/Discrete-Time Integrator1' */
-  real_T DiscreteTimeIntegrator1_PREV_U;/* '<S73>/Discrete-Time Integrator1' */
-  uint32_T MODESACCELERATION_PIDLAUNCH1A_m;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH1.ACTIVE.ramp' */
-  uint8_T DiscreteTimeIntegrator1_SYSTEM_;/* '<S73>/Discrete-Time Integrator1' */
-  boolean_T MODESACCELERATION_PIDLAUNCH1A_i;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH1.ACTIVE.ramp' */
-} DW_MODESACCELERATION_PIDLAUNCH1;
-
-/* Block signals and states (default storage) for system '<S48>/MODES.ACCELERATION_PID.LAUNCH2.ACTIVE.ramp' */
-typedef struct {
-  real_T Minus;                        /* '<S74>/Minus' */
-  real_T DiscreteTimeIntegrator2_DSTATE;/* '<S74>/Discrete-Time Integrator2' */
-  real_T DiscreteTimeIntegrator2_PREV_U;/* '<S74>/Discrete-Time Integrator2' */
-  uint32_T MODESACCELERATION_PIDLAUNCH2ACT;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH2.ACTIVE.ramp' */
-  uint32_T MODESACCELERATION_PIDLAUNCH2A_p;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH2.ACTIVE.ramp' */
-  uint8_T DiscreteTimeIntegrator2_SYSTEM_;/* '<S74>/Discrete-Time Integrator2' */
-  boolean_T MODESACCELERATION_PIDLAUNCH2A_o;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH2.ACTIVE.ramp' */
-} DW_MODESACCELERATION_PIDLAUNCH2;
-
-/* Block signals and states (default storage) for system '<S48>/MODES.ACCELERATION_PID.LAUNCH4.ACTIVE.ramp' */
-typedef struct {
-  real_T Minus;                        /* '<S76>/Minus' */
-  real_T DiscreteTimeIntegrator2_DSTATE;/* '<S76>/Discrete-Time Integrator2' */
-  real_T DiscreteTimeIntegrator2_PREV_U;/* '<S76>/Discrete-Time Integrator2' */
-  uint32_T MODESACCELERATION_PIDLAUNCH4ACT;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH4.ACTIVE.ramp' */
-  uint32_T MODESACCELERATION_PIDLAUNCH4A_f;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH4.ACTIVE.ramp' */
-  uint8_T DiscreteTimeIntegrator2_SYSTEM_;/* '<S76>/Discrete-Time Integrator2' */
-  boolean_T MODESACCELERATION_PIDLAUNCH4A_c;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH4.ACTIVE.ramp' */
-} DW_MODESACCELERATION_PIDLAUNCH4;
-
-/* Block signals and states (default storage) for system '<S48>/MODES.ACCELERATION_PID.LAUNCH6.ACTIVE.pidControl' */
-typedef struct {
-  real_T Minus;                        /* '<S78>/Minus' */
-  real_T Integrator_DSTATE;            /* '<S102>/Integrator' */
-  real_T UD_DSTATE;                    /* '<S106>/UD' */
-  real_T Integrator_PREV_U;            /* '<S102>/Integrator' */
-  uint32_T MODESACCELERATION_PIDLAUNCH6ACT;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH6.ACTIVE.pidControl' */
-  uint32_T MODESACCELERATION_PIDLAUNCH6A_a;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH6.ACTIVE.pidControl' */
-  int8_T Integrator_PrevResetState;    /* '<S102>/Integrator' */
-  uint8_T Integrator_SYSTEM_ENABLE;    /* '<S102>/Integrator' */
-  boolean_T MODESACCELERATION_PIDLAUNCH6A_m;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH6.ACTIVE.pidControl' */
-} DW_MODESACCELERATION_PIDLAUNCH6;
-
-/* Zero-crossing (trigger) state for system '<S48>/MODES.ACCELERATION_PID.LAUNCH6.ACTIVE.pidControl' */
-typedef struct {
-  ZCSigState UD_Reset_ZCE_j;           /* '<S106>/UD' */
-} ZCE_MODESACCELERATION_PIDLAUN_j;
-
-/* Block signals and states (default storage) for system '<S48>/MODES.ACCELERATION_PID.LAUNCH8.ACTIVE.pidControl' */
-typedef struct {
-  real_T Minus;                        /* '<S80>/Minus' */
-  real_T Integrator_DSTATE;            /* '<S112>/Integrator' */
-  real_T UD_DSTATE;                    /* '<S116>/UD' */
-  real_T Integrator_PREV_U;            /* '<S112>/Integrator' */
-  uint32_T MODESACCELERATION_PIDLAUNCH8ACT;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH8.ACTIVE.pidControl' */
-  uint32_T MODESACCELERATION_PIDLAUNCH8A_l;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH8.ACTIVE.pidControl' */
-  int8_T Integrator_PrevResetState;    /* '<S112>/Integrator' */
-  uint8_T Integrator_SYSTEM_ENABLE;    /* '<S112>/Integrator' */
-  boolean_T MODESACCELERATION_PIDLAUNCH8A_e;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH8.ACTIVE.pidControl' */
-} DW_MODESACCELERATION_PIDLAUNCH8;
-
-/* Zero-crossing (trigger) state for system '<S48>/MODES.ACCELERATION_PID.LAUNCH8.ACTIVE.pidControl' */
-typedef struct {
-  ZCSigState UD_Reset_ZCE;             /* '<S116>/UD' */
-} ZCE_MODESACCELERATION_PIDLAUN_b;
+  real_T Delay_DSTATE[5];              /* '<S71>/Delay' */
+} DW_GEARSHIFTcheckCurrent;
 
 /* Block signals and states (default storage) for system '<Root>' */
 typedef struct {
-  DW_MODESACCELERATION_PIDLAUNCH8 MODESACCELERATION_PIDLAUNCH9ACT;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH9.ACTIVE.pidControl' */
-  DW_MODESACCELERATION_PIDLAUNCH8 MODESACCELERATION_PIDLAUNCH8ACT;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH8.ACTIVE.pidControl' */
-  DW_MODESACCELERATION_PIDLAUNCH6 MODESACCELERATION_PIDLAUNCH7ACT;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH7.ACTIVE.pidControl' */
-  DW_MODESACCELERATION_PIDLAUNCH6 MODESACCELERATION_PIDLAUNCH6ACT;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH6.ACTIVE.pidControl' */
-  DW_MODESACCELERATION_PIDLAUNCH4 MODESACCELERATION_PIDLAUNCH5ACT;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH5.ACTIVE.ramp' */
-  DW_MODESACCELERATION_PIDLAUNCH4 MODESACCELERATION_PIDLAUNCH4ACT;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH4.ACTIVE.ramp' */
-  DW_MODESACCELERATION_PIDLAUNCH2 MODESACCELERATION_PIDLAUNCH3ACT;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH3.ACTIVE.ramp' */
-  DW_MODESACCELERATION_PIDLAUNCH2 MODESACCELERATION_PIDLAUNCH2ACT;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH2.ACTIVE.ramp' */
-  DW_MODESACCELERATION_PIDLAUNCH1 MODESACCELERATION_PIDLAUNCH1ACT;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH1.ACTIVE.ramp' */
+  DW_MODESACCELERATION_PIDLAUNCH0 MODESACCELERATION_PIDLAUNCH3ACT;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH3.ACTIVE.ramp' */
+  DW_GEARSHIFTcheckCurrent GEARSHIFTcheckCurrent_p;/* '<S48>/GEARSHIFT.checkCurrent' */
+  DW_MODESACCELERATION_PIDLAUNCH0 MODESACCELERATION_PIDLAUNCH2ACT;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH2.ACTIVE.ramp' */
+  DW_MODESACCELERATION_PIDLAUNCH0 MODESACCELERATION_PIDLAUNCH1ACT;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH1.ACTIVE.ramp' */
   DW_MODESACCELERATION_PIDLAUNCH0 MODESACCELERATION_PIDLAUNCH0ACT;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH0.ACTIVE.ramp' */
   DW_Evaluate_Request Evaluate_Request_l;/* '<S3>/Evaluate_Request' */
   DW_EngineControl_Start EngineControl_Start_h;/* '<S46>/EngineControl_Start' */
@@ -279,10 +209,25 @@ typedef struct {
   eepromRequest RateTransition[20];    /* '<S3>/Rate Transition' */
   eepromRequest requestBuffer[20];     /* '<S3>/EEPROM_Load_Buffer' */
   eepromRequest outputRequest;         /* '<S3>/EEPROM_OutputRequest' */
-  real_T Delay_DSTATE[5];              /* '<S71>/Delay' */
   real_T RateTransition40;             /* '<Root>/Rate Transition40' */
   real_T RateTransition41;             /* '<Root>/Rate Transition41' */
   real_T RateTransition1;              /* '<S3>/Rate Transition1' */
+  real_T SFunction_o8;                 /* '<S5>/GCULogic' */
+  real_T SFunction_o9;                 /* '<S5>/GCULogic' */
+  real_T SFunction_o10;                /* '<S5>/GCULogic' */
+  real_T SFunction_o11;                /* '<S5>/GCULogic' */
+  real_T SFunction_o12;                /* '<S5>/GCULogic' */
+  real_T SFunction_o13;                /* '<S5>/GCULogic' */
+  real_T SFunction_o14;                /* '<S5>/GCULogic' */
+  real_T SFunction_o15;                /* '<S5>/GCULogic' */
+  real_T SFunction_o16;                /* '<S5>/GCULogic' */
+  real_T SFunction_o17;                /* '<S5>/GCULogic' */
+  real_T SFunction_o18;                /* '<S5>/GCULogic' */
+  real_T SFunction_o19;                /* '<S5>/GCULogic' */
+  real_T SFunction_o20;                /* '<S5>/GCULogic' */
+  real_T SFunction_o21;                /* '<S5>/GCULogic' */
+  real_T SFunction_o22;                /* '<S5>/GCULogic' */
+  real_T SFunction_o23;                /* '<S5>/GCULogic' */
   real_T time;                         /* '<S5>/GCULogic' */
   real_T current;                      /* '<S5>/GCULogic' */
   real_T deltaTime;                    /* '<S42>/timeCounter' */
@@ -355,6 +300,7 @@ typedef struct {
   uint16_T RateTransition31;           /* '<Root>/Rate Transition31' */
   uint16_T UnitDelay_b;                /* '<S5>/Unit Delay' */
   uint16_T stateFb;                    /* '<S5>/GCULogic' */
+  uint16_T rpmAccTarget;               /* '<S5>/GCULogic' */
   uint16_T last_rpmValue;              /* '<S42>/timeCounter' */
   uint16_T antiStallFb;                /* '<S42>/antiStallLogic' */
   uint16_T UnpackCanUart_o1;           /* '<S4>/UnpackCanUart' */
@@ -396,20 +342,10 @@ typedef struct {
   uint16_T buzzerCounter;              /* '<S5>/GCULogic' */
   uint16_T aacCounter;                 /* '<S5>/GCULogic' */
   uint16_T autoXCounter;               /* '<S5>/GCULogic' */
-  uint16_T autoXCounter_n;             /* '<S5>/GCULogic' */
-  uint16_T autoXCounter_o;             /* '<S5>/GCULogic' */
-  uint16_T autoXCounter_j;             /* '<S5>/GCULogic' */
-  uint16_T autoXCounter_b;             /* '<S5>/GCULogic' */
   uint16_T autoXCounter_l;             /* '<S5>/GCULogic' */
-  uint16_T autoXCounter_n2;            /* '<S5>/GCULogic' */
-  uint16_T autoXCounter_e;             /* '<S5>/GCULogic' */
-  uint16_T lastSlip;                   /* '<S5>/GCULogic' */
-  uint16_T autoXCounter_p;             /* '<S5>/GCULogic' */
-  uint16_T lastSlip_n;                 /* '<S5>/GCULogic' */
-  uint16_T autoXCounter_o3;            /* '<S5>/GCULogic' */
-  uint16_T lastSlip_a;                 /* '<S5>/GCULogic' */
   uint16_T autoXCounter_m;             /* '<S5>/GCULogic' */
-  uint16_T lastSlip_l;                 /* '<S5>/GCULogic' */
+  uint16_T autoXCounter_d;             /* '<S5>/GCULogic' */
+  uint16_T autoXCounter_mt;            /* '<S5>/GCULogic' */
   volatile int8_T RateTransition9_ActiveBufIdx;/* '<Root>/Rate Transition9' */
   volatile int8_T RateTransition2_ActiveBufIdx;/* '<Root>/Rate Transition2' */
   volatile int8_T RateTransition4_ActiveBufIdx;/* '<Root>/Rate Transition4' */
@@ -448,10 +384,10 @@ typedef struct {
   uint8_T Eeprom_write_o1;             /* '<S34>/Eeprom_write' */
   uint8_T Eeprom_write_o2;             /* '<S34>/Eeprom_write' */
   uint8_T EngineControlStop;           /* '<S64>/EngineControl Stop' */
-  uint8_T GearMotorTurnLeft_o1;        /* '<S124>/GearMotor Turn Left' */
-  uint8_T GearMotorTurnLeft_o2;        /* '<S124>/GearMotor Turn Left' */
-  uint8_T GearMotorTurnLeft_o3;        /* '<S124>/GearMotor Turn Left' */
-  uint8_T GearMotorRelease;            /* '<S123>/GearMotor Release' */
+  uint8_T GearMotorTurnLeft_o1;        /* '<S116>/GearMotor Turn Left' */
+  uint8_T GearMotorTurnLeft_o2;        /* '<S116>/GearMotor Turn Left' */
+  uint8_T GearMotorTurnLeft_o3;        /* '<S116>/GearMotor Turn Left' */
+  uint8_T GearMotorRelease;            /* '<S115>/GearMotor Release' */
   uint8_T Minus;                       /* '<S57>/Minus' */
   uint8_T antiStallClutchVal;          /* '<S42>/antiStallLogic' */
   uint8_T Inport;                      /* '<S42>/antiStallLogic' */
@@ -479,28 +415,10 @@ typedef struct {
   uint8_T is_ACCELERATION_PID;         /* '<S5>/GCULogic' */
   uint8_T is_LAUNCH0;                  /* '<S5>/GCULogic' */
   uint8_T is_ACTIVE_d;                 /* '<S5>/GCULogic' */
-  uint8_T is_LAUNCH1;                  /* '<S5>/GCULogic' */
-  uint8_T is_ACTIVE_k;                 /* '<S5>/GCULogic' */
-  uint8_T is_LAUNCH2;                  /* '<S5>/GCULogic' */
+  uint8_T is_ANTISTALL_ENABLE;         /* '<S5>/GCULogic' */
+  uint8_T is_active_ANTISTALL_ENABLE;  /* '<S5>/GCULogic' */
+  uint8_T is_ACTIVE_g;                 /* '<S5>/GCULogic' */
   uint8_T is_ACTIVE_e;                 /* '<S5>/GCULogic' */
-  uint8_T is_LAUNCH3;                  /* '<S5>/GCULogic' */
-  uint8_T is_ACTIVE_c;                 /* '<S5>/GCULogic' */
-  uint8_T is_LAUNCH4;                  /* '<S5>/GCULogic' */
-  uint8_T is_ACTIVE_cg;                /* '<S5>/GCULogic' */
-  uint8_T is_LAUNCH5;                  /* '<S5>/GCULogic' */
-  uint8_T is_ACTIVE_f;                 /* '<S5>/GCULogic' */
-  uint8_T is_LAUNCH6;                  /* '<S5>/GCULogic' */
-  uint8_T is_ACTIVE_a;                 /* '<S5>/GCULogic' */
-  uint8_T is_RELEASE;                  /* '<S5>/GCULogic' */
-  uint8_T is_LAUNCH7;                  /* '<S5>/GCULogic' */
-  uint8_T is_ACTIVE_l;                 /* '<S5>/GCULogic' */
-  uint8_T is_RELEASE_k;                /* '<S5>/GCULogic' */
-  uint8_T is_LAUNCH8;                  /* '<S5>/GCULogic' */
-  uint8_T is_ACTIVE_ky;                /* '<S5>/GCULogic' */
-  uint8_T is_RELEASE_d;                /* '<S5>/GCULogic' */
-  uint8_T is_LAUNCH9;                  /* '<S5>/GCULogic' */
-  uint8_T is_ACTIVE_h;                 /* '<S5>/GCULogic' */
-  uint8_T is_RELEASE_g;                /* '<S5>/GCULogic' */
   uint8_T is_NEUTRAL_STATE;            /* '<S5>/GCULogic' */
   uint8_T is_active_NEUTRAL_STATE;     /* '<S5>/GCULogic' */
   uint8_T is_GEARSHIFT;                /* '<S5>/GCULogic' */
@@ -518,8 +436,10 @@ typedef struct {
   uint8_T is_active_START_ENGINE;      /* '<S5>/GCULogic' */
   uint8_T is_SCAN_ADC;                 /* '<S5>/GCULogic' */
   uint8_T is_active_SCAN_ADC;          /* '<S5>/GCULogic' */
-  uint8_T is_ANTISTALL_ENABLE;         /* '<S5>/GCULogic' */
-  uint8_T is_active_ANTISTALL_ENABLE;  /* '<S5>/GCULogic' */
+  uint8_T is_LAUNCH1;                  /* '<S5>/GCULogic' */
+  uint8_T is_LAUNCH2;                  /* '<S5>/GCULogic' */
+  uint8_T is_LAUNCH3;                  /* '<S5>/GCULogic' */
+  uint8_T is_ACTIVE_d4;                /* '<S5>/GCULogic' */
   uint8_T lastShift;                   /* '<S5>/GCULogic' */
   uint8_T lastCom;                     /* '<S5>/GCULogic' */
   uint8_T startCounter;                /* '<S5>/GCULogic' */
@@ -533,14 +453,6 @@ typedef struct {
   uint8_T counter2;                    /* '<S2>/CAN_id' */
   boolean_T LogicalOperator;           /* '<S71>/Logical Operator' */
 } DW;
-
-/* Zero-crossing (trigger) state */
-typedef struct {
-  ZCE_MODESACCELERATION_PIDLAUN_b MODESACCELERATION_PIDLAUNCH9ACT;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH9.ACTIVE.pidControl' */
-  ZCE_MODESACCELERATION_PIDLAUN_b MODESACCELERATION_PIDLAUNCH8ACT;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH8.ACTIVE.pidControl' */
-  ZCE_MODESACCELERATION_PIDLAUN_j MODESACCELERATION_PIDLAUNCH7ACT;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH7.ACTIVE.pidControl' */
-  ZCE_MODESACCELERATION_PIDLAUN_j MODESACCELERATION_PIDLAUNCH6ACT;/* '<S48>/MODES.ACCELERATION_PID.LAUNCH6.ACTIVE.pidControl' */
-} PrevZCX;
 
 /* Constant parameters (default storage) */
 typedef struct {
@@ -564,24 +476,24 @@ typedef struct {
    *   '<S2>/1-D Lookup Table1'
    *   '<S2>/1-D Lookup Table2'
    */
-  uint16_T pooled22[8];
+  uint16_T pooled11[8];
 
   /* Pooled Parameter (Expression: [0:7])
    * Referenced by:
    *   '<S2>/1-D Lookup Table1'
    *   '<S2>/1-D Lookup Table2'
    */
-  uint16_T pooled23[8];
+  uint16_T pooled12[8];
 
-  /* Expression: [uint16(0),uint16(100),uint16(200),uint16(300),uint16(400),uint16(500),uint16(600),uint16(700),uint16(800),uint16(900),uint16(1000)];
+  /* Expression: uint16(0:25:350)
    * Referenced by: '<S2>/1-D Lookup Table3'
    */
-  uint16_T uDLookupTable3_tableData[11];
+  uint16_T uDLookupTable3_tableData[15];
 
   /* Computed Parameter: uDLookupTable3_bp01Data
    * Referenced by: '<S2>/1-D Lookup Table3'
    */
-  uint16_T uDLookupTable3_bp01Data[11];
+  uint16_T uDLookupTable3_bp01Data[15];
 } ConstP;
 
 /* External inputs (root inport signals with default storage) */
@@ -657,10 +569,6 @@ extern RT_MODEL *const rtM;
  *
  * Block '<Root>/Cast' : Unused code path elimination
  * Block '<S42>/Scope' : Unused code path elimination
- * Block '<S106>/DTDup' : Unused code path elimination
- * Block '<S111>/DTDup' : Unused code path elimination
- * Block '<S116>/DTDup' : Unused code path elimination
- * Block '<S121>/DTDup' : Unused code path elimination
  * Block '<Root>/Rate Transition39' : Unused code path elimination
  * Block '<S2>/Cast' : Eliminate redundant data type conversion
  * Block '<S2>/Cast1' : Eliminate redundant data type conversion
@@ -778,50 +686,50 @@ extern RT_MODEL *const rtM;
  * '<S83>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/GEARSHIFT.checkCurrent/Compare To Constant'
  * '<S84>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/GEARSHIFT.checkCurrent/Compare To Constant1'
  * '<S85>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/GEARSHIFT.checkCurrent/Compare To Constant2'
- * '<S86>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH2.ACTIVE.ramp/If Action Subsystem'
- * '<S87>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH2.ACTIVE.ramp/If Action Subsystem1'
- * '<S88>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH2.ACTIVE.ramp/If Action Subsystem2'
- * '<S89>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH2.ACTIVE.ramp/If Action Subsystem3'
- * '<S90>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH3.ACTIVE.ramp/If Action Subsystem'
- * '<S91>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH3.ACTIVE.ramp/If Action Subsystem1'
- * '<S92>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH3.ACTIVE.ramp/If Action Subsystem2'
- * '<S93>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH3.ACTIVE.ramp/If Action Subsystem3'
- * '<S94>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH4.ACTIVE.ramp/If Action Subsystem'
- * '<S95>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH4.ACTIVE.ramp/If Action Subsystem1'
- * '<S96>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH4.ACTIVE.ramp/If Action Subsystem2'
- * '<S97>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH4.ACTIVE.ramp/If Action Subsystem3'
- * '<S98>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH5.ACTIVE.ramp/If Action Subsystem'
- * '<S99>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH5.ACTIVE.ramp/If Action Subsystem1'
- * '<S100>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH5.ACTIVE.ramp/If Action Subsystem2'
- * '<S101>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH5.ACTIVE.ramp/If Action Subsystem3'
- * '<S102>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH6.ACTIVE.pidControl/Discrete PID Controller'
- * '<S103>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH6.ACTIVE.pidControl/If Action Subsystem4'
- * '<S104>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH6.ACTIVE.pidControl/If Action Subsystem5'
- * '<S105>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH6.ACTIVE.pidControl/Discrete PID Controller/Clamping circuit'
- * '<S106>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH6.ACTIVE.pidControl/Discrete PID Controller/Differentiator'
- * '<S107>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH7.ACTIVE.pidControl/Discrete PID Controller'
- * '<S108>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH7.ACTIVE.pidControl/If Action Subsystem4'
- * '<S109>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH7.ACTIVE.pidControl/If Action Subsystem5'
- * '<S110>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH7.ACTIVE.pidControl/Discrete PID Controller/Clamping circuit'
- * '<S111>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH7.ACTIVE.pidControl/Discrete PID Controller/Differentiator'
- * '<S112>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH8.ACTIVE.pidControl/Discrete PID Controller'
- * '<S113>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH8.ACTIVE.pidControl/If Action Subsystem4'
- * '<S114>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH8.ACTIVE.pidControl/If Action Subsystem5'
- * '<S115>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH8.ACTIVE.pidControl/Discrete PID Controller/Clamping circuit'
- * '<S116>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH8.ACTIVE.pidControl/Discrete PID Controller/Differentiator'
- * '<S117>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH9.ACTIVE.pidControl/Discrete PID Controller'
- * '<S118>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH9.ACTIVE.pidControl/If Action Subsystem4'
- * '<S119>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH9.ACTIVE.pidControl/If Action Subsystem5'
- * '<S120>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH9.ACTIVE.pidControl/Discrete PID Controller/Clamping circuit'
- * '<S121>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH9.ACTIVE.pidControl/Discrete PID Controller/Differentiator'
- * '<S122>' : 'GCU_Model_genCode/GCU_timer/GearMotor1/Gearmotor_brake'
- * '<S123>' : 'GCU_Model_genCode/GCU_timer/GearMotor1/Gearmotor_release'
- * '<S124>' : 'GCU_Model_genCode/GCU_timer/GearMotor1/Gearmotor_turnLeft'
- * '<S125>' : 'GCU_Model_genCode/GCU_timer/GearMotor1/Gearmotor_turnRight'
- * '<S126>' : 'GCU_Model_genCode/Simulink_Acc_Debug/AccelerationRoutine'
- * '<S127>' : 'GCU_Model_genCode/Simulink_Acc_Debug1/AccelerationRoutine'
- * '<S128>' : 'GCU_Model_genCode/Subsystem/Subsystem'
- * '<S129>' : 'GCU_Model_genCode/Subsystem/Subsystem/MATLAB Function'
+ * '<S86>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH4.ACTIVE.ramp/If Action Subsystem'
+ * '<S87>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH4.ACTIVE.ramp/If Action Subsystem1'
+ * '<S88>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH4.ACTIVE.ramp/If Action Subsystem2'
+ * '<S89>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH4.ACTIVE.ramp/If Action Subsystem3'
+ * '<S90>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH5.ACTIVE.ramp/If Action Subsystem'
+ * '<S91>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH5.ACTIVE.ramp/If Action Subsystem1'
+ * '<S92>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH5.ACTIVE.ramp/If Action Subsystem2'
+ * '<S93>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH5.ACTIVE.ramp/If Action Subsystem3'
+ * '<S94>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH6.ACTIVE.pidControl/Discrete PID Controller'
+ * '<S95>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH6.ACTIVE.pidControl/If Action Subsystem4'
+ * '<S96>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH6.ACTIVE.pidControl/If Action Subsystem5'
+ * '<S97>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH6.ACTIVE.pidControl/Discrete PID Controller/Clamping circuit'
+ * '<S98>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH6.ACTIVE.pidControl/Discrete PID Controller/Differentiator'
+ * '<S99>'  : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH7.ACTIVE.pidControl/Discrete PID Controller'
+ * '<S100>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH7.ACTIVE.pidControl/If Action Subsystem4'
+ * '<S101>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH7.ACTIVE.pidControl/If Action Subsystem5'
+ * '<S102>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH7.ACTIVE.pidControl/Discrete PID Controller/Clamping circuit'
+ * '<S103>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH7.ACTIVE.pidControl/Discrete PID Controller/Differentiator'
+ * '<S104>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH8.ACTIVE.pidControl/Discrete PID Controller'
+ * '<S105>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH8.ACTIVE.pidControl/If Action Subsystem4'
+ * '<S106>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH8.ACTIVE.pidControl/If Action Subsystem5'
+ * '<S107>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH8.ACTIVE.pidControl/Discrete PID Controller/Clamping circuit'
+ * '<S108>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH8.ACTIVE.pidControl/Discrete PID Controller/Differentiator'
+ * '<S109>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH9.ACTIVE.pidControl/Discrete PID Controller'
+ * '<S110>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH9.ACTIVE.pidControl/If Action Subsystem4'
+ * '<S111>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH9.ACTIVE.pidControl/If Action Subsystem5'
+ * '<S112>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH9.ACTIVE.pidControl/Discrete PID Controller/Clamping circuit'
+ * '<S113>' : 'GCU_Model_genCode/GCU_timer/GCULogic/MODES.ACCELERATION_PID.LAUNCH9.ACTIVE.pidControl/Discrete PID Controller/Differentiator'
+ * '<S114>' : 'GCU_Model_genCode/GCU_timer/GearMotor1/Gearmotor_brake'
+ * '<S115>' : 'GCU_Model_genCode/GCU_timer/GearMotor1/Gearmotor_release'
+ * '<S116>' : 'GCU_Model_genCode/GCU_timer/GearMotor1/Gearmotor_turnLeft'
+ * '<S117>' : 'GCU_Model_genCode/GCU_timer/GearMotor1/Gearmotor_turnRight'
+ * '<S118>' : 'GCU_Model_genCode/Simulink_Acc_Debug/AccelerationRoutine'
+ * '<S119>' : 'GCU_Model_genCode/Simulink_Acc_Debug1/AccelerationRoutine'
+ * '<S120>' : 'GCU_Model_genCode/Subsystem/Subsystem'
+ * '<S121>' : 'GCU_Model_genCode/Subsystem/servo 1'
+ * '<S122>' : 'GCU_Model_genCode/Subsystem/Subsystem/LTI System'
+ * '<S123>' : 'GCU_Model_genCode/Subsystem/Subsystem/MATLAB Function'
+ * '<S124>' : 'GCU_Model_genCode/Subsystem/Subsystem/LTI System/IO Delay'
+ * '<S125>' : 'GCU_Model_genCode/Subsystem/Subsystem/LTI System/Input Delay'
+ * '<S126>' : 'GCU_Model_genCode/Subsystem/Subsystem/LTI System/Output Delay'
+ * '<S127>' : 'GCU_Model_genCode/Subsystem/servo 1/IO Delay'
+ * '<S128>' : 'GCU_Model_genCode/Subsystem/servo 1/Input Delay'
+ * '<S129>' : 'GCU_Model_genCode/Subsystem/servo 1/Output Delay'
  * '<S130>' : 'GCU_Model_genCode/update_ADC_data/Mean Value'
  * '<S131>' : 'GCU_Model_genCode/update_ADC_data/Subsystem'
  * '<S132>' : 'GCU_Model_genCode/update_ADC_data/Subsystem/f_T_lt'
